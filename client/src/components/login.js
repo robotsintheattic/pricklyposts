@@ -1,21 +1,9 @@
 import React, { Component } from 'react'
 
 class LoginButton extends Component {
-  constructor(props) {
-    super(props)
-
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-
-  handleClick = (e) => {
-    e.preventDefault()
-    console.log('Clicked')
-  }
-
   render() {
     return (
-      <a href='/' onClick={this.handleClick}>Click Me!</a>
+      <a href='https://api.instagram.com/oauth/authorize/?client_id=2fe5c5abcb8d42b394744da82775cc47&redirect_uri=https://localhost:3000/dashboard&response_type=code'>Click Me!</a>
     )
   }
 }

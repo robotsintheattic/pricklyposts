@@ -2,7 +2,6 @@ exports.up = function(knex) {
   return knex.schema.createTable('modules', (table) => {
     table.increments()
     table.string('type', 30).notNullable()
-    table.string('title', 50).notNullable()
     table.timestamps(true, true)
   })
 }

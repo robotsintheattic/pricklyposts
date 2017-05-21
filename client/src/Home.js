@@ -2,9 +2,23 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import LoginButton from './components/login'
-import { Link } from 'react-router-dom'
+import { Link, browserHistory } from 'react-router-dom'
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    // this.props.history.listen((location, action) => {
+    //   console.log('on route change...')
+    // })
+
+    if (this.props.location.hash) {
+      let token = this.props.location.hash.split('=')[1]
+      localStorage.setItem('token', token)
+      window.location.href = '/dashboard'
+    }
+  }
+
   render() {
     return (
       <div className="App">

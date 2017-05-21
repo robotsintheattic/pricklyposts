@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 
 class LoginButton extends Component {
-  handleClick() => {
-    console.log('click')
-    // 'https://api.instagram.com/oauth/authorize/?client_id=2fe5c5abcb8d42b394744da82775cc47&redirect_uri=https://localhost:3000/dashboard&response_type=code'
+  constructor(props) {
+    super(props)
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick = (e) => {
+    e.preventDefault()
+    let clientID = '2fe5c5abcb8d42b394744da82775cc47'
+    var auth = window.location.replace("https://instagram.com/oauth/authorize/?client_id=" + clientID + "&redirect_uri=" + "http://localhost:3000/" + "&response_type=token", "auth");
   }
 
   render() {
     return (
-      <a onClick={ loginClick }>Click Me!</a>
+      <a href='#' onClick={this.handleClick}>Login with Instagram</a>
     )
   }
 }

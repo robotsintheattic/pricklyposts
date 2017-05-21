@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import Home from './Home'
-// import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './registerServiceWorker'
 import './index.css'
 import {BrowserRouter, Route} from 'react-router-dom'
 
@@ -10,10 +10,9 @@ ReactDOM.render(
   <BrowserRouter>
     <div className="App">
       <Route exact path="/" component={Home}></Route>
-      <Route path="/dashboard" component={App}></Route>
-      <Route path="/dashboard:query" component={App}></Route>
+      <Route exact path="/dashboard" component={App}></Route>
     </div>
   </BrowserRouter>,
   document.getElementById('root')
 )
-// registerServiceWorker()
+registerServiceWorker()

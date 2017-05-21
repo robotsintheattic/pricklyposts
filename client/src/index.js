@@ -11,6 +11,7 @@ ReactDOM.render(
     <div className="App">
       <Route exact path="/" component={Home}></Route>
       <Route path="/dashboard" component={App}></Route>
+      <Route path="/dashboard:query" component={App}></Route>
     </div>
   </BrowserRouter>,
   document.getElementById('root')

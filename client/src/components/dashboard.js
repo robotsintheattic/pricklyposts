@@ -18,14 +18,30 @@ class Dashboard extends Component {
       url: `https://api.instagram.com/v1/users/self/?access_token=${localStorage.token}`,
       dataType: 'jsonp',
       success: function(result) {
-        userData = result.data
+        userData = {
+          fullName: result.data.full_name,
+          instagramId: result.data.id,
+          userName: result.data.username,
+          profilePicture: result.data.profile_picture
+        }
       },
       error: function(err) {
         console.log(err);
       }
     }).then(() => {
-
-      console.log(userData);
+      // AND HERE ON MONDAY
+      fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify(userData),
+        credentials: 'same-origin',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(res => {
+        console.log(res);
+      })
     })
   }
 

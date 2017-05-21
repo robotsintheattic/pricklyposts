@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 
 const index = require('./routes/index')
+const users = require('./routes/users')
 
 const app = express()
 
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, '../client')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
 app.use('/', index)
+app.use('/api/users', users)
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', { root: path.join(__dirname, '../client') })

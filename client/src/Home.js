@@ -8,10 +8,6 @@ class Home extends Component {
   constructor(props) {
     super(props)
 
-    // this.props.history.listen((location, action) => {
-    //   console.log('on route change...')
-    // })
-
     if (this.props.location.hash) {
       let token = this.props.location.hash.split('=')[1]
       localStorage.setItem('token', token)

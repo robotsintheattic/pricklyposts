@@ -31,6 +31,51 @@ router.get('/journals/:id', function(req, res, next) {
 })
 
 /* POST one journal */
-router.POST
+router.post('/journals', function(req, res, next) {
+  knex('journals')
+    .returning(['id', 'title', 'user_id'])
+    .insert({
+      title: req.body.title,
+      user_id: req.body.user_id
+    })
+    .then((journal) => {
+      res.send(journal)
+    })
+    .catch((error) => {
+      console.log(error)
+      next(error)
+    })
+})
+
+/* UPDATE one journal */
+router.patch('/journals/:id', function(req, res, next) {
+  knex('journals')
+    .returning(['id', 'title', 'user_id'])
+    .where('id', req.params.id)
+    .update({
+      title: req.body.title
+    })
+    .then((journal) => {
+      res.send(journal)
+    })
+    .catch((error) => {
+      console.log(error)
+      next(error)
+    })
+})
+
+/* DELETE one journal */
+router.delete('/journals/:id', function(req, res, next) {
+  knex('journals')
+    .where('id', req.params.id)
+    .del()
+    .then((journal) => {
+      res.send(journal)
+    })
+    .catch((error) => {
+      console.log(error)
+      next(error)
+    })
+})
 
 module.exports = router

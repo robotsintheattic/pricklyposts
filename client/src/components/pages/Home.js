@@ -7,7 +7,7 @@ class Home extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {name: '', profilePicture: ''}
+    this.state = {name: '', profilePicture: '', id: 0, titles: null}
 
     if (!localStorage.token) {
       window.location.href = '/'
@@ -16,6 +16,7 @@ class Home extends Component {
 
   componentDidMount() {
     let userData = ''
+    var journalList = []
     $.ajax({
       method: 'get',
       url: `https://api.instagram.com/v1/users/self/?access_token=${localStorage.token}`,
@@ -45,7 +46,21 @@ class Home extends Component {
       .then(res => {
         return res.text().then(user => {
           user = JSON.parse(user)
-          this.setState({name: user[0], profilePicture: user[1]})
+          this.setState({name: user[0], profilePicture: user[1], id: user[2]})
+        })
+      }).then(() => {
+        fetch(`/api/journals/users/${this.state.id}`, {
+          method: 'GET'
+        }).then((res) => {
+          return res.text().then(journals => {
+            journals = JSON.parse(journals)
+            console.log('here;', journals)
+            journals.forEach((item) => {
+              console.log(item.id)
+              journalList.push(<li key={item.id} id={item.id}><Link to={`/journal/${item.id}`}>{item.title}</Link></li>)
+            })
+            this.setState({titles: journalList})
+          })
         })
       })
     })
@@ -54,9 +69,10 @@ class Home extends Component {
   render() {
       return (
           <div>
-              <h1>Welcome to the dashboard {this.state.name}</h1>
+              <h1>{this.state.name}'s Journals</h1>
               <img src={this.state.profilePicture}/><br/>
               <Link to='/'>Home</Link>
+              <ul>{this.state.titles}</ul>
               <JournalButton />
           </div>
       )

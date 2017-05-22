@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const index = require('./routes/index')
 const users = require('./routes/users')
 const entries_modules = require('./routes/entries_modules')
+const journals = require('./routes/journals')
 
 const app = express()
 
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 app.use('/', index)
 app.use('/api/users', users)
 app.use('/api/entries_modules', entries_modules)
+app.use('/api/journals', journals)
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', { root: path.join(__dirname, '../client') })

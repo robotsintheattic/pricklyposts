@@ -3,20 +3,28 @@ const router = express.Router()
 const knex = require('../knex')
 
 /* GET all journals */
-router.get('/journals', function(req, res, next) {
+router.get('/', function(req, res, next) {
   knex('journals')
     .orderBy('created_at', 'asc')
     .then((journals) => {
+      console.log('journals', journals)
       res.send(journals)
     })
-    .catch((error) => {
-      console.log(error)
-      next(error)
+})
+
+router.get('/users/:id', function(req, res, next) {
+  let user_id = req.params.id
+  knex('journals')
+    .where('user_id', user_id)
+    .orderBy('created_at', 'asc')
+    .then((journals) => {
+      console.log('journals', journals)
+      res.send(journals)
     })
 })
 
 /* GET one journal */
-router.get('/journals/:id', function(req, res, next) {
+router.get('/:id', function(req, res, next) {
   let id = req.params.id
 
   knex('journals')
@@ -24,14 +32,10 @@ router.get('/journals/:id', function(req, res, next) {
     .then((journal) => {
       res.send(journal)
     })
-    .catch((error) => {
-      console.log(error)
-      next(error)
-    })
 })
 
 /* POST one journal */
-router.post('/journals', function(req, res, next) {
+router.post('/', function(req, res, next) {
   knex('journals')
     .returning(['id', 'title', 'user_id'])
     .insert({
@@ -41,14 +45,10 @@ router.post('/journals', function(req, res, next) {
     .then((journal) => {
       res.send(journal)
     })
-    .catch((error) => {
-      console.log(error)
-      next(error)
-    })
 })
 
 /* UPDATE one journal */
-router.patch('/journals/:id', function(req, res, next) {
+router.patch('/:id', function(req, res, next) {
   knex('journals')
     .returning(['id', 'title', 'user_id'])
     .where('id', req.params.id)
@@ -58,23 +58,15 @@ router.patch('/journals/:id', function(req, res, next) {
     .then((journal) => {
       res.send(journal)
     })
-    .catch((error) => {
-      console.log(error)
-      next(error)
-    })
 })
 
 /* DELETE one journal */
-router.delete('/journals/:id', function(req, res, next) {
+router.delete('/:id', function(req, res, next) {
   knex('journals')
     .where('id', req.params.id)
     .del()
     .then((journal) => {
       res.send(journal)
-    })
-    .catch((error) => {
-      console.log(error)
-      next(error)
     })
 })
 

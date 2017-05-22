@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../../App.css'
+import Logo from '../../Cactus_6.svg'
 import LoginButton from './../buttons/loginButton'
 import { Link, browserHistory } from 'react-router-dom'
 
@@ -17,13 +18,10 @@ class Login extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
+        <div className="container App-content">
+          <h1 className="App-title">Daily <span><img src={Logo} /></span> Dash</h1>
+          <LoginButton />
         </div>
-        <p className="App-intro">
-          Emily, Grace, Jen, & Kaiti got React and Express Together!
-        </p>
-        <LoginButton />
       </div>
     )
   }

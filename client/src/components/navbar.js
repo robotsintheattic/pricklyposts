@@ -1,12 +1,8 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import $ from 'jquery'
-import  JournalButton from './../buttons/journalButton'
-import '../../App.css'
-import Logo from '../../Cactus_3.svg'
-import Navbar from './../navbar'
 
-class Home extends Component {
+class Navbar extends Component {
   constructor(props) {
     super(props)
 
@@ -51,36 +47,24 @@ class Home extends Component {
           user = JSON.parse(user)
           this.setState({name: user[0], profilePicture: user[1], id: user[2]})
         })
-      }).then(() => {
-        fetch(`/api/journals/users/${this.state.id}`, {
-          method: 'GET'
-        }).then((res) => {
-          return res.text().then(journals => {
-            journals = JSON.parse(journals)
-            journals.forEach((item) => {
-              journalList.push(<div key={item.id} id={item.id} className="journalDiv col-md-2"><span><img alt="image of a cactus" src={Logo} /></span><Link to={`/journal/${item.id}`}>{item.title}</Link></div>)
-            })
-            this.setState({titles: journalList})
-          })
-        })
       })
     })
   }
 
+//where do we go?
   render() {
-      return (
-          <div>
-              <Navbar />
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-2"></div>
-                  <div className="journalDiv col-md-2"><span><img alt="image of cactus" src={Logo} /></span><JournalButton /></div>
-                  <div>{this.state.titles}</div>
-                </div>
-                </div>
+    return (
+      <div>
+        <nav className="navbar navbar-default">
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <h1 className="Home-title"><img className="Home-img" src={this.state.profilePicture}/>  {this.state.name}'s Journals</h1>
+            </div>
           </div>
-      )
+        </nav>
+      </div>
+    )
   }
 }
 
-export default Home
+export default Navbar

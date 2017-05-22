@@ -3,11 +3,6 @@ import {Link} from 'react-router-dom'
 import  EntryButton from './../buttons/entryButton'
 
 class Journal extends Component {
-  constructor(props) {
-    super(props)
-
-  }
-
   render() {
       return (
           <div>

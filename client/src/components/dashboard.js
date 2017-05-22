@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import $ from 'jquery'
-import Textfield from './textfield'
 import  JournalButton from './journals'
 import BlockQuote from './blockquote'
 

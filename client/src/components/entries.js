@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import  EntryButton from './entries'
 
-class JournalButton extends Component {
+class EntryButton extends Component {
   constructor(props) {
     super(props)
 
@@ -11,19 +10,13 @@ class JournalButton extends Component {
 
   handleClick = (e) => {
     e.preventDefault()
-
   }
 
   render() {
     return (
-      <div>
-        <p>
-          <p></p>
-          <Link to='/dashboard/journals'>Journal</Link></p>
-        <p><EntryButton /></p>
-      </div>
+      <Link to='/dashboard/journals/entries'>Entry</Link>
     )
   }
 }
 
-export default JournalButton
+export default EntryButton

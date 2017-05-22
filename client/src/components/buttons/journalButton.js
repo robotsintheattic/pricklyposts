@@ -16,10 +16,7 @@ class JournalButton extends Component {
 //where do we go?
   render() {
     return (
-      <div>
-        <p>
-          <Link to='/journals'>Create New Journal</Link>
-        </p>
+      <div><Link to='/journal'>Create New Journal</Link>
       </div>
     )
   }

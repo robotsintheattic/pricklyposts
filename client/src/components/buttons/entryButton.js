@@ -14,8 +14,9 @@ class EntryButton extends Component {
 
   render() {
     return (
-      // where do we go?
-      <Link to='/entry'>Entry</Link>
+      <div>
+        <Link to='/entry'>Create New Entry</Link>
+      </div>
     )
   }
 }

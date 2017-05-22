@@ -26,12 +26,17 @@ class Pic extends Component {
       error: function(err) {
         console.log(err);
       }
-    }).then(() => {
     })
+    // .then(() => {
+    // })
     render() {
+      let recentPics = this.state.pic
+      let picsList = recentPics.map(function(picsDisplay){
+        return <img src={picsDisplay} />
+      })
         return (
             <div className='insta-collection'>
-                <img src={this.state.pic}/><br/>
+                <div>{picsList}</div><br/>
                 <Link to='/'>Home</Link>
             </div>
         )

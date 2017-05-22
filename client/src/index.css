@@ -1,5 +1,29 @@
+html {
+  background-image: url('../src/img/wood.jpg');
+  height: 100%;
+}
+
 body {
-  margin: 0;
+  margin: 50px;
+  height: 80%;
   padding: 0;
+  background-color:	rgba(0, 0, 0, 1);
+  border-radius: 15px 30px 30px 15px;
   font-family: sans-serif;
 }
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+.page {
+  height: 98%;
+  width: 98%;
+  background-color:	rgba(245, 231, 140, 0.8);
+  border-radius: 15px 30px 30px 15px;
+}
+
+/*.pager {
+  position: absolute;
+  bottom: 0;
+}*/

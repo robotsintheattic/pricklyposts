@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import $ from 'jquery'
 import Textfield from './textfield'
 import  JournalButton from './journals'
+import BlockQuote from './blockquote'
 
 class Dashboard extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ class Dashboard extends Component {
               <Link to='/'>Home</Link>
               <JournalButton />
               <Textfield />
+              <BlockQuote />
           </div>
       )
   }

@@ -3,7 +3,7 @@ const router = express.Router()
 const knex = require('../knex')
 
 /* GET all entires_modules */
-router.get('/options', (req, res, next) => {
+router.get('/', (req, res, next) => {
   knex('entries_modules')
     .then((options) => {
       res.send(options)
@@ -14,7 +14,7 @@ router.get('/options', (req, res, next) => {
 })
 
 /* GET one option */
-router.get('/options/:id', (req, res, next) => {
+router.get('/:id', (req, res, next) => {
   const id = req.params.id
 
   knex('entries_modules')
@@ -27,7 +27,7 @@ router.get('/options/:id', (req, res, next) => {
 })
 
 /* POST one option */
-router.post('/options', (req, res, next) => {
+router.post('/', (req, res, next) => {
   knex('entries_modules')
     .returning(['id', 'entry_id', 'module_id', 'font', 'content'])
     .insert({
@@ -45,7 +45,7 @@ router.post('/options', (req, res, next) => {
 })
 
 /* UPDATE one option */
-router.patch('/options/:id', (req, res, next) => {
+router.patch('/:id', (req, res, next) => {
   const id = req.params.id
 
   knex('entries_modules')
@@ -66,7 +66,7 @@ router.patch('/options/:id', (req, res, next) => {
 })
 
 /* DELETE one option */
-router.delete('/options/:id', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
   const id = req.params.id
 
   knex('entries_modules')

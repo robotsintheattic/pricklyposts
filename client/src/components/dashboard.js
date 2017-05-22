@@ -6,6 +6,8 @@ class Dashboard extends Component {
   constructor(props) {
     super(props)
 
+    this.state = {name: '', profilePicture: ''}
+
     if (!localStorage.token) {
       window.location.href = '/'
     }
@@ -40,7 +42,10 @@ class Dashboard extends Component {
         }
       })
       .then(res => {
-        console.log(res);
+        return res.text().then(user => {
+          user = JSON.parse(user)
+          this.setState({name: user[0], profilePicture: user[1]})
+        })
       })
     })
   }
@@ -48,7 +53,8 @@ class Dashboard extends Component {
   render() {
       return (
           <div>
-              <h1>On the dashboard</h1>
+              <h1>Welcome to the dashboard {this.state.name}</h1>
+              <img src={this.state.profilePicture}/><br/>
               <Link to='/'>Home</Link>
           </div>
       )

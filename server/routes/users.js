@@ -1,21 +1,22 @@
 const express = require('express')
 const router = express.Router()
 const knex = require('../knex')
+
 // START HERE MONDAY
 router.post('/', function(req, res, next) {
   let user = req.body
-  console.log('parsed', user)
   knex('users')
     .where('userName', user.userName)
     .then((searchedUser) => {
       if (searchedUser.length > 0) {
-        // JWT TOKEN
+        // JWT
+        res.send([searchedUser[0].fullName, searchedUser[0].profilePicture])
       } else {
-        knex('user')
+        knex('users')
         .insert(user)
         .then(insertedUser => {
           // JWT
-          res.send(insertedUser[0])
+          res.send(insertedUser[0].fullName)
         })
       }
     })

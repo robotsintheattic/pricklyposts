@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import $ from 'jquery'
 import  JournalButton from './../buttons/journalButton'
+import '../../App.css'
+import Logo from '../../Cactus_3.svg'
 
 class Home extends Component {
   constructor(props) {
@@ -54,10 +56,8 @@ class Home extends Component {
         }).then((res) => {
           return res.text().then(journals => {
             journals = JSON.parse(journals)
-            console.log('here;', journals)
             journals.forEach((item) => {
-              console.log(item.id)
-              journalList.push(<li key={item.id} id={item.id}><Link to={`/journal/${item.id}`}>{item.title}</Link></li>)
+              journalList.push(<div key={item.id} id={item.id} className="journalDiv col-md-2"><span><img src={Logo} /></span><Link to={`/journal/${item.id}`}>{item.title}</Link></div>)
             })
             this.setState({titles: journalList})
           })
@@ -69,11 +69,20 @@ class Home extends Component {
   render() {
       return (
           <div>
-              <h1>{this.state.name}'s Journals</h1>
-              <img src={this.state.profilePicture}/><br/>
-              <Link to='/'>Home</Link>
-              <ul>{this.state.titles}</ul>
-              <JournalButton />
+          <nav className="navbar navbar-default">
+              <div className="container-fluid">
+                <div className="navbar-header">
+                  <h1 className="Home-title"><img className="Home-img" src={this.state.profilePicture}/>  {this.state.name}'s Journals</h1>
+                </div>
+              </div>
+          </nav>
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-2"></div>
+                  <div className="journalDiv col-md-2"><span><img src={Logo} /></span><JournalButton /></div>
+                  <div>{this.state.titles}</div>
+                </div>
+                </div>
           </div>
       )
   }

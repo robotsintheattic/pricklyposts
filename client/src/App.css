@@ -14,10 +14,50 @@
   padding-bottom: 2rem;
 }
 
+.Home-title {
+  font-family: 'cursive';
+  font-size: 6rem;
+  color: #A7E8BD;
+  padding-bottom: 2rem;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.Home-img {
+  border-radius: 50%;
+  height: 7rem;
+}
+
+.Home-logo {
+  height: 6rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
 .insta-button {
   border: 1px double grey;
-
 }
+
+.journalDiv {
+  height: 20em;
+  margin: 2em;
+  /*background-image: url('Cactus_3.svg');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #a4a2a1;
+  border-radius: 3em;
+  padding: 2em;
+}
+
+.journalCont {
+  margin-left: 10em;
+}
+
+.a {
+  color: inherit;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

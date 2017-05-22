@@ -13,6 +13,7 @@ class Entry extends Component {
           <div>
               <h1>Entry</h1>
               <p><Link to='journals/'>Home</Link></p>
+              <p><Link to='journal/'>Back to Journal</Link></p>
           </div>
       )
   }

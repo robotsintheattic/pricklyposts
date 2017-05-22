@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import $ from 'jquery'
 import Textfield from './textfield'
+import  JournalButton from './journals'
 
 class Dashboard extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ class Dashboard extends Component {
               <h1>Welcome to the dashboard {this.state.name}</h1>
               <img src={this.state.profilePicture}/><br/>
               <Link to='/'>Home</Link>
+              <JournalButton />
               <Textfield />
           </div>
       )

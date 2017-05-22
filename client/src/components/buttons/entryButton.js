@@ -14,7 +14,8 @@ class EntryButton extends Component {
 
   render() {
     return (
-      <Link to='/dashboard/journals/entries'>Entry</Link>
+      // where do we go?
+      <Link to='/entry'>Entry</Link>
     )
   }
 }

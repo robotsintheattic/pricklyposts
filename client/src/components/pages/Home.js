@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import $ from 'jquery'
-import  JournalButton from './journals'
-import BlockQuote from './blockquote'
+import  JournalButton from './../buttons/journalButton'
 
-class Dashboard extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
 
@@ -59,11 +58,9 @@ class Dashboard extends Component {
               <img src={this.state.profilePicture}/><br/>
               <Link to='/'>Home</Link>
               <JournalButton />
-              <Textfield />
-              <BlockQuote />
           </div>
       )
   }
 }
 
-export default Dashboard
+export default Home

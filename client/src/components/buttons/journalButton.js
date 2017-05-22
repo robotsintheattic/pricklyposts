@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import  EntryButton from './entries'
 
 class JournalButton extends Component {
   constructor(props) {
@@ -14,13 +13,13 @@ class JournalButton extends Component {
 
   }
 
+//where do we go?
   render() {
     return (
       <div>
         <p>
-          <p></p>
-          <Link to='/dashboard/journals'>Journal</Link></p>
-        <p><EntryButton /></p>
+          <Link to='/journals'>Create New Journal</Link>
+        </p>
       </div>
     )
   }

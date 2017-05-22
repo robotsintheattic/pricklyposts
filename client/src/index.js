@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Login from './Login'
-import Journals from './Journals'
+import Login from './components/pages/Login'
+import Home from './components/pages/Home'
+import Journal from './components/pages/Journal'
+import Entry from './components/pages/Entry'
+
 import registerServiceWorker from './registerServiceWorker'
 import './index.css'
 import {BrowserRouter, Route} from 'react-router-dom'
@@ -10,9 +13,9 @@ ReactDOM.render(
   <BrowserRouter>
     <div className="App">
       <Route exact path="/" component={Login}></Route>
-      <Route exact path="/journals" component={Journals}></Route>
-      <Route path="/journal/:id" component={Journal}></Route>
-      <Route path="/entry/:id" component={entry}></Route>
+      <Route exact path="/journals" component={Home}></Route>
+      <Route path="/journal" component={Journal}></Route>
+      <Route path="/entry" component={Entry}></Route>
     </div>
   </BrowserRouter>,
   document.getElementById('root')

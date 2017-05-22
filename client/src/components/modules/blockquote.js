@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import ContentEditable from 'react-contenteditable'
+
 class BlockQuote extends Component {
   constructor(props) {
     super(props)

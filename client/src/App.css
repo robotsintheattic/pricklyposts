@@ -16,16 +16,21 @@
 
 .Home-title {
   font-family: 'cursive';
-  font-size: 6rem;
+  font-size: 4rem;
   color: #A7E8BD;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   text-align: left;
   padding-left: 2rem;
+  padding-top: 0rem;
+}
+
+div.navbar-header {
+  margin: -1rem;
 }
 
 .Home-img {
   border-radius: 50%;
-  height: 7rem;
+  height: 6rem;
 }
 
 .Home-logo {

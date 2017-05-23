@@ -11,47 +11,57 @@ class Journal extends Component {
 
     componentDidMount() {
       // console.log(window.location.pathname)
-      let id = window.location.pathname.split('/')[2]
-      // console.log(id);
-      let entryData = ''
-        fetch('/api/entries', {
-          method: 'GET',
-          credentials: 'same-origin',
+      let journal_id = window.location.pathname.split('/')[2]
+      // console.log(journal_id);
+      let entryList = []
+        fetch(`/api/entries/journals/${journal_id}`, {
+          method: 'GET'
         })
         .then(res => {
           return res.text().then(entry => {
-            // console.log(entry);
+            console.log("1", entry);
             entry = JSON.parse(entry)
-            console.log(entry);
-            console.log(entry[0].journal_id);
-
-            function isJournalId(value) {
-              if (value == id) {
-                
-              }
-            }
-
-            let individual = entry.filter((isJournalId) => {
-              return (
-                this.setState({
-                  title: entry[0]
-                })
-
-              )
+            console.log("2", entry);
+            console.log("entry id", entry.id);
+            this.setState({
+              content: entry[0],
+              entry_id: entry[1],
+              font: entry[2],
+              id: entry[3],
+              journal_id: entry[4],
+              module_id: entry[5],
+              title: entry[6],
+              type: entry[7]
             })
 
+            fetch(`/api/entries_modules/${this.state.entry_id}`, {
+              method: 'GET'
+            })
+            .then(result => {
+              return result.text().then(module => {
+                // console.log("module 1", module);
+                module = JSON.parse(module)
+                // console.log("module 2", module);
+
+                module.forEach((item) => {
+                  entryList.push(<p key={item.id} id={item.id} className="journalDiv col-md-2">{item.content}</p>)
+                })
+                this.setState({content: entryList})
+              })
+            })
           })
         })
     }
 
 
   render() {
+
       return (
           <div>
               <h1>Journal View (for each individual journal)</h1>
               <p><Link to='journals/'>Home</Link></p>
               <EntryButton />
-              <h1>{this.state.title}</h1>
+              <div>{this.state.content}</div>
           </div>
       )
   }

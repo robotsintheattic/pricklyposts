@@ -55,6 +55,9 @@ class Home extends Component {
         return res.text().then(user => {
           user = JSON.parse(user)
           this.setState({name: user[0], profilePicture: user[1], id: user[2]})
+          localStorage.setItem('userId', user[2])
+          localStorage.setItem('userName', user[0])
+          localStorage.setItem('userPic', user[1])
         })
       }).then(() => {
         fetch(`/api/journals/users/${this.state.id}`, {
@@ -79,7 +82,7 @@ class Home extends Component {
     if (this.state.id !== 0) {
       return (
           <div>
-              <Navbar user={user}/>
+              <Navbar />
               <div className="container">
                 <div className="row">
                   <div className="col-md-2"></div>

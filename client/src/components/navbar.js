@@ -17,7 +17,7 @@ class Navbar extends Component {
           <nav className="navbar navbar-default">
             <div className="container-fluid">
               <div className="navbar-header">
-                <h1 className="Home-title"><img className="Home-img" src={this.props.user.profilePicture}/>  {this.props.user.name}'s Journals</h1>
+                <h1 className="Home-title"><img className="Home-img" src={localStorage.userPic}/>  {localStorage.userName}'s Journals</h1>
               </div>
             </div>
           </nav>

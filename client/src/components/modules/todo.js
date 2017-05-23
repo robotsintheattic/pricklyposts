@@ -47,7 +47,7 @@ const ToDo = React.createClass({
 
   render: function() {
     return (
-      <div className="todoListMain">
+      <div className="todoListMain container">
         <div className="header">
           <form onSubmit={this.addItem}>
             <input ref={ (a) => this._inputElement = a } placeholder="Make your list!">

@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import ContentEditable from 'react-contenteditable'
 
-const ToDoItems = React.createClass({
-  render: function () {
+class ToDoItems extends Component {
+  render() {
     let todoEntries = this.props.entries
 
     function createTasks(item){
@@ -13,22 +12,20 @@ const ToDoItems = React.createClass({
 
     return(
       <ul className="list-unstyled">
-       <li>things</li>
-       <li>stuff</li>
        {listItems}
       </ul>
     )
   }
-})
+}
 
-const ToDo = React.createClass({
-  getInitialState: function() {
-    return {
-      items: []
-    }
-  },
+class ToDo extends Component{
+  constructor(props) {
+    super(props)
+      this.state = {items: []}
+      this.addItem = this.addItem.bind(this)
+  }
 
-  addItem: function(e) {
+  addItem(e) {
     let itemArray = this.state.items
 
     itemArray.push(
@@ -45,9 +42,25 @@ const ToDo = React.createClass({
     this._inputElement.value = ""
 
     e.preventDefault()
-  },
+  }
 
-  render: function() {
+  render() {
+
+    let listItem
+    if (this.props.todo.content !== undefined) {
+      let todoArray = this.props.todo.content
+      console.log(todoArray);
+      if (todoArray !== undefined) {
+        todoArray = todoArray.substring(2,(todoArray.length -2)).split('"')
+        listItem = todoArray.map((item, index) => {
+          if (index % 2 === 0) {
+            return <li key={index}>{item}</li>
+          }
+        })
+      }
+    }
+    else return null
+
     return (
       <div className="todoListMain">
         <div className="header">
@@ -58,9 +71,11 @@ const ToDo = React.createClass({
           </form>
         </div>
         <ToDoItems entries={this.state.items} />
+        <ul className="list-unstyled">
+          {listItem}
+        </ul>
       </div>
     )
   }
-})
-
+}
 export default ToDo

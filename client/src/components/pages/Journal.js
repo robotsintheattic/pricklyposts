@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import  EntryButton from './../buttons/entryButton'
+import ToDo from './../modules/todo'
 
 class Journal extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {title: ''}
+    this.state = {title: '', todo: ''}
   }
 
     componentDidMount() {
@@ -20,46 +21,29 @@ class Journal extends Component {
         .then(res => {
           return res.text().then(entry => {
             entry = JSON.parse(entry)
-            console.log("2", entry);
-            this.setState({
-              content: entry[0],
-              entry_id: entry[1],
-              font: entry[2],
-              id: entry[3],
-              journal_id: entry[4],
-              module_id: entry[5],
-              title: entry[6],
-              type: entry[7]
-            })
-
-            fetch(`/api/entries_modules/${this.state.entry_id}`, {
-              method: 'GET'
-            })
-            .then(result => {
-              return result.text().then(module => {
-                // console.log("module 1", module);
-                module = JSON.parse(module)
-                // console.log("module 2", module);
-
-                module.forEach((item) => {
-                  entryList.push(<p key={item.id} id={item.id} className="col-md-2">{item.content}</p>)
+            entry.forEach((obj) => {
+              if (obj.module_id === 1) {
+                this.setState({
+                  todo: obj
                 })
-                this.setState({content: entryList})
-              })
+              }
             })
           })
         })
     }
   render() {
-
+    let todo = this.state.todo
+    // console.log(todo);
+    if (this.state.obj !== '') {
       return (
-          <div>
-              <h1>Journal View (for each individual journal)</h1>
-              <p><Link to='journals/'>Home</Link></p>
-              <EntryButton />
-              <div>{this.state.content}</div>
-          </div>
+        <div>
+          <h1>Journal View (for each individual journal)</h1>
+          <p><Link to='journals/'>Home</Link></p>
+          <EntryButton />
+          <ToDo todo={todo} />
+        </div>
       )
+    }
   }
 }
 

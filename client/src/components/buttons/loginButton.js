@@ -15,7 +15,8 @@ class LoginButton extends Component {
 
   render() {
     return (
-        <Button onClick={this.handleClick}  className="insta-button">Continue with Instagram <img src="http://i.imgur.com/s8x7QpN.png" width="20px;"/></Button>
+        <Button onClick={this.handleClick}  className="insta-button">Continue with Instagram <img src="http://i.imgur.com/s8x7QpN.png" width="20px;"/>
+        </Button>
     )
   }
 }

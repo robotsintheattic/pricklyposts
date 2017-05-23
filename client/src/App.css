@@ -36,6 +36,7 @@
 
 .insta-button {
   border: 1px double grey;
+
 }
 
 .journalDiv {
@@ -57,8 +58,28 @@
   color: inherit;
 }
 
+.insta-button:hover {
+  animation: insta-button-buldger 1s forwards;
+  background-color: white;
+}
 
-@keyframes App-logo-spin {
+@keyframes insta-button-buldger {
+  0% {
+    font-size: 100%;
+  }
+
+  100% {
+    font-size: 110%;
+    background-color: pink;
+    border-color: white;
+  }
+}
+
+.Cactus-logo:hover {
+  animation: Cactus-logo-spin infinite 1s linear;
+}
+
+@keyframes Cactus-logo-spin {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to { transform: rotate(25deg); }
 }

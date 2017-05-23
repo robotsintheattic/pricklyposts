@@ -18,7 +18,7 @@ class Login extends Component {
     return (
       <div className="App">
         <div className="container App-content">
-          <h1 className="App-title">Daily <span><img alt="svg of a cactus" src={Logo} /></span> Dash</h1>
+          <h1 className="App-title">Daily <span><img className="Cactus-logo" alt="svg of a cactus" src={Logo} /></span> Dash</h1>
           <LoginButton />
         </div>
       </div>

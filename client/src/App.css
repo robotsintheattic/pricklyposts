@@ -76,10 +76,13 @@
 }
 
 .Cactus-logo:hover {
-  animation: Cactus-logo-spin infinite 1s linear;
+  animation: Cactus-logo-spin infinite 3s linear;
 }
 
 @keyframes Cactus-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(25deg); }
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(25deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-25deg); }
+  100% { transform: rotate(0deg); }
 }

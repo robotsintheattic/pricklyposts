@@ -12,7 +12,7 @@ const ToDoItems = React.createClass({
     let listItems = todoEntries.map(createTasks)
 
     return(
-      <ul className="theList">
+      <ul className="list-unstyled">
        <li>things</li>
        <li>stuff</li>
        {listItems}

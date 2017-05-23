@@ -52,8 +52,6 @@ class Journal extends Component {
           })
         })
     }
-
-
   render() {
 
       return (

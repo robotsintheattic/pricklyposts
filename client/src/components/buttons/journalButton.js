@@ -8,15 +8,35 @@ class JournalButton extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick = (e) => {
-    e.preventDefault()
 
+  handleClick = (e) => {
+    console.log(this.props.userId)
+    e.preventDefault()
+    let post = {
+      title: 'Untitled Post',
+      user_id: localStorage.userId,
+    }
+
+    fetch('/api/journals', {
+      method: 'POST',
+      body: JSON.stringify(post),
+      credentials: 'same-origin',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then((res) => {
+      return res.text().then(el => {
+        el = JSON.parse(el)
+        window.location.href = `/journal/${el[0].id}`
+      })
+    })
   }
 
-//where do we go?
   render() {
     return (
-      <div><Link to='/journal'>Create New Journal</Link>
+      <div>
+        <a onClick={this.handleClick}>+ New Journal</a>
       </div>
     )
   }

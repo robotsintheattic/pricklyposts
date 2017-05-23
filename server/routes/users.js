@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
     .then((searchedUser) => {
       if (searchedUser.length > 0) {
         // JWT
-        res.send([searchedUser[0].fullName, searchedUser[0].profilePicture])
+        res.send([searchedUser[0].fullName, searchedUser[0].profilePicture, searchedUser[0].id])
       } else {
         knex('users')
         .insert(user)

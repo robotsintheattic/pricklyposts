@@ -3,7 +3,7 @@ const router = express.Router()
 const knex = require('../knex')
 
 /* GET all entries */
-router.get('/entries', (req, res, next) => {
+router.get('/', (req, res, next) => {
   knex('entries')
     .then((entries) => {
       res.send(entries)
@@ -13,8 +13,19 @@ router.get('/entries', (req, res, next) => {
     })
 })
 
+router.get('/journals/:id', (req, res, next) => {
+  knex('entries')
+    .where('journal_id', req.params.id)
+    .then((entries) => {
+      res.send(entries[0])
+    })
+    .catch((error) => {
+      next(error)
+    })
+})
+
 /* POST one entry */
-router.post('/entries', (req, res, next) => {
+router.post('/', (req, res, next) => {
   knex('entries')
     .returning(['id', 'title', 'journal_id'])
     .insert({
@@ -30,7 +41,7 @@ router.post('/entries', (req, res, next) => {
 })
 
 /* UPDATE one entry */
-router.patch('/entries/:id', (req, res, next) => {
+router.patch('/:id', (req, res, next) => {
   const id = req.params.id
 
   knex('entries')
@@ -49,7 +60,7 @@ router.patch('/entries/:id', (req, res, next) => {
 })
 
 /* DELETE one entry */
-router.delete('/entries/:id', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
   const id = req.params.id
 
   knex('entries')

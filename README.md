@@ -1,5 +1,5 @@
 # bulletjournal
 
 To Run:
-- $ PORT=3001 node bin/www on Server-side
+- $ PORT=3001 nodemon on Server-side
 - $ npm start on Client-side

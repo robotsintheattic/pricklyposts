@@ -13,6 +13,19 @@ router.get('/', (req, res, next) => {
     })
 })
 
+router.get('/entries/:id', (req, res, next) => {
+  console.log('here', req.params.id);
+  knex('entries_modules')
+    .where('entry_id', req.params.id)
+    .then((modules) => {
+      console.log(modules);
+      res.send(modules[0])
+    })
+    .catch((error) => {
+      next(error)
+    })
+})
+
 /* GET one option */
 router.get('/:id', (req, res, next) => {
   const id = req.params.id

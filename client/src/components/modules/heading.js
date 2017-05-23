@@ -27,7 +27,8 @@ class Heading extends Component {
   }
 
   render() {
-    return <div>
+    return (
+      <div>
         <ContentEditable
           html={this.state.html} // innerHTML of the editable div
           disabled={false}       // use true to disable edition
@@ -35,6 +36,7 @@ class Heading extends Component {
         />
         <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
       </div>
+    )
   }
 }
 

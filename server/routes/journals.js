@@ -18,7 +18,6 @@ router.get('/users/:id', function(req, res, next) {
     .where('user_id', user_id)
     .orderBy('created_at', 'asc')
     .then((journals) => {
-      console.log('journals', journals)
       res.send(journals)
     })
 })

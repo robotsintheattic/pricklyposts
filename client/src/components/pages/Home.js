@@ -10,11 +10,16 @@ class Home extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {name: '', profilePicture: '', id: 0, titles: null}
+    this.state = {name: '', profilePicture: '', idFromChild: 0, titles: null}
 
     if (!localStorage.token) {
       window.location.href = '/'
     }
+  }
+
+  myCallback = (dataFromChild) => {
+    this.setState({id: dataFromChild})
+    console.log(this.state)
   }
 
   componentDidMount() {
@@ -67,19 +72,27 @@ class Home extends Component {
     })
   }
 
+
   render() {
+    let userId = this.state.id
+    let user = {name: this.state.name, id: this.state.id, profilePicture: this.state.profilePicture}
+    if (this.state.id !== 0) {
       return (
           <div>
-              <Navbar />
+              <Navbar user={user}/>
               <div className="container">
                 <div className="row">
                   <div className="col-md-2"></div>
-                  <div className="journalDiv col-md-2"><span><img alt="image of cactus" src={Logo} /></span><JournalButton /></div>
+                  <div className="journalDiv col-md-2">
+                    <span><img alt="image of cactus" src={Logo} /></span>
+                    <JournalButton userId={userId} />
+                  </div>
                   <div>{this.state.titles}</div>
                 </div>
                 </div>
           </div>
       )
+    }
   }
 }
 

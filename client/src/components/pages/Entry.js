@@ -19,8 +19,7 @@ class Entry extends Component {
               </div>
             </nav>
             <div className="container">
-              <h1>Entry</h1>
-              <p><Link to='journals/'>Home</Link></p>
+              <p><Link to='journals/'>Back to Journals</Link></p>
               <p><Link to='journal/'>Back to Journal</Link></p>
               <div className="row grid-heading">
                 <div className="col-md-6 col-sm-12">
@@ -30,7 +29,7 @@ class Entry extends Component {
                   <h1>Mood here</h1>
                 </div>
               </div>
-              <div className="row grid-body">
+              <div className="row grid-top">
                 <div className="col-md-6 col-sm-12">
                     <ToDo />
                 </div>
@@ -38,9 +37,9 @@ class Entry extends Component {
                   <Textfield />
                 </div>
               </div>
-              <div className="row grid-body">
+              <div className="row grid-bottom">
                 <div className="col-md-6 col-sm-12">
-                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509"/>
+                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" width="400px;"/>
                 </div>
                 <div className="col-md-6 col-sm-12">
                   <BlockQuote />

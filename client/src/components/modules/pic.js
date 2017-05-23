@@ -42,11 +42,11 @@ class Pic extends Component {
       console.log('recent:', recent)
       let picsList = recent.map(function(picsDisplay) {
         console.log('picsDisplay', picsDisplay.images.standard_resolution.url);
-        return <img src={picsDisplay.images.standard_resolution.url}/>
+        return <img src={picsDisplay.images.standard_resolution.url} width="75%" className="insta-pics"/>
       })
       return (
         <div className='insta-collection'>
-          <div>
+          <div className="text-center">
           {picsList}
           </div>
           <br/>

@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 
-const ToDoItems = React.createClass({
-  render: function () {
+class ToDoItems extends Component {
+  render() {
     let todoEntries = this.props.entries
 
     function createTasks(item){
@@ -16,16 +16,16 @@ const ToDoItems = React.createClass({
       </ul>
     )
   }
-})
+}
 
-const ToDo = React.createClass({
-  getInitialState: function() {
-    return {
-      items: []
-    }
-  },
+class ToDo extends Component{
+  constructor(props) {
+    super(props)
+      this.state = {items: []}
+      this.addItem = this.addItem.bind(this)
+  }
 
-  addItem: function(e) {
+  addItem(e) {
     let itemArray = this.state.items
 
     itemArray.push(
@@ -42,9 +42,9 @@ const ToDo = React.createClass({
     this._inputElement.value = ""
 
     e.preventDefault()
-  },
+  }
 
-  render: function() {
+  render() {
 
     let listItem
     if (this.props.todo.content !== undefined) {
@@ -77,11 +77,5 @@ const ToDo = React.createClass({
       </div>
     )
   }
-})
-
-
-
-
-
-
+}
 export default ToDo

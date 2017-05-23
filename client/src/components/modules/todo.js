@@ -13,6 +13,8 @@ const ToDoItems = React.createClass({
 
     return(
       <ul className="theList">
+       <li>things</li>
+       <li>stuff</li>
        {listItems}
       </ul>
     )

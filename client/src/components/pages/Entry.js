@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import Sidenav from './../sidenav'
 import  ToDo from './../modules/todo'
 
-
 class Entry extends Component {
   render() {
       return (

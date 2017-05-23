@@ -8,7 +8,7 @@ class Textfield extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {text: '<p>Hello World</p>'}
+    this.state = {text: '<p>I\'m holding my entire head together... the skin, and the shell, of me. I\'m falling absolutely inside myself -- but you can see that. You can see the hole. And just because we don\'t know, doesn\'t mean we won\'t know. We just don\'t know yet. But I think one day we will.</p>'}
     this.handleChange = this.handleChange.bind(this)
     this.handeClick = this.handleChange.bind(this)
   }
@@ -37,48 +37,9 @@ class Textfield extends Component {
           disabled={false}       // use true to disable edition
           onChange={this.handleChange} // handle innerHTML change
         />
-        <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
       </div>
     )
   }
 }
-//   constructor(props) {
-//     super(props)
-//
-//     this.state = {
-//       value: 'Please write something about your day.'
-//     }
-//
-//     // componentDidMount() {
-//     //
-//     // }
-//
-//     this.handleChange = this.handleChange.bind(this)
-//     this.handleSubmit = this.handleSubmit.bind(this)
-//   }
-//
-//   handleChange(e) {
-//     this.setState({
-//       value: e.target.value
-//     })
-//   }
-//
-//   handleSubmit(e) {
-//     e.preventDefault()
-//     console.log('A note was submitted: ', this.state.value)
-//   }
-//
-//   render() {
-//     return (
-//       <form onSubmit={this.handleSubmit}>
-//         <label>
-//           Note:
-//           <textarea value={this.state.value} onChange={this.handleChange} />
-//         </label>
-//         <input type="submit" value="Save" />
-//       </form>
-//     )
-//   }
-// }
 
 export default Textfield

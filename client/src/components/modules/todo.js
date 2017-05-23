@@ -4,12 +4,23 @@ import ContentEditable from 'react-contenteditable'
 
 const ToDoItems = React.createClass({
   render: function () {
+    let todoEntries = this.props.entries
 
+    function createTasks(item){
+      return <li key={item.key}>{item.text}</li>
+    }
+    let listItems = todoEntries.map(createTasks)
+
+    return(
+      <ul className="theList">
+       {listItems}
+      </ul>
+    )
   }
 })
 
 const ToDo = React.createClass({
-  getInitialState: funciton() {
+  getInitialState: function() {
     return {
       items: []
     }
@@ -44,6 +55,7 @@ const ToDo = React.createClass({
             <button type="submit">add</button>
           </form>
         </div>
+        <ToDoItems entries={this.state.items} />
       </div>
     )
   }

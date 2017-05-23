@@ -7,7 +7,7 @@ class BlockQuote extends Component {
 
     this.state = {quote: '<blockquote> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi lacus, auctor sit amet purus vel, gravida luctus lectus. Aenean rhoncus dapibus enim, sit amet faucibus leo ornare vitae. </blockquote>',
     citation:'<p>' + '-' + '<cite>Some People</cite></p>'}
-    console.log('1', this.state.quote)
+    // console.log('1', this.state.quote)
     this.handleChange = this.handleChange.bind(this)
   }
   handleChange = (e) =>{
@@ -15,7 +15,7 @@ class BlockQuote extends Component {
   }
 
   handleClick = () => {
-    console.log('this.state', this.state.quote)
+    // console.log('this.state', this.state.quote)
     let data =  this.state.quote
     fetch('/api/entries_modules', {
       method: 'POST',

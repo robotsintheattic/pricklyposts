@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
+import {Button} from 'react-bootstrap'
 import Sidenav from './../sidenav'
 import  ToDo from './../modules/todo'
 import  Textfield from './../modules/textfield'
@@ -13,14 +14,11 @@ class Entry extends Component {
             <nav className="navbar navbar-default">
               <div className="container-fluid">
                 <div className="navbar-header">
-                  <h1 className="Home-title"><img className="Home-img" src={localStorage.userPic}/> Welcome, {localStorage.userName}</h1>
-                  <Sidenav />
+                  <h1 className="Home-title"><img className="Home-img" src={localStorage.userPic}/> Welcome, {localStorage.userName}<span><Sidenav /></span></h1>
                 </div>
               </div>
             </nav>
             <div className="container">
-              <p><Link to='journals/'>Back to Journals</Link></p>
-              <p><Link to='journal/'>Back to Journal</Link></p>
               <div className="row grid-heading">
                 <div className="col-md-6 col-sm-12">
                   <Heading />
@@ -31,10 +29,10 @@ class Entry extends Component {
               </div>
               <div className="row grid-top">
                 <div className="col-md-6 col-sm-12">
-                    <ToDo />
+                  <Textfield />
                 </div>
                 <div className="col-md-6 col-sm-12">
-                  <Textfield />
+                  <ToDo />
                 </div>
               </div>
               <div className="row grid-bottom">
@@ -45,6 +43,7 @@ class Entry extends Component {
                   <BlockQuote />
                 </div>
               </div>
+              <Button className="journals-button" href="/journals">Back to All Journals</Button>
             </div>
           </div>
       )

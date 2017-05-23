@@ -21,7 +21,7 @@ router.get('/journals/:id', (req, res, next) => {
     .where('journal_id', req.params.id)
     .then((modules) => {
       console.log(modules)
-      res.send(modules[0])
+      res.send(modules)
     })
     .catch((error) => {
       next(error)

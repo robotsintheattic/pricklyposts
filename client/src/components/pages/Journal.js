@@ -19,10 +19,8 @@ class Journal extends Component {
         })
         .then(res => {
           return res.text().then(entry => {
-            console.log("1", entry);
             entry = JSON.parse(entry)
             console.log("2", entry);
-            console.log("entry id", entry.id);
             this.setState({
               content: entry[0],
               entry_id: entry[1],
@@ -44,7 +42,7 @@ class Journal extends Component {
                 // console.log("module 2", module);
 
                 module.forEach((item) => {
-                  entryList.push(<p key={item.id} id={item.id} className="journalDiv col-md-2">{item.content}</p>)
+                  entryList.push(<p key={item.id} id={item.id} className="col-md-2">{item.content}</p>)
                 })
                 this.setState({content: entryList})
               })

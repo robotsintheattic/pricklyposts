@@ -5,7 +5,7 @@ class Heading extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {html: '<h1>Hello World</h1>'}
+    this.state = {html: ''}
     this.handleChange = this.handleChange.bind(this)
     this.handeClick = this.handleChange.bind(this)
   }
@@ -24,6 +24,10 @@ class Heading extends Component {
     //     'Content-Type': 'application/json'
     //   }
     // })
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({html: `<h1>${nextProps.content}</h1>`})
   }
 
   render() {

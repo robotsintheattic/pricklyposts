@@ -172,6 +172,90 @@ exports.seed = function(knex, Promise) {
           module_id: 6,
           font: 'sans-serif',
           content: [' Easy day, piece of cake']
+        },
+        {
+          id: 25,
+          entry_id: 5,
+          module_id: 1,
+          font: 'sans-serif',
+          content: ['Do Laundry', 'Eat all 3 meals', 'Take a walk']
+        },
+        {
+          id: 26,
+          entry_id: 5,
+          module_id: 2,
+          font: 'cursive',
+          content: ['Respect yourself enough to walk away from anything that no longer serves you, grows you, or makes you happy', 'Robert Tew']
+        },
+        {
+          id: 27,
+          entry_id: 5,
+          module_id: 3,
+          font: 'sans-serif',
+          content: ['May 22nd, 2017']
+        },
+        {
+          id: 28,
+          entry_id: 5,
+          module_id: 4,
+          font: 'sans-serif',
+          content: ['Happy']
+        },
+        {
+          id: 29,
+          entry_id: 5,
+          module_id: 5,
+          font: 'sans-serif',
+          content: ['https://upload.wikimedia.org/wikipedia/en/5/56/Flatirons_with_Spring_flowers.jpg', 'The flatirons keep me centered!']
+        },
+        {
+          id: 30,
+          entry_id: 5,
+          module_id: 6,
+          font: 'sans-serif',
+          content: [' Easy day, piece of cake']
+        },
+        {
+          id: 31,
+          entry_id: 6,
+          module_id: 1,
+          font: 'sans-serif',
+          content: ['Do Laundry', 'Eat all 3 meals', 'Take a walk']
+        },
+        {
+          id: 32,
+          entry_id: 6,
+          module_id: 2,
+          font: 'cursive',
+          content: ['Respect yourself enough to walk away from anything that no longer serves you, grows you, or makes you happy', 'Robert Tew']
+        },
+        {
+          id: 33,
+          entry_id: 6,
+          module_id: 3,
+          font: 'sans-serif',
+          content: ['May 22nd, 2017']
+        },
+        {
+          id: 34,
+          entry_id: 6,
+          module_id: 4,
+          font: 'sans-serif',
+          content: ['Happy']
+        },
+        {
+          id: 35,
+          entry_id: 6,
+          module_id: 5,
+          font: 'sans-serif',
+          content: ['https://upload.wikimedia.org/wikipedia/en/5/56/Flatirons_with_Spring_flowers.jpg', 'The flatirons keep me centered!']
+        },
+        {
+          id: 36,
+          entry_id: 6,
+          module_id: 6,
+          font: 'sans-serif',
+          content: [' Easy day, piece of cake']
         }
       ])
     }).then(() => {

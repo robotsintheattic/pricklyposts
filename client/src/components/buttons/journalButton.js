@@ -10,7 +10,6 @@ class JournalButton extends Component {
 
 
   handleClick = (e) => {
-    console.log(this.props.userId)
     e.preventDefault()
     let post = {
       title: 'Untitled Post',

@@ -24,6 +24,16 @@ exports.seed = function(knex, Promise) {
           id: 4,
           title: 'May 22nd, 2017',
           journal_id: 4
+        },
+        {
+          id: 5,
+          title: 'May 23rd',
+          journal_id: 1
+        },
+        {
+          id: 6,
+          title: 'May 24rd',
+          journal_id: 1
         }
       ])
     }).then(() => {

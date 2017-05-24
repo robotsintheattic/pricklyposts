@@ -78,7 +78,6 @@ class Home extends Component {
 
   render() {
     let userId = this.state.id
-    let user = {name: this.state.name, id: this.state.id, profilePicture: this.state.profilePicture}
     if (this.state.id !== 0) {
       return (
           <div>

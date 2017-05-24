@@ -36,7 +36,7 @@ class Pic extends Component {
       })
       return (
         <div className='insta-collection'>
-          <div className="text-center">
+          <div className="text-center stackone">
           {picsList}
           </div>
           <br/>

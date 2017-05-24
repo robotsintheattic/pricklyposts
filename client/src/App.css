@@ -223,3 +223,69 @@ div.navbar-header {
 .sticky p {
     text-align: center;
 }
+
+/*Image*/
+.instagram {
+  height: 350px;
+  width: 350px;
+  margin-left: -15px;
+}
+
+.stackone {
+	border: 6px solid #fff;
+	float: left;
+	height: 362px;
+  width: 362px;
+	margin: 50px 115px;
+	position: relative;
+	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.stackone:before {
+	content: "";
+}
+
+.stackone:before {
+	content: "";
+	height: 362px;
+  width: 362px;
+	background: #eff2bb;
+	border: 6px solid #fff;
+
+	position: absolute;
+	z-index: -1;
+	top: 0px;
+	left: -10px;
+
+	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	transform: rotate(-5deg);
+}
+
+.stackone:after {
+	content: "";
+	height: 362px;
+  width: 362px;
+	background: #768590;
+	border: 6px solid #fff;
+	position: absolute;
+	z-index: -1;
+	top: 5px;
+	left: 0px;
+	-webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	-moz-box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	-webkit-transform: rotate(4deg);
+	-moz-transform: rotate(4deg);
+	-o-transform: rotate(4deg);
+	-ms-transform: rotate(4deg);
+	transform: rotate(4deg);
+}

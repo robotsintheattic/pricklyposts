@@ -36,8 +36,8 @@ class Entry extends Component {
                 </div>
               </div>
               <div className="row grid-bottom">
-                <div className="col-md-6 col-sm-12">
-                  <img src="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" width="400px;"/>
+                <div className="col-md-6 col-sm-12 stackone">
+                  <img className="instagram" src="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" width="400px;"/>
                 </div>
                 <div className="col-md-6 col-sm-12">
                   <BlockQuote />

@@ -47,7 +47,7 @@ class ToDo extends Component{
   render() {
 
     let listItem
-    if (this.props.todo.content !== undefined) {
+    if (this.props.todo !== undefined) {
       let todoArray = this.props.todo.content
       console.log(todoArray);
       if (todoArray !== undefined) {

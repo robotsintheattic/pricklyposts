@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
+import { Draggable, Droppable } from 'react-drag-and-drop'
 import $ from 'jquery'
 
 class Pic extends Component {
@@ -32,8 +33,11 @@ class Pic extends Component {
     render() {
       let recent = this.state.recentPics
       let picsList = recent.map(function(picsDisplay) {
-        return <img src={picsDisplay.images.standard_resolution.url} id="drag-me" draggable="true"
-ondragstart="drag(event)" width="75%" className="insta-pics"/>
+        return (
+          <Draggable type="insta">
+            <img src={picsDisplay.images.standard_resolution.url} width="75%" className="insta-pics"/>
+          </Draggable>
+        )
       })
       return (
         <div className='insta-collection'>

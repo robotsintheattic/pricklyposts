@@ -1,12 +1,14 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
+import { Draggable, Droppable } from 'react-drag-and-drop'
 import Sidenav from './../sidenav'
 import  ToDo from './../modules/todo'
 import  Textfield from './../modules/textfield'
 import  BlockQuote from './../modules/blockquote'
 import  Heading from './../modules/heading'
 import  Mood from './../modules/mood'
+import Drop from './../modules/drop'
 
 class Entry extends Component {
   render() {
@@ -38,7 +40,7 @@ class Entry extends Component {
               </div>
               <div className="row grid-bottom">
                 <div className="col-md-6 col-sm-12">
-                  <div id="drop-here" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                  <Drop />
                 </div>
                 <div className="col-md-6 col-sm-12">
                   <BlockQuote />
@@ -50,7 +52,5 @@ class Entry extends Component {
       )
   }
 }
-
-                  // <img src="https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509" width="400px;"/>
 
 export default Entry

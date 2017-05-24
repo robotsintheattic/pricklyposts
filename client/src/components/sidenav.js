@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
-import $ from 'jquery'
 import Pic from './modules/pic'
 import { Button, Modal, Nav, NavItem } from 'react-bootstrap'
 
-class Sidebar extends React.Component {
+class Sidebar extends Component {
 	render() {
   	return (
     	<Modal className='Sidebar right' show={ this.props.isVisible } onHide={this.props.onHide}
@@ -21,7 +19,7 @@ class Sidebar extends React.Component {
   }
 }
 
-class Sidenav extends React.Component {
+class Sidenav extends Component {
 	constructor(props, context) {
   	super(props, context);
 

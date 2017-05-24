@@ -69,7 +69,7 @@ class Home extends Component {
             journals.forEach((item) => {
               if (!journal_ids.includes(item.j_id)) {
                 journal_ids.push(item.j_id)
-                journalList.push(<div key={item.j_id} id={item.j_id} className="journalDiv col-md-2"><span><img alt="image of a cactus" src={Logo} /></span><Link to={`/journal/${item.j_id}/${item.e_id}`}>{item.j_title}</Link></div>)
+                journalList.push(<div key={item.j_id} id={item.j_id} className="journalDiv col-md-2"><span><img alt="cactus" src={Logo} /></span><Link to={`/journal/${item.j_id}/${item.e_id}`}>{item.j_title}</Link></div>)
               }
             })
 
@@ -93,7 +93,7 @@ class Home extends Component {
                 <div className="row">
                   <div className="col-md-2"></div>
                   <div className="journalDiv col-md-2">
-                    <span><img alt="image of cactus" src={Logo} /></span>
+                    <span><img alt="cactus" src={Logo} /></span>
                     <JournalButton userId={userId} />
                   </div>
                   <div>{this.state.titles}</div>

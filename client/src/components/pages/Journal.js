@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
-import Todo from './../modules/todo'
+import Navbar from './../navbar'
+import ToDo from './../modules/todo'
 import Heading from './../modules/heading'
 import Mood from './../modules/mood'
 import Textfield from './../modules/textfield'
 import Blockquote from './../modules/blockquote'
-
 
 class Journal extends Component {
   constructor(props) {
@@ -81,18 +81,38 @@ class Journal extends Component {
     if (next_entry) next = next_entry
 
     return (
-      <div>
-        <h1>Journal View (for each individual journal)</h1>
-        <Heading entryModule={this.state.heading}/>
-        <Mood entryModule={this.state.mood} />
-        <Textfield entryModule={this.state.text} />
-        <Todo entryModule={this.state.todo}/>
-        <Blockquote entryModule={this.state.blockquote}/>
-        <p><Link to='journals/'>Home</Link></p>
-        <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
-        <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
-
-      </div>
+        <div>
+          <Navbar />
+          <div className="container">
+            <div className="row grid-heading">
+              <div className="col-md-6 col-sm-12">
+                <Heading entryModule={this.state.heading}/>
+              </div>
+              <div className="col-md-6 col-sm-12">
+                <Mood entryModule={this.state.mood} />
+              </div>
+            </div>
+            <div className="row grid-top">
+              <div className="col-md-6 col-sm-12">
+                <Textfield entryModule={this.state.text} />
+              </div>
+              <div className="col-md-6 col-sm-12">
+                <ToDo entryModule={this.state.todo}/>
+              </div>
+            </div>
+            <div className="row grid-bottom">
+              <div className="col-md-6 col-sm-12 stackone">
+                <img className="instagram" src={this.state.img.content} alt="instagram"/>
+              </div>
+              <div className="col-md-6 col-sm-12 quoteblock">
+                <Blockquote entryModule={this.state.blockquote}/>
+              </div>
+            </div>
+            <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
+            <Button className="journals-button" href="/journals">Back to All Journals</Button>
+            <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
+          </div>
+        </div>
     )
   }
 }

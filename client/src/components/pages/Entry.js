@@ -6,6 +6,7 @@ import  ToDo from './../modules/todo'
 import  Textfield from './../modules/textfield'
 import  BlockQuote from './../modules/blockquote'
 import  Heading from './../modules/heading'
+import  Mood from './../modules/mood'
 
 class Entry extends Component {
   render() {
@@ -24,7 +25,7 @@ class Entry extends Component {
                   <Heading />
                 </div>
                 <div className="col-md-6 col-sm-12">
-                  <h1>Mood here</h1>
+                  <Mood />
                 </div>
               </div>
               <div className="row grid-top">

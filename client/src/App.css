@@ -63,6 +63,12 @@ div.navbar-header {
   color: inherit;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 /*----Login Page Animations----*/
 .insta-button:hover {
   animation: insta-button-buldger 1s forwards;

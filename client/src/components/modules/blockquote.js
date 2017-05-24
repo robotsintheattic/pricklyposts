@@ -5,8 +5,9 @@ class BlockQuote extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {html: '<blockquote> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi lacus, auctor sit amet purus vel, gravida luctus lectus. Aenean rhoncus dapibus enim, sit amet faucibus leo ornare vitae. <br> —<cite>Some People</cite> </blockquote>'}
-    console.log('1', this.state.html)
+    this.state = {quote: '<blockquote> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi lacus, auctor sit amet purus vel, gravida luctus lectus. Aenean rhoncus dapibus enim, sit amet faucibus leo ornare vitae. </blockquote>',
+    citation:'<p>' + '-' + '<cite>Some People</cite></p>'}
+    // console.log('1', this.state.quote)
     this.handleChange = this.handleChange.bind(this)
   }
   handleChange = (e) =>{
@@ -14,8 +15,8 @@ class BlockQuote extends Component {
   }
 
   handleClick = () => {
-    console.log('this.state', this.state.html)
-    let data =  this.state.html
+    // console.log('this.state', this.state.quote)
+    let data =  this.state.quote
     fetch('/api/entries_modules', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -31,14 +32,20 @@ class BlockQuote extends Component {
 
 
   render() {
-    return  <div>
+    return (
+       <div>
         <ContentEditable
-              html={this.state.html}
+              html={this.state.quote}
               disabled={false}
               onChange={this.handleChange}
             />
+            <ContentEditable
+                  html={this.state.citation}
+                  disabled={false}
+                  onChange={this.handleChange}
+                />
             <button type="submit" onClick={this.handleClick}>Save</button>
-        </div>
+        </div>)
   }
 }
 

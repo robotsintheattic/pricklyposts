@@ -96,6 +96,10 @@ div.navbar-header {
 
 /*---SIDE NAV-----*/
 
+.Side-nav {
+  display: inline;
+}
+
 .Sidebar-demo {
   padding: 15px;
 }
@@ -155,3 +159,33 @@ div.navbar-header {
   display:none;
 }
 /*------------------------*/
+
+.navbar-header {
+  width: 100%;
+}
+/*----GRID----*/
+
+.grid-heading {
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 8px 8px 0px 0px;
+  margin: 0rem 5rem 0rem 5rem;
+}
+
+.grid-top, .grid-bottom {
+  padding: 2rem;
+  height: auto;
+  border: 1px solid grey;
+  margin: 0rem 5rem 0rem 5rem;
+}
+
+.grid-bottom {
+  border-radius: 0px 0px 8px 8px;
+  margin: 0rem 5rem 3rem 5rem;
+
+}
+
+.journal-button {
+}
+
+/*------------*/

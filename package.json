@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node server/bin/www",
     "knex": "knex",
-    "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build;",
+    "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build && cd ../server && knex migrate:rollback && knex migrate:latest && knex seed:run;",
     "nodemon": "node server/app.js"
   },
   "dependencies": {

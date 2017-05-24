@@ -4,6 +4,8 @@ import {Button} from 'react-bootstrap'
 import Todo from './../modules/todo'
 import Heading from './../modules/heading'
 import Mood from './../modules/mood'
+import Textfield from './../modules/textfield'
+
 
 class Journal extends Component {
   constructor(props) {
@@ -82,6 +84,7 @@ class Journal extends Component {
         <h1>Journal View (for each individual journal)</h1>
         <Heading content={this.state.heading}/>
         <Mood content={this.state.mood} />
+        <Textfield content={this.state.text} />
         <Todo content={this.state.todo}/>
         <p><Link to='journals/'>Home</Link></p>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>

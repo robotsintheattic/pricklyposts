@@ -8,7 +8,7 @@ class Textfield extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {text: '<p>I\'m holding my entire head together... the skin, and the shell, of me. I\'m falling absolutely inside myself -- but you can see that. You can see the hole. And just because we don\'t know, doesn\'t mean we won\'t know. We just don\'t know yet. But I think one day we will.</p>'}
+    this.state = {text: ''}
     this.handleChange = this.handleChange.bind(this)
     this.handeClick = this.handleChange.bind(this)
   }
@@ -29,13 +29,17 @@ class Textfield extends Component {
     // })
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({text: `<p>${nextProps.content}</p>`})
+  }
+
   render() {
     return (
       <div>
         <ContentEditable
-          html={this.state.text} // innerHTML of the editable div
-          disabled={false}       // use true to disable edition
-          onChange={this.handleChange} // handle innerHTML change
+          html={this.state.text}
+          disabled={false}
+          onChange={this.handleChange} 
         />
       </div>
     )

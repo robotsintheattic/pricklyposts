@@ -34,9 +34,9 @@ class Heading extends Component {
     return (
       <div>
         <ContentEditable
-          html={this.state.html} // innerHTML of the editable div
-          disabled={false}       // use true to disable edition
-          onChange={this.handleChange} // handle innerHTML change
+          html={this.state.html}
+          disabled={false}
+          onChange={this.handleChange} 
         />
 
       </div>

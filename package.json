@@ -1,5 +1,5 @@
 {
   "start": {
-    "install": "cd server && npm install"
+    "preinstall": "cd server && npm install"
   }
 }

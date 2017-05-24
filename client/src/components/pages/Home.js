@@ -10,16 +10,11 @@ class Home extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {name: '', profilePicture: '', idFromChild: 0, titles: null}
+    this.state = {name: '', profilePicture: '', id: '', titles: null}
 
     if (!localStorage.token) {
       window.location.href = '/'
     }
-  }
-
-  myCallback = (dataFromChild) => {
-    this.setState({id: dataFromChild})
-    console.log(this.state)
   }
 
   componentDidMount() {

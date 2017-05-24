@@ -115,7 +115,7 @@ class CreateEntry extends Component {
 
   render() {
     return (
-      <div className='Sidenav pull-right'>
+      <div className='pull-right'>
           <Button onClick={this.handleClick}>+ New Entry</Button>
       </div>
     )

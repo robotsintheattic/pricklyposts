@@ -9,7 +9,7 @@ class Journal extends Component {
     this.state = {
       journal_id: window.location.pathname.split('/')[2],
       entry_id: window.location.pathname.split('/')[3],
-      entryArr: '',
+      entryArr: ''
     }
 
     this.handleClick = this.handleClick.bind(this)

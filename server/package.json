@@ -2,8 +2,14 @@
   "name": "bulletjournal",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "v7.9.0"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "knex": "knex",
+    "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
+    "nodemon": "node app.js"
   },
   "dependencies": {
     "body-parser": "~1.16.0",

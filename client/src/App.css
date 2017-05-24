@@ -86,7 +86,8 @@ padding: 5px;
 
 .scroll {
   overflow: scroll;
-  height: 375px;
+  width: 100%;
+  height: inherit;
 }
 /*----Login Page Animations----*/
 
@@ -368,4 +369,27 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+.quotebtn {
+  margin-right: -250px;
+  height: 28px;
+}
+
+.quotebtn, .quotebtn:visited {
+  color: #fff;
+  background-color: rgba(40, 96, 144, 0.5);
+  border-color: transparent;
+}
+
+.quotebtn:hover {
+  color: #fff;
+  background-color: rgba(40, 96, 144, 0.75);
+  border-color: rgba(32, 77, 116, 0.75);
+}
+
+.quotebtn:active {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
 }

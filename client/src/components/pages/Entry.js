@@ -39,8 +39,10 @@ class Entry extends Component {
                 </div>
               </div>
               <div className="row grid-bottom">
-                <div className="col-md-6 col-sm-12 scroll">
-                  <Pic />
+                <div className="col-md-6 col-sm-12 instagram stackone">
+                 <div className="scroll">
+                   <Pic />
+                  </div>
                 </div>
                 <div className="col-md-6 col-sm-12">
                   <BlockQuote />

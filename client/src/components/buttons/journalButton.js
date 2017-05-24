@@ -44,7 +44,7 @@ class JournalButton extends Component {
               method: 'POST',
               body: JSON.stringify({
                 module_id: 1,
-                content: 'This is the entry title.'
+                content: ''
               }),
               credentials: 'same-origin',
               headers: {
@@ -86,7 +86,7 @@ class JournalButton extends Component {
               method: 'POST',
               body: JSON.stringify({
                 module_id: 4,
-                content: ''
+                content: 'https://s-media-cache-ak0.pinimg.com/564x/6c/0b/b5/6c0bb58a6a6e8640a247a772fd6bb13e.jpg'
               }),
               credentials: 'same-origin',
               headers: {
@@ -100,7 +100,7 @@ class JournalButton extends Component {
               method: 'POST',
               body: JSON.stringify({
                 module_id: 5,
-                content: 'What quote is inspiring you today?'
+                content: 'Sample Quote: Ask what makes you come alive and go do it. Because what the world needs is people who have come alive. -Howard Truman'
               }),
               credentials: 'same-origin',
               headers: {

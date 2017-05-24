@@ -84,6 +84,10 @@ padding: 5px;
   margin-bottom: 1.8rem;
 }
 
+.scroll {
+  overflow: scroll;
+  height: 375px;
+}
 /*----Login Page Animations----*/
 
 .insta-button:hover {

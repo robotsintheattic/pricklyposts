@@ -8,7 +8,7 @@ import  Textfield from './../modules/textfield'
 import  BlockQuote from './../modules/blockquote'
 import  Heading from './../modules/heading'
 import  Mood from './../modules/mood'
-import Drop from './../modules/drop'
+import Pic from './../modules/pic'
 
 class Entry extends Component {
   render() {
@@ -39,8 +39,8 @@ class Entry extends Component {
                 </div>
               </div>
               <div className="row grid-bottom">
-                <div className="col-md-6 col-sm-12">
-                  <Drop />
+                <div className="col-md-6 col-sm-12 scroll">
+                  <Pic />
                 </div>
                 <div className="col-md-6 col-sm-12">
                   <BlockQuote />

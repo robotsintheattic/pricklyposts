@@ -28,7 +28,7 @@ class ToDo extends Component{
   addItem(e) {
     let itemArray = this.state.items
 
-    itemArray.push(
+    itemArray.unshift(
       {
         text: this._inputElement.value,
         key: Date.now()
@@ -45,35 +45,34 @@ class ToDo extends Component{
   }
 
   render() {
-
-    let listItem
-    if (this.props.todo !== undefined) {
-      let todoArray = this.props.todo.content
-      console.log(todoArray);
-      if (todoArray !== undefined) {
-        todoArray = todoArray.substring(2,(todoArray.length -2)).split('"')
-        listItem = todoArray.map((item, index) => {
-          if (index % 2 === 0) {
-            return <li key={index}>{item}</li>
-          }
+    let todoListDb
+    if (this.props.content) {
+        todoListDb = this.props.content.map((item) => {
+          return <li key={item.todo_id}>{item.list_item}</li>
         })
-      }
     }
     else return null
 
     return (
-      <div className="todoListMain">
-        <div className="header">
+
+      <div>
+        <div className='todoListMain'>
           <form onSubmit={this.addItem}>
             <input ref={ (a) => this._inputElement = a } placeholder="Make your list!">
             </input>
-            <button type="submit">add</button>
+            <button className='btn btn-primary' type='submit'>add</button>
           </form>
         </div>
-        <ToDoItems entries={this.state.items} />
-        <ul className="list-unstyled">
-          {listItem}
-        </ul>
+        <br />
+        <div className='sticky'>
+          <p><strong>To Do List</strong></p>
+          <ul className="list-unstyled">
+            <li>
+              <ToDoItems entries={this.state.items} />
+            </li>
+            {todoListDb}
+          </ul>
+        </div>
       </div>
     )
   }

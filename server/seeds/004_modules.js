@@ -7,27 +7,27 @@ exports.seed = function(knex, Promise) {
       return knex('modules').insert([
         {
           id: 1,
-          type: '<ToDo />'
-        },
-        {
-          id: 2,
-          type: '<BlockQuote />'
-        },
-        {
-          id: 3,
           type: '<Heading />'
         },
         {
-          id: 4,
+          id: 2,
           type: '<Mood />'
         },
         {
-          id: 5,
+          id: 3,
+          type: '<Textfield />'
+        },
+        {
+          id: 4,
           type: '<Pic />'
         },
         {
+          id: 5,
+          type: '<Blockquote />'
+        },
+        {
           id: 6,
-          type: '<Textfield />'
+          type: '<Todo />'
         }
       ])
     })

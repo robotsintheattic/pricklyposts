@@ -14,6 +14,10 @@
   padding-bottom: 2rem;
 }
 
+a, btn {
+  cursor: pointer;
+}
+
 .Home-title {
   font-family: 'cursive';
   font-size: 4rem;
@@ -41,7 +45,6 @@ div.navbar-header {
 
 .insta-button {
   border: 1px double grey;
-
 }
 
 .journalDiv {
@@ -82,6 +85,7 @@ padding: 5px;
 }
 
 /*----Login Page Animations----*/
+
 .insta-button:hover {
   animation: insta-button-buldger 1s forwards;
   background-color: white;
@@ -91,7 +95,6 @@ padding: 5px;
   0% {
     font-size: 100%;
   }
-
   100% {
     font-size: 110%;
     background-color: pink;
@@ -104,13 +107,26 @@ padding: 5px;
 }
 
 @keyframes Cactus-logo-spin {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(25deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-25deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
+
+
 /*-----------------*/
+
 
 /*---SIDE NAV-----*/
 
@@ -125,42 +141,53 @@ padding: 5px;
 .Sidebar.modal.fade .modal-dialog {
   transition: none;
 }
+
 .Sidebar.modal.fade {
   transition: transform 0.3s ease-out, opacity 0.15s linear;
 }
+
 .Sidebar.modal.fade:not(.in).left {
   transform: translate3d(-100%, 0, 0);
 }
+
 .Sidebar.modal.fade:not(.in).right {
   transform: translate3d(100%, 0, 0);
 }
+
 .Sidebar.modal {
   /* overflow: auto; */
   max-width: 100%;
   box-shadow: 5px 0 10px;
   background-color: #f5f5f5;
 }
+
 .Sidebar.modal.left {
   right: auto;
 }
+
 .Sidebar.modal.right {
   left: auto;
 }
+
 .Sidebar.modal .modal-dialog {
   margin: 0;
   width: auto;
 }
+
 .Sidebar.modal .modal-dialog .modal-content {
   background-color: transparent;
   border: 0;
   box-shadow: none;
 }
+
 .Sidebar.modal .modal-dialog .modal-content .modal-body {
   padding: 0;
 }
+
 .Sidebar.modal.fade:not(.in).left .modal-dialog {
   transform: translate3d(-100%, 0, 0);
 }
+
 .Sidebar.modal.fade:not(.in).right .modal-dialog {
   transform: translate3d(100%, 0, 0);
 }
@@ -174,13 +201,17 @@ padding: 5px;
 }
 
 .hidden {
-  display:none;
+  display: none;
 }
+
+
 /*------------------------*/
 
 .navbar-header {
   width: 100%;
 }
+
+
 /*----GRID----*/
 
 .grid-heading {
@@ -200,10 +231,137 @@ padding: 5px;
 .grid-bottom {
   border-radius: 0px 0px 8px 8px;
   margin: 0rem 5rem 3rem 5rem;
-
 }
 
-.journal-button {
-}
+.journal-button {}
+
 
 /*------------*/
+
+
+/*ToDo List*/
+
+.sticky {
+  /* General */
+  margin: 0 auto;
+  padding: 8px 24px;
+  width: 380px;
+  /* Font */
+  font-family: 'Nothing You Could Do', Arial;
+  font-size: 1.4em;
+  /* Border */
+  border: 1px #E8Ds47 solid;
+  /* Shadow */
+  -moz-box-shadow: 0px 0px 6px 1px #333333;
+  -webkit-box-shadow: 0px 0px 6px 1px #333333;
+  box-shadow: 0px 0px 6px 1px #333333;
+  /* Background */
+  background: #feefca;
+  background: -moz-linear-gradient(top, #feefca 0%, #f7d681 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #feefca), color-stop(100%, #f7d681));
+  background: -webkit-linear-gradient(top, #feefca 0%, #f7d681 100%);
+  background: -o-linear-gradient(top, #feefca 0%, #f7d681 100%);
+  background: -ms-linear-gradient(top, #feefca 0%, #f7d681 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feefca', endColorstr='#f7d681', GradientType=0);
+  background: linear-gradient(top, #feefca 0%, #f7d681 100%);
+}
+
+.sticky ul {
+  list-style-type: none;
+  margin: 12px;
+}
+
+.sticky p {
+  text-align: center;
+}
+
+
+/*Image*/
+
+.instagram {
+  height: 350px;
+  width: 350px;
+  margin-left: -15px;
+}
+
+.stackone {
+  border: 6px solid #fff;
+  float: left;
+  height: 362px;
+  width: 362px;
+  margin: 50px 93px;
+  position: relative;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.stackone:before {
+  content: "";
+}
+
+.stackone:before {
+  content: "";
+  height: 362px;
+  width: 362px;
+  background: #eff2bb;
+  border: 6px solid #fff;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: -10px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.stackone:after {
+  content: "";
+  height: 362px;
+  width: 362px;
+  background: #768590;
+  border: 6px solid #fff;
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 0px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+
+.stackone, blockquote {
+  margin: 50px 55px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #A7E8BD;
+  margin: 1.5em 10px;
+  padding: -1.5em 10px;
+  margin-top: 110px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #A7E8BD;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-right: 6.25em;
+  vertical-align: -0.5em;
+}
+
+blockquote p {
+  display: inline;
+}

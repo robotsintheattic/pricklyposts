@@ -12,15 +12,17 @@ router.get('/', (req, res, next) => {
       next(error)
     })
 })
-router.get('/journals/:id', (req, res, next) => {
-  console.log('here', req.params.id)
+
+// Getting ALL entries_modules for individual entry (includes the leftJoin to account for the todos TABLE)
+router.get('/:id', (req, res, next) => {
   knex('entries')
-    .select(['entries_modules.module_id', 'entries_modules.entry_id', 'entries.journal_id', 'entries_modules.content', 'entries_modules.font', 'modules.id', 'modules.type', 'entries.title'])
-    .join('entries_modules','entries_modules.entry_id', 'entries.id')
-    .join('modules','modules.id', 'entries_modules.module_id')
-    .where('journal_id', req.params.id)
+    .select(['entries_modules.content', 'todos.list_item', 'todos.id as todo_id', 'modules.id as m_id'])
+    .join('entries_modules', 'entries_modules.entry_id', 'entries.id')
+    .join('modules', 'modules.id', 'entries_modules.module_id')
+    .leftJoin('todos', 'entries_modules.id', 'todos.entries_modules_id')
+    .where('entries.id', req.params.id)
+    .orderBy('modules.id')
     .then((modules) => {
-      console.log(modules)
       res.send(modules)
     })
     .catch((error) => {

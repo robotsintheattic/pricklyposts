@@ -1,49 +1,91 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import  EntryButton from './../buttons/entryButton'
-import ToDo from './../modules/todo'
+import {Button} from 'react-bootstrap'
+import Todo from './../modules/todo'
 
 class Journal extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {title: '', todo: ''}
+    this.state = {
+      journal_id: window.location.pathname.split('/')[2],
+      entry_id: window.location.pathname.split('/')[3],
+      entryArr: '',
+      heading: '',
+      mood: '',
+      text: '',
+      img: '',
+      blockquote: '',
+      todo:''
+    }
+
+    this.handleClick = this.handleClick.bind(this)
   }
 
-    componentDidMount() {
-      // console.log(window.location.pathname)
-      let journal_id = window.location.pathname.split('/')[2]
-      // console.log(journal_id);
-      let entryList = []
-        fetch(`/api/entries/journals/${journal_id}`, {
-          method: 'GET'
+  handleClick() {
+    let entry_id = +window.location.pathname.split('/')[3]
+
+    fetch(`/api/entries/${entry_id}`, {
+      method: 'GET'
+    })
+    .then(res => {
+      return res.text().then(entries => {
+        entries = JSON.parse(entries)
+
+        let todoItems = entries.filter(entry => {
+          return entry.m_id === 6
         })
-        .then(res => {
-          return res.text().then(entry => {
-            entry = JSON.parse(entry)
-            entry.forEach((obj) => {
-              if (obj.module_id === 1) {
-                this.setState({
-                  todo: obj
-                })
-              }
-            })
-          })
+
+        this.setState({
+          heading: entries[0].content,
+          mood: entries[1].content,
+          text: entries[2].content,
+          img: entries[3].content,
+          blockquote: entries[4].content,
+          todo: todoItems
         })
-    }
+      })
+    })
+  }
+
+  componentDidMount() {
+    fetch(`/api/journals/${this.state.journal_id}`, {
+      method: 'GET'
+    }).then(res => {
+      return res.text().then(entries => {
+        let entryArr = JSON.parse(entries).map(entry => {
+          return entry.id
+        })
+        this.setState({entryArr: entryArr})
+      })
+    })
+    this.handleClick()
+  }
+
   render() {
-    let todo = this.state.todo
-    // console.log(todo);
-    if (this.state.obj !== '') {
-      return (
-        <div>
-          <h1>Journal View (for each individual journal)</h1>
-          <p><Link to='journals/'>Home</Link></p>
-          <EntryButton />
-          <ToDo todo={todo} />
-        </div>
-      )
-    }
+    // Handling logic of moving through entry arr to find prev and next entries
+    let entry_id = +window.location.pathname.split('/')[3]
+
+    let previous_entry = this.state.entryArr[this.state.entryArr.indexOf(entry_id) + 1]
+    let next_entry = this.state.entryArr[this.state.entryArr.indexOf(entry_id) - 1]
+
+    let prev = entry_id
+    let next = entry_id
+
+    if (previous_entry) prev = previous_entry
+    if (next_entry) next = next_entry
+
+    return (
+      <div>
+        <h1>Journal View (for each individual journal)</h1>
+
+        <Todo content={this.state.todo}/>
+        <p><Link to='journals/'>Home</Link></p>
+        <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
+        <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
+
+      </div>
+    )
   }
 }
 

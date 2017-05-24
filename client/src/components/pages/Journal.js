@@ -7,11 +7,9 @@ class Journal extends Component {
     super(props)
 
     this.state = {
-      title: '',
-      todo: '',
       journal_id: window.location.pathname.split('/')[2],
       entry_id: window.location.pathname.split('/')[3],
-      entryArr: ''
+      entryArr: '',
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -41,8 +39,13 @@ class Journal extends Component {
       method: 'GET'
     })
     .then(res => {
-      return res.text().then(entry => {
-        entry = JSON.parse(entry)
+      return res.text().then(entries => {
+        entries = JSON.parse(entries)
+        let todoItems = []
+        entries.forEach((entry) => {
+          if (entry.m_id == 1) todoItems.push(entry)
+        })
+
       })
     })
   }

@@ -68,12 +68,11 @@ router.patch('/:id', (req, res, next) => {
 /* DELETE one entry */
 router.delete('/:id', (req, res, next) => {
   const id = req.params.id
-
   knex('entries')
     .where('id', id)
     .del()
     .then((entry) => {
-      res.send(entry)
+      res.sendStatus(200)
     })
     .catch((error) => {
       next(error)

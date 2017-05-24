@@ -1,0 +1,5 @@
+{
+  "start": {
+    "postinstall": "cd server && npm install"
+  }
+}

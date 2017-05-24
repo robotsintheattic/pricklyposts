@@ -32,7 +32,8 @@ class Pic extends Component {
     render() {
       let recent = this.state.recentPics
       let picsList = recent.map(function(picsDisplay) {
-        return <img src={picsDisplay.images.standard_resolution.url} width="75%" className="insta-pics"/>
+        return <img src={picsDisplay.images.standard_resolution.url} id="drag-me" draggable="true"
+ondragstart="drag(event)" width="75%" className="insta-pics"/>
       })
       return (
         <div className='insta-collection'>

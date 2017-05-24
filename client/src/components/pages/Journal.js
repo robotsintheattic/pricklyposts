@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import  EntryButton from './../buttons/entryButton'
-import ToDo from './../modules/todo'
 
 class Journal extends Component {
   constructor(props) {
@@ -11,39 +9,28 @@ class Journal extends Component {
   }
 
     componentDidMount() {
-      // console.log(window.location.pathname)
-      let journal_id = window.location.pathname.split('/')[2]
-      // console.log(journal_id);
+      // let journal_id = window.location.pathname.split('/')[2]
+      let entry_id = window.location.pathname.split('/')[3]
+      console.log('e_id', entry_id);
       let entryList = []
-        fetch(`/api/entries/journals/${journal_id}`, {
+        fetch(`/api/entries/${entry_id}`, {
           method: 'GET'
         })
         .then(res => {
           return res.text().then(entry => {
             entry = JSON.parse(entry)
-            entry.forEach((obj) => {
-              if (obj.module_id === 1) {
-                this.setState({
-                  todo: obj
-                })
-              }
-            })
+            console.log('entry', entry)
+
           })
         })
     }
   render() {
-    let todo = this.state.todo
-    // console.log(todo);
-    if (this.state.obj !== '') {
       return (
         <div>
           <h1>Journal View (for each individual journal)</h1>
           <p><Link to='journals/'>Home</Link></p>
-          <EntryButton />
-          <ToDo todo={todo} />
         </div>
       )
-    }
   }
 }
 

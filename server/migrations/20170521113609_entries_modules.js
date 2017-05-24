@@ -3,7 +3,6 @@ exports.up = function(knex) {
     table.increments()
     table.integer('entry_id').notNullable().references('entries.id').onDelete('CASCADE')
     table.integer('module_id').notNullable().references('modules.id').onDelete('CASCADE')
-    table.string('font', 30).notNullable()
     table.text('content').notNullable()
     table.timestamps(true, true)
   })

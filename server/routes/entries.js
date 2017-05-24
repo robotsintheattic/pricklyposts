@@ -12,15 +12,14 @@ router.get('/', (req, res, next) => {
       next(error)
     })
 })
-router.get('/journals/:id', (req, res, next) => {
-  console.log('here', req.params.id)
+router.get('/:id', (req, res, next) => {
   knex('entries')
-    .select(['entries_modules.module_id', 'entries_modules.entry_id', 'entries.journal_id', 'entries_modules.content', 'entries_modules.font', 'modules.id', 'modules.type', 'entries.title'])
-    .join('entries_modules','entries_modules.entry_id', 'entries.id')
-    .join('modules','modules.id', 'entries_modules.module_id')
-    .where('journal_id', req.params.id)
+    .select(['entries.id as e_id', 'entries_modules.content', 'entries_modules.font', 'modules.id as m_id', 'modules.type', 'entries.title'])
+    .join('entries_modules', 'entries_modules.entry_id', 'entries.id')
+    .join('modules', 'modules.id', 'entries_modules.module_id')
+    .where('entries.id', req.params.id)
     .then((modules) => {
-      console.log(modules)
+      console.log('get', modules)
       res.send(modules)
     })
     .catch((error) => {

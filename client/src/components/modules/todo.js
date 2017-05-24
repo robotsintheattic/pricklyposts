@@ -6,7 +6,7 @@ class ToDoItems extends Component {
     let todoEntries = this.props.entries
 
     function createTasks(item){
-      return <li key={item.key}>{item.text}</li>
+      return <p key={item.key}>{item.text}</p>
     }
     let listItems = todoEntries.map(createTasks)
 
@@ -48,7 +48,7 @@ class ToDo extends Component{
     let todoListDb
     if (this.props.content) {
         todoListDb = this.props.content.map((item) => {
-          return <li className="toDoListItem" key={item.todo_id}>{item.list_item}</li>
+          return <p key={item.todo_id}>{item.list_item}</p>
         })
     }
     else return null
@@ -56,21 +56,23 @@ class ToDo extends Component{
     return (
 
       <div>
-        <div className='todoListMain'>
-          <form onSubmit={this.addItem}>
-            <input ref={ (a) => this._inputElement = a } placeholder="Make your list!">
-            </input>
-            <button className='btn btn-primary' type='submit'>add</button>
-          </form>
-        </div>
         <br />
         <div className='sticky'>
           <h1><strong>To Do List</strong></h1>
+          <div className='todoListMain'>
+            <form onSubmit={this.addItem}>
+              <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your list!">
+              </input>
+              <button className='btn btn-primary' type='submit'>add</button>
+            </form>
+          </div>
+          <hr className="stickyHR"/>
           <ul className="list-unstyled">
-            <li className="toDoListItem">
-              <ToDoItems entries={this.state.items} />
-              {todoListDb}
-            </li>
+            {/* <li className="toDoListItem"> */}
+              <ToDoItems entries={this.state.items}
+              />
+            {/* </li> */}
+            {todoListDb}
           </ul>
         </div>
         <br />

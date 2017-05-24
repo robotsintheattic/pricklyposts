@@ -29,6 +29,10 @@ class Mood extends Component {
     // })
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({text: nextProps.content})
+  }
+
   render() {
     return (
       <row>

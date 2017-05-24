@@ -40,13 +40,13 @@ router.get('/:id', (req, res, next) => {
 })
 
 /* POST one option */
-router.post('/', (req, res, next) => {
+router.post('/:id', (req, res, next) => {
+  let entryId = +req.params.id
   knex('entries_modules')
-    .returning(['id', 'entry_id', 'module_id', 'font', 'content'])
+    .returning(['id', 'entry_id', 'module_id', 'content'])
     .insert({
-      entry_id: req.body.entry_id,
+      entry_id: entryId,
       module_id: req.body.module_id,
-      font: req.body.font,
       content: req.body.content
     })
     .then((option) => {

@@ -32,14 +32,15 @@ router.get('/:id', (req, res, next) => {
 
 /* POST one entry */
 router.post('/', (req, res, next) => {
+  console.log('here', req.body)
   knex('entries')
-    .returning(['id', 'title', 'journal_id'])
+    .returning(['id as e_id', 'title', 'journal_id'])
     .insert({
       title: req.body.title,
       journal_id: req.body.journal_id
     })
     .then((entry) => {
-      res.send(entry)
+      res.send(entry[0])
     })
     .catch((error) => {
       next(error)
@@ -49,7 +50,6 @@ router.post('/', (req, res, next) => {
 /* UPDATE one entry */
 router.patch('/:id', (req, res, next) => {
   const id = req.params.id
-
   knex('entries')
     .returning(['id', 'title', 'journal_id'])
     .where('id', id)

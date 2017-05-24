@@ -24,7 +24,7 @@ class Entry extends Component {
                 <div className="col-md-6 col-sm-12">
                   <Heading />
                 </div>
-                <div className="col-md-6 col-sm-12">
+                <div className="col-md-6 col-sm-12" padding="10px">
                   <Mood />
                 </div>
               </div>

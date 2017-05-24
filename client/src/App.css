@@ -71,20 +71,15 @@ div.navbar-header {
 
 .dashed-box {
 border: 1px dashed #AAA;
-width: 290px;
 padding: 5px;
 }
 
 .vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+  height: auto;
+  vertical-align: middle;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
 }
-
-/*[contenteditable=true]:empty:before {
-  content: attr(placeholder);
-  display: block;
-}*/
 
 /*----Login Page Animations----*/
 .insta-button:hover {

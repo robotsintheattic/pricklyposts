@@ -34,11 +34,12 @@ class Heading extends Component {
           disabled={false}       // use true to disable edition
           onChange={this.handleChange} // handle innerHTML change
         />
-        <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
+
       </div>
     )
   }
 }
 
+        // <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
 
 export default Heading

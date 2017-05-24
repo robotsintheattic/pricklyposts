@@ -9,14 +9,35 @@ class Journal extends Component {
     this.state = {
       journal_id: window.location.pathname.split('/')[2],
       entry_id: window.location.pathname.split('/')[3],
-      entryArr: ''
+      entryArr: '',
+      heading: '',
+      todo:''
     }
 
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
-    this.setState({journal_id: window.location.pathname.split('/')[2]})
+    // this.setState({journal_id: window.location.pathname.split('/')[2]})
+    let entry_id = +window.location.pathname.split('/')[3]
+
+    fetch(`/api/entries/${entry_id}`, {
+      method: 'GET'
+    })
+    .then(res => {
+      return res.text().then(entries => {
+        entries = JSON.parse(entries)
+        let todoItems = []
+        // this.setState({ entryData.heading: entries[0].content })
+        // console.log(this.state.entryData);
+        entries.forEach((entry) => {
+          console.log(entry)
+
+
+        })
+
+      })
+    })
   }
 
   componentDidMount() {
@@ -30,25 +51,13 @@ class Journal extends Component {
         this.setState({entryArr: entryArr})
       })
     })
+    this.handleClick()
   }
 
-  componentDidUpdate(prevState) {
-    let entry_id = +window.location.pathname.split('/')[3]
-
-    fetch(`/api/entries/${entry_id}`, {
-      method: 'GET'
-    })
-    .then(res => {
-      return res.text().then(entries => {
-        entries = JSON.parse(entries)
-        let todoItems = []
-        entries.forEach((entry) => {
-          if (entry.m_id == 1) todoItems.push(entry)
-        })
-
-      })
-    })
-  }
+  // componentDidUpdate(prevState) {
+  //   console.log('prev state', prevState);
+  //
+  // }
 
   render() {
     // Handling logic of moving through entry arr to find prev and next entries

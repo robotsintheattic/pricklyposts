@@ -48,7 +48,7 @@ class ToDo extends Component{
     let todoListDb
     if (this.props.content) {
         todoListDb = this.props.content.map((item) => {
-          return <li key={item.todo_id}>{item.list_item}</li>
+          return <li className="toDoListItem" key={item.todo_id}>{item.list_item}</li>
         })
     }
     else return null
@@ -65,14 +65,15 @@ class ToDo extends Component{
         </div>
         <br />
         <div className='sticky'>
-          <p><strong>To Do List</strong></p>
+          <h1><strong>To Do List</strong></h1>
           <ul className="list-unstyled">
-            <li>
+            <li className="toDoListItem">
               <ToDoItems entries={this.state.items} />
+              {todoListDb}
             </li>
-            {todoListDb}
           </ul>
         </div>
+        <br />
       </div>
     )
   }

@@ -10,7 +10,7 @@ class LoginButton extends Component {
 
   handleClick = () => {
     let clientID = '2fe5c5abcb8d42b394744da82775cc47'
-    var auth = window.location.replace("https://instagram.com/oauth/authorize/?client_id=" + clientID + "&redirect_uri=" + "http://localhost:3000/" + "&response_type=token", "auth");
+    var auth = window.location.replace("https://instagram.com/oauth/authorize/?client_id=" + clientID + "&redirect_uri=" + window.location.href + "&response_type=token", "auth");
   }
 
   render() {

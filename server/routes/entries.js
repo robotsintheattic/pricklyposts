@@ -16,7 +16,7 @@ router.get('/', (req, res, next) => {
 // Getting ALL entries_modules for individual entry (includes the leftJoin to account for the todos TABLE)
 router.get('/:id', (req, res, next) => {
   knex('entries')
-    .select(['entries_modules.content', 'todos.list_item', 'todos.id as todo_id', 'modules.id as m_id'])
+    .select(['entries_modules.content', 'entries_modules.id as em_id', 'todos.list_item', 'todos.id as todo_id', 'modules.id as m_id'])
     .join('entries_modules', 'entries_modules.entry_id', 'entries.id')
     .join('modules', 'modules.id', 'entries_modules.module_id')
     .leftJoin('todos', 'entries_modules.id', 'todos.entries_modules_id')

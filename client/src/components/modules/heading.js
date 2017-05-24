@@ -15,19 +15,20 @@ class Heading extends Component {
   }
 
   handleClick = (e) => {
-    // fetch('/api/entries_modules', {
-    //   method: 'PATCH',
-    //   body: JSON.stringify(this.state.html),
-    //   credentials: 'same-origin',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   }
-    // })
+    let content = this.state.html.substring(4, this.state.html.length - 5)
+    fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({content: content}),
+      credentials: 'same-origin',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({html: `<h1>${nextProps.content}</h1>`})
+    this.setState({html: `<h1>${nextProps.entryModule.content}</h1>`})
   }
 
   render() {
@@ -36,14 +37,13 @@ class Heading extends Component {
         <ContentEditable
           html={this.state.html}
           disabled={false}
-          onChange={this.handleChange} 
+          onChange={this.handleChange}
         />
-
+        <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
       </div>
     )
   }
 }
 
-        // <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
 
 export default Heading

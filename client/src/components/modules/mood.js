@@ -18,19 +18,20 @@ class Mood extends Component {
   }
 
   handleClick = (e) => {
-    // fetch('/api/entries_modules', {
-    //   method: 'PATCH',
-    //   body: JSON.stringify(this.state.html),
-    //   credentials: 'same-origin',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   }
-    // })
+    let content = this.state.text
+    fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({content: content}),
+      credentials: 'same-origin',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({text: nextProps.content})
+    this.setState({text: nextProps.entryModule.content})
   }
 
   render() {
@@ -41,7 +42,9 @@ class Mood extends Component {
           html={this.state.text}
           disabled={false}
           onChange={this.handleChange}
-        /></div>
+        />
+        </div>
+          <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
       </row>
     )
   }

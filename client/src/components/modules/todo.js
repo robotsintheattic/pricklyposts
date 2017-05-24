@@ -28,7 +28,7 @@ class ToDo extends Component{
   addItem(e) {
     let itemArray = this.state.items
 
-    itemArray.push(
+    itemArray.unshift(
       {
         text: this._inputElement.value,
         key: Date.now()
@@ -45,19 +45,11 @@ class ToDo extends Component{
   }
 
   render() {
-
-    let listItem
-    if (this.props.todo !== undefined) {
-      let todoArray = this.props.todo.content
-      console.log(todoArray);
-      if (todoArray !== undefined) {
-        todoArray = todoArray.substring(2,(todoArray.length -2)).split('"')
-        listItem = todoArray.map((item, index) => {
-          if (index % 2 === 0) {
-            return <li key={index}>{item}</li>
-          }
+    let todoListDb
+    if (this.props.content) {
+        todoListDb = this.props.content.map((item) => {
+          return <li key={item.todo_id}>{item.list_item}</li>
         })
-      }
     }
     else return null
 
@@ -74,12 +66,12 @@ class ToDo extends Component{
         <br />
         <div className='sticky'>
           <p><strong>To Do List</strong></p>
-          {/* <p><small>Today's Date</small></p> */}
-          <ol>{listItem}
+          <ul className="list-unstyled">
             <li>
               <ToDoItems entries={this.state.items} />
             </li>
-          </ol>
+            {todoListDb}
+          </ul>
         </div>
       </div>
     )

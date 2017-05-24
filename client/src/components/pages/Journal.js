@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
+import Todo from './../modules/todo'
 
 class Journal extends Component {
   constructor(props) {
@@ -11,6 +12,10 @@ class Journal extends Component {
       entry_id: window.location.pathname.split('/')[3],
       entryArr: '',
       heading: '',
+      mood: '',
+      text: '',
+      img: '',
+      blockquote: '',
       todo:''
     }
 
@@ -18,7 +23,6 @@ class Journal extends Component {
   }
 
   handleClick() {
-    // this.setState({journal_id: window.location.pathname.split('/')[2]})
     let entry_id = +window.location.pathname.split('/')[3]
 
     fetch(`/api/entries/${entry_id}`, {
@@ -27,15 +31,19 @@ class Journal extends Component {
     .then(res => {
       return res.text().then(entries => {
         entries = JSON.parse(entries)
-        let todoItems = []
-        // this.setState({ entryData.heading: entries[0].content })
-        // console.log(this.state.entryData);
-        entries.forEach((entry) => {
-          console.log(entry)
 
-
+        let todoItems = entries.filter(entry => {
+          return entry.m_id === 6
         })
 
+        this.setState({
+          heading: entries[0].content,
+          mood: entries[1].content,
+          text: entries[2].content,
+          img: entries[3].content,
+          blockquote: entries[4].content,
+          todo: todoItems
+        })
       })
     })
   }
@@ -54,11 +62,6 @@ class Journal extends Component {
     this.handleClick()
   }
 
-  // componentDidUpdate(prevState) {
-  //   console.log('prev state', prevState);
-  //
-  // }
-
   render() {
     // Handling logic of moving through entry arr to find prev and next entries
     let entry_id = +window.location.pathname.split('/')[3]
@@ -76,6 +79,7 @@ class Journal extends Component {
       <div>
         <h1>Journal View (for each individual journal)</h1>
 
+        <Todo content={this.state.todo}/>
         <p><Link to='journals/'>Home</Link></p>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>

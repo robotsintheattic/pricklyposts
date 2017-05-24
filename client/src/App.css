@@ -1,3 +1,7 @@
+#root {
+  font-family: 'Raleway', cursive;
+}
+
 .App {
   text-align: center;
   height: 600px;
@@ -9,7 +13,7 @@
 
 .App-title {
   font-family: 'cursive';
-  font-size: 10rem;
+  font-size: 11rem;
   color: #A7E8BD;
   padding-bottom: 2rem;
 }
@@ -253,7 +257,7 @@ padding: 5px;
   padding: 8px 24px;
   width: 380px;
   /* Font */
-  font-family: 'Nothing You Could Do', Arial;
+  font-family: 'Shadows Into Light Two', cursive !important;
   font-size: 1.4em;
   /* Border */
   border: 1px #E8Ds47 solid;

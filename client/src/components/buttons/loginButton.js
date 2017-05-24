@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {buttonToolbar, Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 class LoginButton extends Component {
   constructor(props) {

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
 
 class ToDoItems extends Component {
   render() {
@@ -46,15 +45,15 @@ class ToDo extends Component{
 
   render() {
     let todoListDb
-    if (this.props.content) {
-        todoListDb = this.props.content.map((item) => {
-          return <p key={item.todo_id}>{item.list_item}</p>
+
+    if (this.props.entryModule) {
+        todoListDb = this.props.entryModule.map((item) => {
+          return <li className="toDoListItem" key={item.todo_id}>{item.list_item}</li>
         })
     }
     else return null
 
     return (
-
       <div>
         <br />
         <div className='sticky'>

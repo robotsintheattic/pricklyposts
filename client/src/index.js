@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Login from './components/pages/Login'
 import Home from './components/pages/Home'
 import Journal from './components/pages/Journal'
-import Entry from './components/pages/Entry'
+
 
 import registerServiceWorker from './registerServiceWorker'
 import './index.css'
@@ -14,8 +14,7 @@ ReactDOM.render(
     <div className="App">
       <Route exact path="/" component={Login}></Route>
       <Route exact path="/journals" component={Home}></Route>
-      <Route path="/journal" component={Journal}></Route>
-      <Route path="/entry" component={Entry}></Route>
+      <Route path="/journal/" component={Journal}></Route>
     </div>
   </BrowserRouter>,
   document.getElementById('root')

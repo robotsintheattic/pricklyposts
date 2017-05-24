@@ -9,40 +9,38 @@ class BlockQuote extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
   handleChange = (e) =>{
-    this.setState({html: e.target.value})
+    this.setState({quote: e.target.value})
   }
 
-  handleClick = () => {
-    // console.log('this.state', this.state.quote)
-    let data =  this.state.quote
-    fetch('/api/entries_modules', {
-      method: 'POST',
-      body: JSON.stringify(data),
+  handleClick = (e) => {
+    let content = this.state.quote.substring(3, this.state.quote.length - 4)
+    fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({content: content}),
       credentials: 'same-origin',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
     })
-
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({quote: `<p>${nextProps.content}</p>`})
+    this.setState({quote: `<p>${nextProps.entryModule.content}</p>`})
   }
 
   render() {
     return (
       <div className="quoteblock">
         <blockquote className="quote-box">
-          <p className="quote-text">
+          <div className="quote-text">
             <ContentEditable
               html={this.state.quote}
               disabled={false}
               onChange={this.handleChange}/>
-          </p>
+          </div>
           <hr />
-          <button className="btn btn-primary quotebtn" type="submit" onClick={this.handleClick}>Save</button>
+            <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
         </blockquote>
       </div>
     )

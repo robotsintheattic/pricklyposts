@@ -60,18 +60,14 @@ router.post('/', (req, res, next) => {
 /* UPDATE one option */
 router.patch('/:id', (req, res, next) => {
   const id = req.params.id
-
+  console.log('in patch', req.body, id)
   knex('entries_modules')
-    .returning(['id', 'entry_id', 'module_id', 'font', 'content'])
+    .returning(['id', 'content'])
     .where('id', id)
-    .update({
-      entry_id: req.body.entry_id,
-      module_id: req.body.module_id,
-      font: req.body.font,
-      content: req.body.content
-    })
-    .then((option) => {
-      res.send(option)
+    .update(req.body)
+    .then((entry_mod) => {
+      console.log(entry_mod)
+      res.send(entry_mod)
     })
     .catch((error) => {
       next(error)

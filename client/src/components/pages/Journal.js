@@ -42,11 +42,11 @@ class Journal extends Component {
         })
 
         this.setState({
-          heading: entries[0].content,
-          mood: entries[1].content,
-          text: entries[2].content,
-          img: entries[3].content,
-          blockquote: entries[4].content,
+          heading: entries[0],
+          mood: entries[1],
+          text: entries[2],
+          img: entries[3],
+          blockquote: entries[4],
           todo: todoItems
         })
       })
@@ -83,11 +83,11 @@ class Journal extends Component {
     return (
       <div>
         <h1>Journal View (for each individual journal)</h1>
-        <Heading content={this.state.heading}/>
-        <Mood content={this.state.mood} />
-        <Textfield content={this.state.text} />
-        <Todo content={this.state.todo}/>
-        <Blockquote content={this.state.blockquote}/>
+        <Heading entryModule={this.state.heading}/>
+        <Mood entryModule={this.state.mood} />
+        <Textfield entryModule={this.state.text} />
+        <Todo entryModule={this.state.todo}/>
+        <Blockquote entryModule={this.state.blockquote}/>
         <p><Link to='journals/'>Home</Link></p>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>

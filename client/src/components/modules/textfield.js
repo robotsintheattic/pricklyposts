@@ -18,19 +18,20 @@ class Textfield extends Component {
   }
 
   handleClick = (e) => {
-    // fetch('/api/entries_modules', {
-    //   method: 'PATCH',
-    //   body: JSON.stringify(this.state.html),
-    //   credentials: 'same-origin',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   }
-    // })
+    let content = this.state.text.substring(3, this.state.text.length - 4)
+    fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({content: content}),
+      credentials: 'same-origin',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({text: `<p>${nextProps.content}</p>`})
+    this.setState({text: `<p>${nextProps.entryModule.content}</p>`})
   }
 
   render() {
@@ -39,8 +40,9 @@ class Textfield extends Component {
         <ContentEditable
           html={this.state.text}
           disabled={false}
-          onChange={this.handleChange} 
+          onChange={this.handleChange}
         />
+        <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
       </div>
     )
   }

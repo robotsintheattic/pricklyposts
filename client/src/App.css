@@ -189,3 +189,37 @@ div.navbar-header {
 }
 
 /*------------*/
+
+/*ToDo List*/
+.sticky {
+    /* General */
+    margin: 0 auto;
+    padding: 8px 24px;
+    width: 380px;
+    /* Font */
+    font-family: 'Nothing You Could Do', Arial;
+    font-size: 1.4em;
+    /* Border */
+    border:1px #E8Ds47 solid;
+    /* Shadow */
+    -moz-box-shadow:0px 0px 6px 1px #333333;
+    -webkit-box-shadow:0px 0px 6px 1px #333333;
+    box-shadow:0px 0px 6px 1px #333333;
+    /* Background */
+    background: #feefca;
+    background: -moz-linear-gradient(top, #feefca 0%, #f7d681 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feefca), color-stop(100%,#f7d681));
+    background: -webkit-linear-gradient(top, #feefca 0%,#f7d681 100%);
+    background: -o-linear-gradient(top, #feefca 0%,#f7d681 100%);
+    background: -ms-linear-gradient(top, #feefca 0%,#f7d681 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feefca', endColorstr='#f7d681',GradientType=0 );
+    background: linear-gradient(top, #feefca 0%,#f7d681 100%);
+}
+
+.sticky ol {
+    margin: 12px;
+}
+
+.sticky p {
+    text-align: center;
+}

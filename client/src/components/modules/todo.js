@@ -62,18 +62,25 @@ class ToDo extends Component{
     else return null
 
     return (
-      <div className="todoListMain">
-        <div className="header">
+
+      <div>
+        <div className='todoListMain'>
           <form onSubmit={this.addItem}>
             <input ref={ (a) => this._inputElement = a } placeholder="Make your list!">
             </input>
-            <button type="submit">add</button>
+            <button className='btn btn-primary' type='submit'>add</button>
           </form>
         </div>
-        <ToDoItems entries={this.state.items} />
-        <ul className="list-unstyled">
-          {listItem}
-        </ul>
+        <br />
+        <div className='sticky'>
+          <p><strong>To Do List</strong></p>
+          {/* <p><small>Today's Date</small></p> */}
+          <ol>{listItem}
+            <li>
+              <ToDoItems entries={this.state.items} />
+            </li>
+          </ol>
+        </div>
       </div>
     )
   }

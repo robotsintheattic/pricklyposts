@@ -19,19 +19,20 @@ router.get('/users/:id', function(req, res, next) {
     .where('user_id', user_id)
     .orderBy('entries.id', 'desc')
     .then((journals) => {
-      console.log('journals', journals)
       res.send(journals)
     })
 })
 
-/* GET one journal */
 router.get('/:id', function(req, res, next) {
-  let id = req.params.id
-
+  let journal_id = req.params.id
+  console.log('here', journal_id)
   knex('journals')
-    .where('id', id)
-    .then((journal) => {
-      res.send(journal)
+    .select('entries.id as id')
+    .join('entries', 'entries.journal_id', 'journals.id')
+    .where('journal_id', journal_id)
+    .orderBy('entries.id', 'desc')
+    .then((journals) => {
+      res.send(journals)
     })
 })
 

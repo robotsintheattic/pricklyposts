@@ -33,7 +33,7 @@ class Mood extends Component {
     return (
       <row>
         <div className="col-md-4 vcenter"><font size="5">Today I feel: </font></div>
-        <div className="col-md-8 vcenter"><font size="5"><ContentEditable
+        <div className="col-md-8 vcenter dashed-box"><font size="5"><ContentEditable
           html={this.state.text}
           disabled={false}
           onChange={this.handleChange}

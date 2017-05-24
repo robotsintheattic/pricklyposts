@@ -5,6 +5,7 @@ import Todo from './../modules/todo'
 import Heading from './../modules/heading'
 import Mood from './../modules/mood'
 import Textfield from './../modules/textfield'
+import Blockquote from './../modules/blockquote'
 
 
 class Journal extends Component {
@@ -86,6 +87,7 @@ class Journal extends Component {
         <Mood content={this.state.mood} />
         <Textfield content={this.state.text} />
         <Todo content={this.state.todo}/>
+        <Blockquote content={this.state.blockquote}/>
         <p><Link to='journals/'>Home</Link></p>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>

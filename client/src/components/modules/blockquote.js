@@ -5,8 +5,7 @@ class BlockQuote extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nisi lacus, auctor sit amet purus vel, gravida luctus lectus. Aenean rhoncus dapibus enim, sit amet faucibus leo ornare vitae.',
-    citation:'<cite>Some People</cite>'}
+    this.state = {quote: ''}
     this.handleChange = this.handleChange.bind(this)
   }
   handleChange = (e) =>{
@@ -28,6 +27,10 @@ class BlockQuote extends Component {
 
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({quote: `<p>${nextProps.content}</p>`})
+  }
+
   render() {
     return (
       <div className="quoteblock">
@@ -39,14 +42,6 @@ class BlockQuote extends Component {
               onChange={this.handleChange}/>
           </p>
           <hr />
-          <div className="blog-post-actions">
-            <p className="blog-post-bottom pull-left">
-              <ContentEditable
-                html={this.state.citation}
-                disabled={false}
-                onChange={this.handleChange}/>
-            </p>
-          </div>
           <button className="btn btn-primary quotebtn" type="submit" onClick={this.handleClick}>Save</button>
         </blockquote>
       </div>

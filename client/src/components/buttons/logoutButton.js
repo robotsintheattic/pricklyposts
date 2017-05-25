@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
+import { Nav, NavItem } from 'react-bootstrap'
 
 class Logout extends Component{
   constructor(props) {
@@ -15,8 +15,9 @@ class Logout extends Component{
 
   render() {
     return (
-        <Button onClick={this.handleClick} >Logout
-        </Button>
+      <Nav>
+        <NavItem onClick={this.handleClick}><span className="glyphicon glyphicon-cog" aria-hidden="true"></span> Logout</NavItem>
+      </Nav>
     )
   }
 }

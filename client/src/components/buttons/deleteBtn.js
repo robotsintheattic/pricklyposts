@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
+import { Nav, NavItem } from 'react-bootstrap'
 
 class CreateEntry extends Component {
   constructor(props) {
@@ -136,7 +136,9 @@ class CreateEntry extends Component {
 
   render() {
     return (
-      <Button onClick={this.handleClick}><span className="glyphicon glyphicon-trash" aria-hidden="true"></span> Current Entry</Button>
+      <Nav>
+        <NavItem onClick={this.handleClick}><span className="glyphicon glyphicon-trash" aria-hidden="true"></span> Current Entry</NavItem>
+      </Nav>
     )
   }
 }

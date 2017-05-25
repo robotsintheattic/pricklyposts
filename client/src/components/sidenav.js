@@ -4,6 +4,7 @@ import Pic from './modules/pic'
 import Logo from '../Cactus_6.png'
 import CreateEntry from './buttons/createEntryButton'
 import DeleteEntry from './buttons/deleteBtn'
+import Logout from './buttons/logoutButton'
 import $ from 'jquery'
 
 class Sidebar extends Component {
@@ -15,12 +16,16 @@ class Sidebar extends Component {
       	<Modal.Header closeButton>
         	<Modal.Title className="Home-title"><img className="modal-logo" src={Logo} height="100rem;" alt="logo"/> Daily Dash</Modal.Title>
           <br />
-          <CreateEntry />
-          <DeleteEntry />
         </Modal.Header>
       	<Modal.Body>
       		{ this.props.children }
         </Modal.Body>
+        <hr />
+        <CreateEntry />
+        <hr />
+        <DeleteEntry />
+        <hr />
+        <Logout />
       </Modal>
     );
   }

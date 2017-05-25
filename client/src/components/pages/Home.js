@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom'
 import $ from 'jquery'
 import  JournalButton from './../buttons/journalButton'
 import '../../App.css'
-import Logo from '../../Cactus_3.svg'
+import ExistingJournals from '../../Cactus4.svg'
+import NewJournal from '../../Cactus_6.png'
 import Navbar from './../navbar'
 
 class Home extends Component {
@@ -64,7 +65,7 @@ class Home extends Component {
             journals.forEach((item) => {
               if (!journal_ids.includes(item.j_id)) {
                 journal_ids.push(item.j_id)
-                journalList.push(<div key={item.j_id} id={item.j_id} className="journalDiv col-md-2"><span><img alt="cactus" src={Logo} /></span><Link to={`/journal/${item.j_id}/${item.e_id}`}>{item.j_title}</Link></div>)
+                journalList.push(<div key={item.j_id} id={item.j_id} className="journalDiv col-md-2"><span><img className="journalImg" alt="cactus" src={ExistingJournals} /></span><br /><br /><Link className="journalLink" to={`/journal/${item.j_id}/${item.e_id}`}>{item.j_title}</Link></div>)
               }
             })
 
@@ -85,10 +86,9 @@ class Home extends Component {
           <div>
               <Navbar />
               <div className="container">
-                <div className="row">
-                  <div className="col-md-2"></div>
+                <div className="row journalRow">
                   <div className="journalDiv col-md-2">
-                    <span><img alt="cactus" src={Logo} /></span>
+                    <span><img className="journalImg" alt="cactus" src={NewJournal} /></span><br /><br />
                     <JournalButton userId={userId} />
                   </div>
                   <div>{this.state.titles}</div>

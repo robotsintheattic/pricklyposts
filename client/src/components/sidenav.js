@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Button, Modal, Nav, NavItem } from 'react-bootstrap'
 import Pic from './modules/pic'
-import Logo from '../Cactus_6.png'
+import Logo from '../img/Cactus_6.png'
 import CreateEntry from './buttons/createEntryButton'
 import DeleteEntry from './buttons/deleteBtn'
 import Logout from './buttons/logoutButton'

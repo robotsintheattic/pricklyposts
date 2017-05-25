@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 import $ from 'jquery'
 import  JournalButton from './../buttons/journalButton'
 import '../../App.css'
-import ExistingJournals from '../../Cactus_4.png'
-import NewJournal from '../../Cactus_5.png'
+import ExistingJournals from '../../img/Cactus_4.png'
+import NewJournal from '../../img/Cactus_5.png'
 import Navbar from './../navbar'
 
 class Home extends Component {

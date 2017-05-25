@@ -68,13 +68,11 @@ router.post('/:id', (req, res, next) => {
 
 router.patch('/todos/:id', (req, res, next) => {
   const id = req.params.id
-  console.log('in patch', req.body, id)
   knex('todos')
     .returning('id')
     .where('id', id)
     .update(req.body)
     .then((entry_mod) => {
-      console.log('here', entry_mod)
       res.send(entry_mod)
     })
     .catch((error) => {
@@ -85,13 +83,11 @@ router.patch('/todos/:id', (req, res, next) => {
 /* UPDATE one option */
 router.patch('/:id', (req, res, next) => {
   const id = req.params.id
-  console.log('in patch', req.body, id)
   knex('entries_modules')
     .returning(['id', 'content'])
     .where('id', id)
     .update(req.body)
     .then((entry_mod) => {
-      console.log(entry_mod)
       res.send(entry_mod)
     })
     .catch((error) => {

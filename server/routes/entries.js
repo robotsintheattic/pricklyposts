@@ -33,7 +33,6 @@ router.get('/:id', (req, res, next) => {
 
 /* POST one entry */
 router.post('/', (req, res, next) => {
-  console.log('here', req.body)
   knex('entries')
     .returning(['id as e_id', 'title', 'journal_id'])
     .insert({

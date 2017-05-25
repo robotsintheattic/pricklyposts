@@ -142,6 +142,10 @@ div.navbar-header {
   width: auto;
 }
 
+.Sidebar.modal .modal-logo {
+  opacity: 0.7;
+}
+
 .Sidebar.modal .modal-dialog .modal-content {
   background-color: transparent;
   border: 0;

@@ -9,7 +9,17 @@ class Pic extends Component {
     this.state = {
       recentPics: []
     }
+    this.selectPic = this.selectPic.bind(this)
   }
+
+  selectPic(e) {
+    if (e.target.src) {
+      localStorage.setItem('img_src', e.target.src)
+    }
+  }
+
+
+
   componentDidMount() {
     let recentPics = ''
     $.ajax({
@@ -36,7 +46,7 @@ class Pic extends Component {
       })
       return (
         <div className='insta-collection'>
-          <div className="text-center">
+          <div className="text-center" onClick={this.selectPic}>
           {picsList}
           </div>
           <br/>

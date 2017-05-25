@@ -11,7 +11,7 @@ class JournalButton extends Component {
   handleClick = (e) => {
     e.preventDefault()
     let post = {
-      title: 'Untitled Post',
+      title: 'Untitled Journal',
       user_id: localStorage.userId,
     }
 
@@ -27,7 +27,7 @@ class JournalButton extends Component {
       return res.text().then(el => {
         el = JSON.parse(el)
         let jId = el[0].id
-        let body = {title: 'Untitled Post', journal_id: jId}
+        let body = {title: 'Untitled Journal', journal_id: jId}
         fetch('/api/entries', {
           method: 'POST',
           body: JSON.stringify(body),
@@ -134,7 +134,7 @@ class JournalButton extends Component {
   render() {
     return (
       <div>
-        <a onClick={this.handleClick}>+ New Journal</a>
+        <a className="journalLink" onClick={this.handleClick}>+ New Journal</a>
       </div>
     )
   }

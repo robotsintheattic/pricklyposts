@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
+import { Button } from 'react-bootstrap'
+import $ from 'jquery'
 
 class ToDoItems extends Component {
   render() {
     let todoEntries = this.props.entries
 
     function createTasks(item){
-      return <p key={item.key}>{item.text}</p>
+      return <p className="crossItem" key={item.key}>{item.text}</p>
     }
     let listItems = todoEntries.map(createTasks)
 
@@ -22,25 +24,75 @@ class ToDo extends Component{
     super(props)
       this.state = {items: []}
       this.addItem = this.addItem.bind(this)
+      this.crossOut = this.crossOut.bind(this)
   }
 
   addItem(e) {
+    e.preventDefault()
     let itemArray = this.state.items
 
-    itemArray.unshift(
-      {
-        text: this._inputElement.value,
-        key: Date.now()
+    fetch(`/api/entries_modules/todos`, {
+      method: 'POST',
+      body: JSON.stringify({
+        entries_modules_id: this.props.entryModule[0].em_id,
+        list_item: this._inputElement.value
+      }),
+      credentials: 'same-origin',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
       }
-    )
-
-    this.setState({
-      items: itemArray
+    }).then((res) => {
+      return res.text().then(todo => {
+        todo = JSON.parse(todo)
+      itemArray.unshift(
+        {
+          text: this._inputElement.value,
+          key: todo[0].id
+        }
+      )
+      this.setState({
+        items: itemArray
+      })
+    })
     })
 
     this._inputElement.value = ""
+  }
 
-    e.preventDefault()
+  crossOut (e) {
+    if ($(e.target).hasClass('crossItem')) {
+      let id
+      if ($(e.target).hasClass('finished')) {
+        $(e.target).removeClass('finished')
+        id = $(e.target).attr('id')
+        fetch(`/api/entries_modules/todos/${id}`, {
+          method: 'PATCH',
+          body: JSON.stringify({
+            finished: false
+          }),
+          credentials: 'same-origin',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        })
+      } else {
+        $(e.target).addClass('finished')
+        id = $(e.target).attr('id')
+        fetch(`/api/entries_modules/todos/${id}`, {
+          method: 'PATCH',
+          body: JSON.stringify({
+            finished: true
+          }),
+          credentials: 'same-origin',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        })
+      }
+    }
   }
 
   render() {
@@ -48,7 +100,11 @@ class ToDo extends Component{
 
     if (this.props.entryModule) {
         todoListDb = this.props.entryModule.map((item) => {
-          return <li className="toDoListItem" key={item.todo_id}>{item.list_item}</li>
+          if (item.finished === false) {
+            return <p className="toDoListItem crossItem" key={item.todo_id} id={item.todo_id}>{item.list_item} </p>
+          } else {
+            return <p className="toDoListItem finished crossItem" key={item.todo_id} id={item.todo_id}>{item.list_item} </p>
+          }
         })
     }
     else return null
@@ -56,23 +112,20 @@ class ToDo extends Component{
     return (
       <div>
         <br />
-        <div className='sticky'>
-          <h1><strong>To Do List</strong></h1>
+        <div>
           <div className='todoListMain'>
             <form onSubmit={this.addItem}>
               <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your list!">
               </input>
-              <button className='btn btn-primary' type='submit'>add</button>
+              <Button type='submit'><span className="glyphicon glyphicon-ok" aria-hidden="true"></span></Button>
             </form>
           </div>
           <hr className="stickyHR"/>
-          <ul className="list-unstyled">
-            {/* <li className="toDoListItem"> */}
+          <div className="list-unstyled" onClick={this.crossOut}>
               <ToDoItems entries={this.state.items}
               />
-            {/* </li> */}
             {todoListDb}
-          </ul>
+          </div>
         </div>
         <br />
       </div>

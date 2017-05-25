@@ -18,10 +18,7 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(cookieParser())
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../client/build'))
-}
-app.use(express.static(path.join(__dirname, '../client')))
+app.use(express.static(path.join(__dirname, '../client/build')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
 app.use('/', index)
@@ -30,8 +27,8 @@ app.use('/api/entries', entries)
 app.use('/api/entries_modules', entries_modules)
 app.use('/api/journals', journals)
 
-app.use('*', function(req, res, next) {
-  res.sendFile('index.html', { root: path.join(__dirname, '../client') })
+app.use('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
 })
 
 // catch 404 and forward to error handler

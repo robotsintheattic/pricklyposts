@@ -1,0 +1,254 @@
+/*-- General --*/
+body, html {
+    height: 100%;
+}
+
+#root {
+  font-family: 'Raleway', cursive;
+  background-image: url(https://www.clipartsgram.com/image/844021927-notebook-paper-powerpoint-template429184.jpg);
+  /*opacity: 0.7;*/
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a, btn, .glyphicon-ok {
+  cursor: pointer;
+}
+
+a:hover, a:active, a:visited, a:focus {
+  text-decoration: none;
+}
+
+button:hover, button:active, button:visited, button:focus {
+  outline: none;
+}
+
+.glyphicon-ok {
+  font-size: 20px;
+}
+
+.glyphicon-ok:hover, .glyphicon-ok:active, .glyphicon-ok:visited {
+  color: pink;
+}
+
+
+/*-- Layout --*/
+
+.navbar-header {
+  width: 100%;
+}
+
+.grid-heading {
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 8px 8px 0px 0px;
+  margin: 0rem 5rem 0rem 5rem;
+}
+
+.grid-top, .grid-bottom {
+  padding: 2rem;
+  height: auto;
+  border: 1px solid transparent;
+  margin: 0rem 5rem 0rem 5rem;
+}
+
+.grid-bottom {
+  border-radius: 0px 0px 8px 8px;
+  margin: 0rem 5rem 3rem 5rem;
+}
+
+.journalDiv {
+  height: 20em;
+  margin: 2em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #a4a2a1;
+  border-radius: 3em;
+  padding: 2em;
+}
+
+.journalCont {
+  margin-left: 10em;
+}
+
+/*-- NavBar & Sidebar --*/
+.Home-title {
+  font-family: 'cursive';
+  font-size: 4rem;
+  color: #A7E8BD;
+  padding-bottom: 1rem;
+  text-align: left;
+  padding-left: 2rem;
+  padding-top: 0rem;
+}
+div.navbar-header {
+  margin: -1rem;
+}
+
+.Home-img {
+  border-radius: 50%;
+  height: 6rem;
+}
+
+.Home-logo {
+  height: 6rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.Side-nav {
+  display: inline;
+}
+
+.Sidebar-demo {
+  padding: 15px;
+}
+
+.Sidebar.modal.fade .modal-dialog {
+  transition: none;
+}
+
+.Sidebar.modal.fade {
+  transition: transform 0.3s ease-out, opacity 0.15s linear;
+}
+
+.Sidebar.modal.fade:not(.in).left {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.Sidebar.modal.fade:not(.in).right {
+  transform: translate3d(100%, 0, 0);
+}
+
+.Sidebar.modal {
+  /* overflow: auto; */
+  max-width: 100%;
+  box-shadow: 5px 0 10px;
+  background-color: #f5f5f5;
+}
+
+.Sidebar.modal.left {
+  right: auto;
+}
+
+.Sidebar.modal.right {
+  left: auto;
+}
+
+.Sidebar.modal .modal-dialog {
+  margin: 0;
+  width: auto;
+}
+
+.Sidebar.modal .modal-dialog .modal-content {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.Sidebar.modal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+
+.Sidebar.modal.fade:not(.in).left .modal-dialog {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.Sidebar.modal.fade:not(.in).right .modal-dialog {
+  transform: translate3d(100%, 0, 0);
+}
+
+.Sidebar .nav {
+  width: 320px;
+}
+
+.insta-pics {
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/*---- Login Page Animations ----*/
+
+.App {
+  text-align: center;
+  height: 600px;
+}
+
+.App-content {
+  padding-top: 200px;
+}
+
+.App-title {
+  font-family: 'cursive';
+  font-size: 11rem;
+  color: rgba(77, 198, 131, 0.71);
+  padding-bottom: 2rem;
+}
+
+.Cactus-logo {
+  opacity: 0.7;
+}
+
+.insta-button {
+  border: 1px double grey;
+}
+
+.insta-button:hover {
+  animation: insta-button-buldger 1s forwards;
+  background-color: white;
+}
+
+@keyframes insta-button-buldger {
+  0% {
+    font-size: 100%;
+  }
+  100% {
+    font-size: 110%;
+    background-color: pink;
+    border-color: white;
+  }
+}
+
+.Cactus-logo:hover {
+  animation: Cactus-logo-spin infinite 3s linear;
+}
+
+@keyframes Cactus-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*-- Media Queries --*/
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+
+  .Home-title {
+    font-size: 3rem;
+  }
+
+  .grid-heading {
+    border: 1px solid transparent;
+  }
+
+  .grid-top, .grid-bottom {
+    border: 1px solid transparent;
+  }
+
+}

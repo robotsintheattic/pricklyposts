@@ -16,12 +16,13 @@ router.get('/', (req, res, next) => {
 // Getting ALL entries_modules for individual entry (includes the leftJoin to account for the todos TABLE)
 router.get('/:id', (req, res, next) => {
   knex('entries')
-    .select(['entries_modules.content', 'entries_modules.id as em_id', 'todos.list_item', 'todos.id as todo_id', 'modules.id as m_id'])
+    .select(['entries_modules.content', 'entries_modules.id as em_id', 'todos.list_item', 'todos.id as todo_id', 'todos.finished as finished', 'modules.id as m_id'])
     .join('entries_modules', 'entries_modules.entry_id', 'entries.id')
     .join('modules', 'modules.id', 'entries_modules.module_id')
     .leftJoin('todos', 'entries_modules.id', 'todos.entries_modules_id')
     .where('entries.id', req.params.id)
     .orderBy('modules.id')
+    .orderBy('todos.id')
     .then((modules) => {
       res.send(modules)
     })
@@ -32,7 +33,6 @@ router.get('/:id', (req, res, next) => {
 
 /* POST one entry */
 router.post('/', (req, res, next) => {
-  console.log('here', req.body)
   knex('entries')
     .returning(['id as e_id', 'title', 'journal_id'])
     .insert({
@@ -68,12 +68,11 @@ router.patch('/:id', (req, res, next) => {
 /* DELETE one entry */
 router.delete('/:id', (req, res, next) => {
   const id = req.params.id
-
   knex('entries')
     .where('id', id)
     .del()
     .then((entry) => {
-      res.send(entry)
+      res.sendStatus(200)
     })
     .catch((error) => {
       next(error)

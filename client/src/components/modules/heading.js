@@ -28,18 +28,20 @@ class Heading extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({html: `<h1>${nextProps.entryModule.content}</h1>`})
+    this.setState({html: `<p>${nextProps.entryModule.content}</p>`})
   }
 
   render() {
     return (
       <div>
-        <ContentEditable
-          html={this.state.html}
-          disabled={false}
-          onChange={this.handleChange}
-        />
-        <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        <h1 className="headingH1">
+          <ContentEditable
+            html={this.state.html}
+            disabled={false}
+            onChange={this.handleChange}
+          />
+          <span className="headingSpan" onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </h1>
       </div>
     )
   }

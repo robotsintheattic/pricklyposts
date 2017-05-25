@@ -31,7 +31,7 @@ class BlockQuote extends Component {
 
   render() {
     return (
-      <div className="quoteblock">
+      <div>
         <blockquote className="quote-box">
           <div className="quote-text">
             <ContentEditable
@@ -39,8 +39,7 @@ class BlockQuote extends Component {
               disabled={false}
               onChange={this.handleChange}/>
           </div>
-          <hr />
-            <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <span onClick={this.handleClick} className="glyphicon glyphicon-ok quotebtn" aria-hidden="true"></span>
         </blockquote>
       </div>
     )

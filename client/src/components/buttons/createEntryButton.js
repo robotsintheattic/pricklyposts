@@ -115,10 +115,8 @@ class CreateEntry extends Component {
 
   render() {
     return (
-      <div className='Sidenav pull-right'>
-          <Button onClick={this.handleClick}>+ New Entry</Button>
-      </div>
-    )
+      <Button onClick={this.handleClick} className="new-entry-button"><span className="glyphicon glyphicon-plus" aria-hidden="true"></span> New Entry</Button>
+    ) 
   }
 }
 

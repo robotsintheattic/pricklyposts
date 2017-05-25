@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
-import Pic from './modules/pic'
 import { Button, Modal, Nav, NavItem } from 'react-bootstrap'
+import Pic from './modules/pic'
+import Logo from '../Cactus_6.png'
+import CreateEntry from './buttons/createEntryButton'
+import DeleteEntry from './buttons/deleteBtn'
+import $ from 'jquery'
 
 class Sidebar extends Component {
 	render() {
@@ -9,7 +13,10 @@ class Sidebar extends Component {
       	 autoFocus keyboard
       >
       	<Modal.Header closeButton>
-        	<Modal.Title>Style your Entry!</Modal.Title>
+        	<Modal.Title className="Home-title"><img className="modal-logo" src={Logo} height="100rem;" alt="logo"/> Daily Dash</Modal.Title>
+          <br />
+          <CreateEntry />
+          <DeleteEntry />
         </Modal.Header>
       	<Modal.Body>
       		{ this.props.children }
@@ -35,6 +42,8 @@ class Sidenav extends Component {
     this.forceUpdate();
   }
 
+
+
 	render() {
   	return (
     	<div className='Sidenav pull-right'>
@@ -45,7 +54,6 @@ class Sidenav extends Component {
               <div className={ this.state.instaShow ? '' : 'hidden' }>
                 <Pic />
               </div>
-            <NavItem>Fonts</NavItem>
           </Nav>
         </Sidebar>
       </div>

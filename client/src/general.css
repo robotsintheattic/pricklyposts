@@ -6,13 +6,15 @@ body, html {
 
 #root {
   font-family: 'Raleway', cursive;
+  background-color: transparent;
   background-image: url(https://www.clipartsgram.com/image/844021927-notebook-paper-powerpoint-template429184.jpg);
   /*opacity: 0.7;*/
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 1000px;
 }
+
 
 a, btn, .glyphicon-ok {
   cursor: pointer;
@@ -43,7 +45,6 @@ button:hover, button:active, button:visited, button:focus {
 
 .grid-heading {
   height: auto;
-  border: 1px solid transparent;
   border-radius: 8px 8px 0px 0px;
   margin: 0rem 5rem 0rem 5rem;
 }
@@ -80,10 +81,8 @@ button:hover, button:active, button:visited, button:focus {
     );
 }
 
-.journalLink {}
-
-.journalCont {
-  margin-left: 10em;
+.journalContainer {
+  margin-top: -18rem;
 }
 
 /*-- NavBar & Sidebar --*/
@@ -101,7 +100,7 @@ button:hover, button:active, button:visited, button:focus {
 }
 
 .App-content button {
-  margin-left: 70px;
+  margin-left: 43px;
 }
 
 .Home-title p {
@@ -144,7 +143,7 @@ div.navbar-header {
   width: 500px;
   float: left;
   margin-top: -50px;
-  margin-left:400px;
+  margin-left: 445px;
 }
 
 .Side-nav {
@@ -179,8 +178,8 @@ div.navbar-header {
 }
 
 .modal-logo {
-  height: 100rem;
-  opacity: 0.
+  height: 10rem;
+  opacity: 0.7;
 }
 
 .new-entry-button {
@@ -226,6 +225,13 @@ div.navbar-header {
   width: 320px;
 }
 
+.sideNavBtn {
+  margin-top: -6rem;
+  margin-right: 3rem;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
 .insta-pics {
   padding-top: 20px;
 }
@@ -233,6 +239,15 @@ div.navbar-header {
 .hidden {
   display: none;
 }
+
+.bottomHR {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  width: 800px;
+}
+
 
 
 /*---- Login Page Animations ----*/
@@ -312,4 +327,10 @@ div.navbar-header {
   .grid-top, .grid-bottom {
     border: 1px solid transparent;
   }
+}
+
+.icon {
+  width: 10%;
+  height: auto;
+  float: right;
 }

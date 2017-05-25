@@ -17,7 +17,7 @@ class Mood extends Component {
   }
 
   handleClick = (e) => {
-    let content = this.state.text
+    let content = this.state.text.substring(5, this.state.text.length - 6)
     fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
       method: 'PATCH',
       body: JSON.stringify({content: content}),
@@ -30,14 +30,14 @@ class Mood extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({text: nextProps.entryModule.content})
+    this.setState({text: `<h2>${nextProps.entryModule.content}</h2>`})
   }
 
   render() {
     return (
       <div>
-        <div className="col-md-4 vcenter">
-          Today I feel:
+        <div className="col-md-5 vcenter">
+          <h2>Today I feel:</h2>
         </div>
         <div className="col-md-8 vcenter dashed-box">
           <ContentEditable
@@ -45,7 +45,7 @@ class Mood extends Component {
           disabled={false}
           onChange={this.handleChange}
           />
-          <img src={check} />
+          <img className="icon" src={check} onClick={this.handleClick} aria-hidden="true"/>
         </div>
       </div>
     )

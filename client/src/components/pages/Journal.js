@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
-import Navbar from './../navbar'
+import JournalNav from './../journalNav'
 import ToDo from './../modules/todo'
 import Heading from './../modules/heading'
 import Mood from './../modules/mood'
@@ -17,6 +17,7 @@ class Journal extends Component {
       journal_id: window.location.pathname.split('/')[2],
       entry_id: window.location.pathname.split('/')[3],
       entryArr: '',
+      title: '',
       heading: '',
       mood: '',
       text: '',
@@ -37,12 +38,13 @@ class Journal extends Component {
     .then(res => {
       return res.text().then(entries => {
         entries = JSON.parse(entries)
-
+        console.log('entries', entries)
         let todoItems = entries.filter(entry => {
           return entry.m_id === 6
         })
 
         this.setState({
+          title: entries[0].j_title,
           heading: entries[0],
           mood: entries[1],
           text: entries[2],
@@ -83,8 +85,8 @@ class Journal extends Component {
 
     return (
       <div>
-        <Navbar />
-        <div className="container">
+        <JournalNav title={this.state.title}/>
+        <div className="container journalContainer">
           <div className="row grid-heading">
             <div className="col-md-6 col-sm-12 heading">
               <Heading entryModule={this.state.heading}/>
@@ -93,7 +95,8 @@ class Journal extends Component {
               <Mood entryModule={this.state.mood} />
             </div>
           </div>
-        </div>
+
+          <hr className="bottomHR"/>
         <div className="row grid-top">
           <div className="col-md-6 col-sm-12 textarea">
             <Textfield entryModule={this.state.text} />
@@ -110,11 +113,11 @@ class Journal extends Component {
             <Blockquote entryModule={this.state.blockquote}/>
           </div>
         </div>
+        </div>
+        <hr className="bottomHR"/>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
         <Button className="journals-button" href="/journals">Back to All Journals</Button>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
-        <br /><br />
-        <br /><br />
       </div>
     )
   }

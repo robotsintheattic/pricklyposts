@@ -14,7 +14,7 @@ class Sidebar extends Component {
       	 autoFocus keyboard
       >
       	<Modal.Header closeButton>
-        	<Modal.Title className="Home-title"><img className="modal-logo" src={Logo} height="100rem;" alt="logo"/> Daily Dash</Modal.Title>
+        	<Modal.Title className="Home-title"><img className="modal-logo" src={Logo} height="100rem;" alt="logo"/> Prickly Posts</Modal.Title>
           <br />
         </Modal.Header>
       	<Modal.Body>
@@ -52,7 +52,7 @@ class Sidenav extends Component {
 	render() {
   	return (
     	<div className='Sidenav pull-right'>
-      	<Button onClick={ () => this.updateModal(true) }><span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> </Button>
+      	<Button onClick={ () => this.updateModal(true) } className="sideNavBtn"><span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> </Button>
         <Sidebar side='left' isVisible={ this.state.isVisible } onHide={ () => this.updateModal(false) }>
         	<Nav>
           	<NavItem onClick={ () => this.setState({ instaShow: !this.state.instaShow })}>Recent Instagram Photos</NavItem>

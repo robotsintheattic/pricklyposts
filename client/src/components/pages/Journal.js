@@ -97,6 +97,7 @@ class Journal extends Component {
             </div>
           </div>
 
+          <hr className="bottomHR"/>
         <div className="row grid-top">
           <div className="col-md-6 col-sm-12 textarea">
             <Textfield entryModule={this.state.text} />
@@ -114,11 +115,10 @@ class Journal extends Component {
           </div>
         </div>
         </div>
+        <hr className="bottomHR"/>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
         <Button className="journals-button" href="/journals">Back to All Journals</Button>
         <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
-        <br /><br />
-        <br /><br />
       </div>
     )
   }

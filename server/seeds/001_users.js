@@ -8,7 +8,7 @@ exports.seed = function(knex) {
         { id: 1,
           fullName: 'Emily Ringoen',
           userName: 'emilyringoen',
-          profilePicture: 'https://scontent.cdninstagram.com/t51.2885-19/11191102_1653303844898676_1806647406_a.jpg',
+          profilePicture: 'https://scontent.cdninstagram.com/t51.2885-19/s150x150/18580869_148868025654353_4117235862754820096_a.jpg',
           instagramId: '1910037648'
         },
         { id: 2,

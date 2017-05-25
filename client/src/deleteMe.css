@@ -4,12 +4,11 @@
 }
 
 .journalContainer {
-  margin-top: -15rem;
+  margin-top: -18rem;
 }
 
 .grid-heading {
   height: auto;
-  border-bottom: 1px solid black;
   border-radius: 8px 8px 0px 0px;
   margin: 0rem 5rem 0rem 5rem;
 }
@@ -35,4 +34,13 @@
 
 .headingH1 {
   display: inline-block;
+  margin-left: 4rem;
+}
+
+.bottomHR {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  width: 800px;
 }

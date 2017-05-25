@@ -16,7 +16,7 @@ class Mood extends Component {
   }
 
   handleClick = (e) => {
-    let content = this.state.text
+    let content = this.state.text.substring(5, this.state.text.length - 6)
     fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
       method: 'PATCH',
       body: JSON.stringify({content: content}),
@@ -29,21 +29,23 @@ class Mood extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({text: nextProps.entryModule.content})
+    this.setState({text: `<h2>${nextProps.entryModule.content}</h2>`})
   }
 
   render() {
     return (
       <div>
-        <div className="col-md-4 vcenter">
-          Today I feel:
+        <div className="col-md-5 vcenter">
+          <h2>Today I feel:</h2>
         </div>
-        <div className="col-md-8 vcenter dashed-box">
-          <ContentEditable
-          html={this.state.text}
-          disabled={false}
-          onChange={this.handleChange}
-          />
+        <div className="col-md-5 vcenter dashed-box">
+          <div className="inlineBox">
+            <ContentEditable
+            html={this.state.text}
+            disabled={false}
+            onChange={this.handleChange}
+            />
+          </div>
           <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true">
           </span>
         </div>

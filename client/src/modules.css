@@ -3,33 +3,21 @@
 /*-- Heading --*/
 
 .headingSpan {
-  margin-left: 5rem;
+  margin-left: 3rem;
 }
 
 /*-- Mood --*/
-
-.dashed-box {
-  border: 1px dashed #AAA;
-  padding-top: 15px;
+.inlineBox {
+  display: inline-block;
 }
 
-.dashed-box div {
-  font-size: 20px;
-}
 
 .vcenter {
-  margin-top: 45px;
-}
-
-.vcenter {
-  height: auto;
-  vertical-align: middle;
-  margin-top: 2.8rem;
-  margin-bottom: 1.8rem;
+  margin-top: 1rem;
 }
 
 .vcenter span {
-  margin-right: -285px;
+  padding-left: 3rem;
 }
 
 
@@ -115,73 +103,69 @@
 /*-- Picture --*/
 
 .instagram {
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   margin-left: -15px;
+  display:
 }
 
 .stackone {
   border: 6px solid #fff;
-  float: left;
-  height: 362px;
-  width: 362px;
-  /*margin: 50px 93px;*/
+  height: 312px;
+  width: 312px;
+  margin-left: 10rem;
   position: relative;
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+  /*
+  .stackone:before {
+    content: "";
+    height: 362px;
+    width: 362px;
+    background: #eff2bb;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: -10px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
 
-.stackone:before {
-  content: "";
-}
-
-.stackone:before {
-  content: "";
-  height: 362px;
-  width: 362px;
-  background: #eff2bb;
-  border: 6px solid #fff;
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  left: -10px;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  -webkit-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
-  -o-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
-  transform: rotate(-5deg);
-}
-
-.stackone:after {
-  content: "";
-  height: 362px;
-  width: 362px;
-  background: #768590;
-  border: 6px solid #fff;
-  position: absolute;
-  z-index: -1;
-  top: 5px;
-  left: 0px;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  -webkit-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
-  -ms-transform: rotate(4deg);
-  transform: rotate(4deg);
-}
+  .stackone:after {
+    content: "";
+    height: 362px;
+    width: 362px;
+    background: #768590;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 0px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }*/
 
 
 /*-- Block Quote --*/
 
 .quoteblock {
   width: 450px;
-  margin: 0px 0px 0px 135px;
+  margin: 0px 0px 0px 73px;
 }
 
 blockquote {

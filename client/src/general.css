@@ -6,14 +6,15 @@ body, html {
 
 #root {
   font-family: 'Raleway', cursive;
+  background-color: transparent;
   background-image: url(https://www.clipartsgram.com/image/844021927-notebook-paper-powerpoint-template429184.jpg);
   /*opacity: 0.7;*/
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1 important!;
+  height: 1000px;
 }
+
 
 a, btn, .glyphicon-ok {
   cursor: pointer;
@@ -42,7 +43,7 @@ button:hover, button:active, button:visited, button:focus {
   width: 100%;
 }
 
-/*.grid-heading {
+.grid-heading {
   height: auto;
   border: 1px solid transparent;
   border-radius: 8px 8px 0px 0px;
@@ -59,7 +60,7 @@ button:hover, button:active, button:visited, button:focus {
 .grid-bottom {
   border-radius: 0px 0px 8px 8px;
   margin: 0rem 5rem 3rem 5rem;
-}*/
+}
 
 .journalRow {
   margin-left: 175px;
@@ -171,11 +172,11 @@ div.navbar-header {
   box-shadow: 5px 0 10px;
   background-color: #f5f5f5;
 }
-/*
+
 .modal-logo {
   height: 100rem;
   opacity: 0.
-}*/
+}
 
 .new-entry-button {
   margin-right: 1rem;

@@ -5,7 +5,6 @@ import Home from './components/pages/Home'
 import Journal from './components/pages/Journal'
 
 import registerServiceWorker from './registerServiceWorker'
-import './index.css'
 import './general.css'
 import './modules.css'
 

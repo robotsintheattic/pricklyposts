@@ -86,7 +86,6 @@ button:hover, button:active, button:visited, button:focus {
   margin-left: 10em;
 }
 
-
 /*-- NavBar & Sidebar --*/
 
 .Home-title {
@@ -96,6 +95,13 @@ button:hover, button:active, button:visited, button:focus {
   margin: 30px auto;
   margin-top: 60px;
   padding: 5px auto;
+}
+.Cactus-logo {
+  margin: 0 35px;
+}
+
+.App-content button {
+  margin-left: 70px;
 }
 
 .Home-title p {

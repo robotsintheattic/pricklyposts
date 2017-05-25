@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../../App.css'
+import logoOne from '../../logo-1.png'
+import logoTwo from '../../logo-2.png'
 import Logo from '../../Cactus_6.png'
 import LoginButton from './../buttons/loginButton'
 
@@ -18,7 +20,11 @@ class Login extends Component {
     return (
       <div className="App">
         <div className="container App-content">
-          <h1 className="App-title">Daily <span><img className="Cactus-logo" alt="svg of a cactus" src={Logo} /></span> Dash</h1>
+          <h1 className="App-title">
+            <img className="logo-1" alt="svg of a cactus" src={logoOne} />
+            <img className="Cactus-logo" alt="svg of a cactus" src={Logo} />
+            <img className="logo-2" alt="svg of a cactus" src={logoTwo} />
+          </h1>
           <LoginButton />
         </div>
       </div>

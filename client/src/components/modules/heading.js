@@ -15,7 +15,7 @@ class Heading extends Component {
   }
 
   handleClick = (e) => {
-    let content = this.state.html.substring(4, this.state.html.length - 5)
+    let content = this.state.html.substring(5, this.state.html.length - 6)
     fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
       method: 'PATCH',
       body: JSON.stringify({content: content}),
@@ -28,20 +28,20 @@ class Heading extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({html: `<p>${nextProps.entryModule.content}</p>`})
+    this.setState({html: `<h1>${nextProps.entryModule.content}</h1>`})
   }
 
   render() {
     return (
       <div>
-        <h1 className="headingH1">
+        <div className="headingH1">
           <ContentEditable
             html={this.state.html}
             disabled={false}
             onChange={this.handleChange}
           />
-          <span className="headingSpan" onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
-        </h1>
+        </div>
+        <span onClick={this.handleClick} className="glyphicon glyphicon-ok headingSpan" aria-hidden="true"></span>
       </div>
     )
   }

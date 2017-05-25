@@ -2,6 +2,9 @@
 
 /*-- Heading --*/
 
+.headingSpan {
+  margin-left: 5rem;
+}
 
 /*-- Mood --*/
 
@@ -38,16 +41,12 @@
 
 .texting {
   padding: 20px;
-  margin: 50px auto;
+  margin: 3px auto;
   background: #f9f9f9;
   color: #000;
-  font-size: 21px;
-  font-weight: bold;
+  font-size: 16px;
   line-height: 1.3em;
-  border: 2px dashed #000;
-  /*border-radius: 10px;*/
   box-shadow: 0 0 0 4px #f9f9f9, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-  text-shadow: -1px -1px rgba(133, 121, 121, 0.7);
   font-weight: normal;
   width: 350px;
 }
@@ -64,8 +63,6 @@
 /*-- To Do --*/
 
 .sticky {
-  margin: 0 100px;
-  padding: 8px 24px;
   width: 380px;
   font-family: 'Shadows Into Light Two', cursive !important;
   font-size: 1.4em;
@@ -128,7 +125,7 @@
   float: left;
   height: 362px;
   width: 362px;
-  margin: 50px 93px;
+  /*margin: 50px 93px;*/
   position: relative;
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -184,7 +181,7 @@
 
 .quoteblock {
   width: 450px;
-  margin: 25px 0px 0px 135px;
+  margin: 0px 0px 0px 135px;
 }
 
 blockquote {
@@ -192,7 +189,7 @@ blockquote {
   border-left: 10px solid #A7E8BD;
   /*margin: 1.5em 10px;*/
   /*padding: -1.5em 10px;*/
-  margin-top: 110px;
+  /*margin-top: 110px;*/
   quotes: "\201C""\201D""\2018""\2019";
 }
 
@@ -230,6 +227,7 @@ blockquote:before {
     height: 25px;
     font-size: 20px;
   }
+
   /*-- Mood --*/
     .vcenter {
       font-size: 20px;

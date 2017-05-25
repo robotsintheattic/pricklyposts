@@ -1,0 +1,38 @@
+.modal-logo {
+  height: 10rem;
+  opacity: 0.7;
+}
+
+.journalContainer {
+  margin-top: -15rem;
+}
+
+.grid-heading {
+  height: auto;
+  border-bottom: 1px solid black;
+  border-radius: 8px 8px 0px 0px;
+  margin: 0rem 5rem 0rem 5rem;
+}
+
+.grid-top, .grid-bottom {
+  padding: 2rem;
+  height: auto;
+  border: 1px solid transparent;
+  margin: 0rem 5rem 0rem 5rem;
+}
+
+.grid-bottom {
+  border-radius: 0px 0px 8px 8px;
+  margin: 0rem 5rem 3rem 5rem;
+}
+
+.sideNavBtn {
+  margin-top: -6rem;
+  margin-right: 3rem;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.headingH1 {
+  display: inline-block;
+}

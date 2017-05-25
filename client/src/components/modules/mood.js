@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ContentEditable from 'react-contenteditable'
+import check from '../../Cactus7_checkicon.png'
 
 
 class Mood extends Component {
@@ -44,8 +45,7 @@ class Mood extends Component {
           disabled={false}
           onChange={this.handleChange}
           />
-          <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true">
-          </span>
+          <img src={check} />
         </div>
       </div>
     )

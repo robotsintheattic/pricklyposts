@@ -21,14 +21,12 @@ class Navbar extends Component {
             <div className="container-fluid">
               <div className="navbar-header">
                 <h1 className="Home-title"><img className="Home-img" src={localStorage.userPic} alt="profile picture"/> <p>Welcome, {localStorage.userName}</p>
-                <span><Sidenav /></span>
                 </h1>
 
               </div>
               <hr className="navbarHR"/>
             </div>
           </nav>
-          <hr className="navbarHR"/>
         </div>
       )
   }

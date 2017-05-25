@@ -45,7 +45,6 @@ button:hover, button:active, button:visited, button:focus {
 
 .grid-heading {
   height: auto;
-  border: 1px solid transparent;
   border-radius: 8px 8px 0px 0px;
   margin: 0rem 5rem 0rem 5rem;
 }
@@ -82,10 +81,8 @@ button:hover, button:active, button:visited, button:focus {
     );
 }
 
-.journalLink {}
-
-.journalCont {
-  margin-left: 10em;
+.journalContainer {
+  margin-top: -18rem;
 }
 
 /*-- NavBar & Sidebar --*/
@@ -181,8 +178,8 @@ div.navbar-header {
 }
 
 .modal-logo {
-  height: 100rem;
-  opacity: 0.
+  height: 10rem;
+  opacity: 0.7;
 }
 
 .new-entry-button {
@@ -228,6 +225,13 @@ div.navbar-header {
   width: 320px;
 }
 
+.sideNavBtn {
+  margin-top: -6rem;
+  margin-right: 3rem;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
 .insta-pics {
   padding-top: 20px;
 }
@@ -235,6 +239,15 @@ div.navbar-header {
 .hidden {
   display: none;
 }
+
+.bottomHR {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  width: 800px;
+}
+
 
 
 /*---- Login Page Animations ----*/

@@ -7,6 +7,7 @@ import Heading from './../modules/heading'
 import Mood from './../modules/mood'
 import Textfield from './../modules/textfield'
 import Blockquote from './../modules/blockquote'
+import ImgDisplay from './../modules/img_display'
 
 class Journal extends Component {
   constructor(props) {
@@ -136,7 +137,7 @@ class Journal extends Component {
         </div>
         <div className="row grid-bottom">
           <div className="col-md-6 col-sm-12 stackone">
-            <img className="instagram" src={this.state.img.content} alt="instagram"/>
+            <ImgDisplay entryModule={this.state.img}/>
           </div>
           <div className="col-md-6 col-sm-12 quoteblock">
             <Blockquote entryModule={this.state.blockquote}/>

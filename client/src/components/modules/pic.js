@@ -14,11 +14,9 @@ class Pic extends Component {
 
   selectPic(e) {
     if (e.target.src) {
-      localStorage.setItem('img_src', e.target.src)
+      $('#instagram-journal').attr('src', e.target.src)
     }
   }
-
-
 
   componentDidMount() {
     let recentPics = ''

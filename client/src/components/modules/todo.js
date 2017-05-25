@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Button } from 'react-bootstrap'
 
 class ToDoItems extends Component {
   render() {
@@ -61,7 +62,7 @@ class ToDo extends Component{
             <form onSubmit={this.addItem}>
               <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your list!">
               </input>
-              <button className='toDoBtn glyphicon glyphicon-ok' type='submit' ></button>
+              <Button type='submit'><span className="glyphicon glyphicon-ok" aria-hidden="true"></span></Button>
             </form>
           </div>
           <hr className="stickyHR"/>

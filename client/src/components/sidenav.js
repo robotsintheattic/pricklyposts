@@ -14,7 +14,7 @@ class Sidebar extends Component {
       	 autoFocus keyboard
       >
       	<Modal.Header closeButton>
-        	<Modal.Title className="Home-title"><img className="modal-logo" src={Logo} height="100rem;" alt="logo"/> Prickly Post</Modal.Title>
+        	<Modal.Title className="Home-title"><img className="modal-logo" src={Logo} height="100rem;" alt="logo"/> Prickly Posts</Modal.Title>
           <br />
         </Modal.Header>
       	<Modal.Body>

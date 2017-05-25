@@ -8,7 +8,6 @@ import Mood from './../modules/mood'
 import Textfield from './../modules/textfield'
 import Blockquote from './../modules/blockquote'
 import ImgDisplay from './../modules/img_display'
-import './../../deleteMe.css'
 
 class Journal extends Component {
   constructor(props) {

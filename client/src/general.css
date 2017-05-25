@@ -75,8 +75,9 @@ button:hover, button:active, button:visited, button:focus {
   width: 200px;
   background-image:
     radial-gradient(
-      #e5d9bd,
+      #7e662f,
       white,
+      /*transparent,*/
       transparent
     );
 }
@@ -87,7 +88,6 @@ button:hover, button:active, button:visited, button:focus {
   margin-left: 10em;
 }
 
-
 /*-- NavBar & Sidebar --*/
 
 .Home-title {
@@ -97,6 +97,13 @@ button:hover, button:active, button:visited, button:focus {
   margin: 30px auto;
   margin-top: 60px;
   padding: 5px auto;
+}
+.Cactus-logo {
+  margin: 0 35px;
+}
+
+.App-content button {
+  margin-left: 70px;
 }
 
 .Home-title p {
@@ -117,7 +124,7 @@ div.navbar-header {
   float: left;
   margin-top: -25px;
   margin-left: 100px;
-  border: 6px solid lightyellow;
+  border: 6px solid #faeed3;
   -webkit-transform: rotate(-4deg);
   -moz-transform: rotate(-4deg);
   -o-transform: rotate(-4deg);

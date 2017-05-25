@@ -35,12 +35,18 @@ class Textfield extends Component {
   render() {
     return (
       <div>
-        <ContentEditable
-          html={this.state.text}
-          disabled={false}
-          onChange={this.handleChange}
-        />
-        <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        <div>
+          <p className="texting">
+            <p>
+              <ContentEditable
+                html={this.state.text}
+                disabled={false}
+                onChange={this.handleChange}
+              />
+            </p>
+            <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          </p>
+        </div>
       </div>
     )
   }

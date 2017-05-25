@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../../App.css'
-import Logo from '../../Cactus_6.svg'
+import Logo from '../../Cactus_6.png'
 import LoginButton from './../buttons/loginButton'
 
 class Login extends Component {

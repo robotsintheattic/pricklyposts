@@ -1,0 +1,341 @@
+
+
+/*-- Heading --*/
+
+
+/*-- Mood --*/
+
+.dashed-box {
+  border: 1px dashed #AAA;
+  padding-top: 15px;
+}
+
+.dashed-box div {
+  font-size: 20px;
+}
+
+.vcenter {
+  margin-top: 45px;
+}
+
+.vcenter {
+  height: auto;
+  vertical-align: middle;
+  margin-top: 2.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.vcenter span {
+  margin-right: -285px;
+}
+
+
+/*-- Text Field --*/
+
+.textarea h2 {
+  margin-top: -5px;
+}
+
+.texting {
+  padding: 20px;
+  margin: 50px auto;
+  background: #f9f9f9;
+  color: #000;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.3em;
+  border: 2px dashed #000;
+  /*border-radius: 10px;*/
+  box-shadow: 0 0 0 4px #f9f9f9, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px rgba(133, 121, 121, 0.7);
+  font-weight: normal;
+  width: 350px;
+}
+
+.texting p {
+  text-align: justify;
+}
+
+.texting span {
+  margin-right: -275px;
+}
+
+
+/*-- To Do --*/
+
+.sticky {
+  margin: 0 100px;
+  padding: 8px 24px;
+  width: 380px;
+  font-family: 'Shadows Into Light Two', cursive !important;
+  font-size: 1.4em;
+  border: 1px #E8Ds47 solid;
+  -moz-box-shadow: 0px 0px 6px 1px #333333;
+  -webkit-box-shadow: 0px 0px 6px 1px #333333;
+  box-shadow: 0px 0px 6px 1px #333333;
+  background: rgba(167, 232, 190, 0.25);
+  background: -moz-linear-gradient(top, rgba(167, 232, 190, 0.25) 0%, #A7E8BD 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(167, 232, 190, 0.25)), color-stop(100%, #A7E8BD));
+  background: -webkit-linear-gradient(top, rgba(167, 232, 190, 0.25) 0%, #A7E8BD 100%);
+  background: -o-linear-gradient(top, rgba(167, 232, 190, 0.25) 0%, #A7E8BD 100%);
+  background: -ms-linear-gradient(top, rgba(167, 232, 190, 0.25) 0%, #A7E8BD 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(167, 232, 190, 0.25)', endColorstr='#A7E8BD', GradientType=0);
+  background: linear-gradient(top, rgba(167, 232, 190, 0.25) 0%, #A7E8BD 100%);
+}
+
+.toDoHolder {
+  width: 175px;
+  margin-right: 10px;
+}
+
+.stickyHR {
+  border: 0;
+  height: 1.5px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.sticky ul {
+  list-style-type: none;
+}
+
+.sticky p {
+  text-align: center;
+}
+
+
+/*.toDoListItem {
+  margin: none;
+}*/
+
+.toDoBtn {
+  color: #000;
+}
+
+
+/*-- Picture --*/
+
+.instagram {
+  height: 350px;
+  width: 350px;
+  margin-left: -15px;
+}
+
+.stackone {
+  border: 6px solid #fff;
+  float: left;
+  height: 362px;
+  width: 362px;
+  margin: 50px 93px;
+  position: relative;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.stackone:before {
+  content: "";
+}
+
+.stackone:before {
+  content: "";
+  height: 362px;
+  width: 362px;
+  background: #eff2bb;
+  border: 6px solid #fff;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: -10px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.stackone:after {
+  content: "";
+  height: 362px;
+  width: 362px;
+  background: #768590;
+  border: 6px solid #fff;
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 0px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+
+
+/*-- Block Quote --*/
+
+.quoteblock {
+  width: 450px;
+  margin: 25px 0px 0px 135px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #A7E8BD;
+  /*margin: 1.5em 10px;*/
+  /*padding: -1.5em 10px;*/
+  margin-top: 110px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #A7E8BD;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.1em;
+  margin-right: 6.25em;
+  vertical-align: -0.5em;
+}
+
+.quotebtn {
+  margin-right: -345px;
+}
+
+
+/*-- Media Queries --*/
+
+
+/* iPhone 6+ ----------- */
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+  /*-- General --*/
+  button.btn.btn-default {
+    visibility: hidden;
+    display: none;
+  }
+  .glyphicon.glyphicon-ok {
+    visibility: hidden;
+    display: none;
+  }
+  /*-- Heading --*/
+  .headingH1 {
+    height: 25px;
+    font-size: 20px;
+  }
+  /*-- Mood --*/
+    .vcenter {
+      font-size: 20px;
+      margin-top: -5px;
+    }
+    .dashed-box {
+      margin-top: -15px;
+    }
+  /*-- Text Field --*/
+  .texting {
+    width: 200px;
+    margin-top: -15px;
+    font-size: 20px;
+  }
+  /*-- To Do --*/
+  .sticky {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+  }
+  .toDoHolder {
+    margin-right: -29px;
+    font-size: 20px;
+  }
+  /*-- Image --*/
+  .instagram {
+    height: 200px;
+    width: 200px;
+  }
+  .stackone {
+    border: 6px solid #fff;
+    float: left;
+    height: 212px;
+    width: 212px;
+    margin: -5px 11px;
+    position: relative;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .stackone:before {
+    content: "";
+  }
+  .stackone:before {
+    content: "";
+    height: 212px;
+    width: 212px;
+    background: #eff2bb;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: -10px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  .stackone:after {
+    content: "";
+    height: 212px;
+    width: 212px;
+    background: #768590;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 0px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  /*-- Quote --*/
+  .quoteblock {
+    width: auto;
+    margin: 0px;
+  }
+  blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #A7E8BD;
+    margin: 0.5em -5px;
+    padding: -1.5em 10px;
+    margin-top: 190px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote.quote-box {
+    margin-top: 245px;
+  }
+  blockquote:before {
+    color: #A7E8BD;
+    content: open-quote;
+    font-size: 20px;
+    line-height: 0.1em;
+    margin-right: 6.25em;
+    vertical-align: -0.5em;
+  }
+  .quote-text {
+    font-size: 20px;
+  }
+  .quotebtn {
+    margin-right: -345px;
+  }
+}

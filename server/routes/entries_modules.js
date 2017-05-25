@@ -38,6 +38,15 @@ router.get('/:id', (req, res, next) => {
       next(error)
     })
 })
+// Post todo items
+router.post('/todos', (req, res, next) => {
+  knex('todos')
+    .returning(['id'])
+    .insert(req.body)
+    .then((todo) => {
+      res.send(todo)
+    })
+})
 
 /* POST one option */
 router.post('/:id', (req, res, next) => {
@@ -56,6 +65,8 @@ router.post('/:id', (req, res, next) => {
       next(error)
     })
 })
+
+
 
 /* UPDATE one option */
 router.patch('/:id', (req, res, next) => {

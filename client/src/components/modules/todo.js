@@ -26,6 +26,7 @@ class ToDo extends Component{
   }
 
   addItem(e) {
+    e.preventDefault()
     let itemArray = this.state.items
 
     itemArray.unshift(
@@ -39,10 +40,23 @@ class ToDo extends Component{
       items: itemArray
     })
 
-    this._inputElement.value = ""
 
-    e.preventDefault()
+    fetch(`/api/entries_modules/todos`, {
+      method: 'POST',
+      body: JSON.stringify({
+        entries_modules_id: this.props.entryModule[0].em_id,
+        list_item: this._inputElement.value
+      }),
+      credentials: 'same-origin',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+    
+    this._inputElement.value = ""
   }
+
 
   render() {
     let todoListDb
@@ -67,10 +81,8 @@ class ToDo extends Component{
           </div>
           <hr className="stickyHR"/>
           <div className="list-unstyled">
-            {/* <li className="toDoListItem"> */}
               <ToDoItems entries={this.state.items}
               />
-            {/* </li> */}
             {todoListDb}
           </div>
         </div>

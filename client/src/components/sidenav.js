@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Pic from './modules/pic'
 import { Button, Modal, Nav, NavItem } from 'react-bootstrap'
+import $ from 'jquery'
 
 class Sidebar extends Component {
 	render() {
@@ -34,6 +35,8 @@ class Sidenav extends Component {
     this.state.instaShow = false;
     this.forceUpdate();
   }
+
+  
 
 	render() {
   	return (

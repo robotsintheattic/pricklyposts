@@ -49,7 +49,7 @@ class CreateEntry extends Component {
                 'Content-Type': 'application/json'
               }
             }).then(() => {
-              
+
             })
             fetch(`/api/entries_modules/${entryId}`, {
               method: 'POST',
@@ -63,7 +63,7 @@ class CreateEntry extends Component {
                 'Content-Type': 'application/json'
               }
             }).then(() => {
-              
+
             })
             fetch(`/api/entries_modules/${entryId}`, {
               method: 'POST',
@@ -77,7 +77,7 @@ class CreateEntry extends Component {
                 'Content-Type': 'application/json'
               }
             }).then(() => {
-              
+
             })
             fetch(`/api/entries_modules/${entryId}`, {
               method: 'POST',
@@ -91,7 +91,7 @@ class CreateEntry extends Component {
                 'Content-Type': 'application/json'
               }
             }).then(() => {
-              
+
             })
             fetch(`/api/entries_modules/${entryId}`, {
               method: 'POST',
@@ -105,7 +105,7 @@ class CreateEntry extends Component {
                 'Content-Type': 'application/json'
               }
             }).then(() => {
-              
+
             })
             fetch(`/api/entries_modules/${entryId}`, {
               method: 'POST',
@@ -119,7 +119,7 @@ class CreateEntry extends Component {
                 'Content-Type': 'application/json'
               }
             }).then(() => {
-              
+
             })
           })
         }).then(() => {
@@ -136,9 +136,7 @@ class CreateEntry extends Component {
 
   render() {
     return (
-      <div className='pull-right'>
-          <Button onClick={this.handleClick}>Delete Entry</Button>
-      </div>
+      <Button onClick={this.handleClick}><span className="glyphicon glyphicon-trash" aria-hidden="true"></span> Current Entry</Button>
     )
   }
 }

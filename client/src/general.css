@@ -1,31 +1,28 @@
 /*-- General --*/
+body, html {
+    height: 100%;
+}
 
 #root {
   font-family: 'Raleway', cursive;
-}
-
-.App {
-  text-align: center;
-  height: 600px;
-}
-
-.App-content {
-  padding-top: 200px;
-}
-
-.App-title {
-  font-family: 'cursive';
-  font-size: 11rem;
-  color: #A7E8BD;
-  padding-bottom: 2rem;
+  background-image: url(https://www.clipartsgram.com/image/844021927-notebook-paper-powerpoint-template429184.jpg);
+  /*opacity: 0.7;*/
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a, btn, .glyphicon-ok {
   cursor: pointer;
 }
 
-a:hover, a:active, a:visited {
+a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
+}
+
+button:hover, button:active, button:visited, button:focus {
+  outline: none;
 }
 
 .glyphicon-ok {
@@ -176,6 +173,26 @@ div.navbar-header {
 }
 
 /*---- Login Page Animations ----*/
+
+.App {
+  text-align: center;
+  height: 600px;
+}
+
+.App-content {
+  padding-top: 200px;
+}
+
+.App-title {
+  font-family: 'cursive';
+  font-size: 11rem;
+  color: rgba(77, 198, 131, 0.71);
+  padding-bottom: 2rem;
+}
+
+.Cactus-logo {
+  opacity: 0.7;
+}
 
 .insta-button {
   border: 1px double grey;

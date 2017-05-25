@@ -81,38 +81,73 @@ class Journal extends Component {
     if (next_entry) next = next_entry
 
     return (
-        <div>
-          <Navbar />
-          <div className="container">
-            <div className="row grid-heading">
-              <div className="col-md-6 col-sm-12">
-                <Heading entryModule={this.state.heading}/>
-              </div>
-              <div className="col-md-6 col-sm-12">
-                <Mood entryModule={this.state.mood} />
-              </div>
+        // <div>
+        //   <Navbar />
+        //   <div className="container">
+        //     <div className="row grid-heading">
+        //       <div className="col-md-6 col-sm-12 heading">
+        //         <Heading entryModule={this.state.heading}/>
+        //       </div>
+        //       <div className="col-md-6 col-sm-12 mood">
+        //         <Mood entryModule={this.state.mood} />
+        //       </div>
+        //     </div>
+        //     <div className="row grid-top">
+        //       <div className="col-md-6 col-sm-12 textarea">
+        //         <Textfield entryModule={this.state.text} />
+        //       </div>
+        //       <div className="col-md-6 col-sm-12 sticky">
+        //         <ToDo entryModule={this.state.todo}/>
+        //       </div>
+        //     </div>
+        //     <div className="row grid-bottom">
+        //       <div className="col-md-6 col-sm-12 stackone">
+        //         <img className="instagram" src={this.state.img.content} alt="instagram"/>
+        //       </div>
+        //       <div className="col-md-6 col-sm-12 quoteblock">
+        //         <Blockquote entryModule={this.state.blockquote}/>
+        //       </div>
+        //     </div>
+        //     <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
+        //     <Button className="journals-button" href="/journals">Back to All Journals</Button>
+        //     <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
+        //   </div>
+        // </div>
+
+      <div>
+        <Navbar />
+        <div className="container">
+          <div className="row grid-heading">
+            <div className="col-md-6 col-sm-12 heading">
+              <Heading entryModule={this.state.heading}/>
             </div>
-            <div className="row grid-top">
-              <div className="col-md-6 col-sm-12">
-                <Textfield entryModule={this.state.text} />
-              </div>
-              <div className="col-md-6 col-sm-12">
-                <ToDo entryModule={this.state.todo}/>
-              </div>
+            <div className="col-md-6 col-sm-12 mood">
+              <Mood entryModule={this.state.mood} />
             </div>
-            <div className="row grid-bottom">
-              <div className="col-md-6 col-sm-12 stackone">
-                <img className="instagram" src={this.state.img.content} alt="instagram"/>
-              </div>
-              <div className="col-md-6 col-sm-12 quoteblock">
-                <Blockquote entryModule={this.state.blockquote}/>
-              </div>
-            </div>
-            <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
-            <Button className="journals-button" href="/journals">Back to All Journals</Button>
-            <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
           </div>
         </div>
+        <div className="row grid-top">
+          <div className="col-md-6 col-sm-12 textarea">
+            <Textfield entryModule={this.state.text} />
+          </div>
+          <div className="col-md-6 col-sm-12 sticky">
+            <ToDo entryModule={this.state.todo}/>
+          </div>
+        </div>
+        <div className="row grid-bottom">
+          <div className="col-md-6 col-sm-12 stackone">
+            <img className="instagram" src={this.state.img.content} alt="instagram"/>
+          </div>
+          <div className="col-md-6 col-sm-12 quoteblock">
+            <Blockquote entryModule={this.state.blockquote}/>
+          </div>
+        </div>
+        <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${prev}`}>Previous Entry</Link></Button>
+        <Button className="journals-button" href="/journals">Back to All Journals</Button>
+        <Button onClick={this.handleClick}><Link to={`/journal/${this.state.journal_id}/${next}`}>Next Entry</Link></Button>
+        <br /><br />
+        <br /><br />
+      </div>
     )
   }
 }

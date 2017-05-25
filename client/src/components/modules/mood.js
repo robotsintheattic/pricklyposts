@@ -34,16 +34,20 @@ class Mood extends Component {
 
   render() {
     return (
-      <row>
-        <div className="col-md-4 vcenter"><font size="5">Today I feel: </font></div>
-        <div className="col-md-8 vcenter dashed-box"><ContentEditable
+      <div>
+        <div className="col-md-4 vcenter">
+          Today I feel:
+        </div>
+        <div className="col-md-8 vcenter dashed-box">
+          <ContentEditable
           html={this.state.text}
           disabled={false}
           onChange={this.handleChange}
-        />
+          />
+          <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true">
+          </span>
         </div>
-          <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
-      </row>
+      </div>
     )
   }
 }

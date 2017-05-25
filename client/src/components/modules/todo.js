@@ -48,7 +48,7 @@ class ToDo extends Component{
 
     if (this.props.entryModule) {
         todoListDb = this.props.entryModule.map((item) => {
-          return <li className="toDoListItem" key={item.todo_id}>{item.list_item}</li>
+          return <p className="toDoListItem" key={item.todo_id}>{item.list_item}</p>
         })
     }
     else return null
@@ -56,23 +56,22 @@ class ToDo extends Component{
     return (
       <div>
         <br />
-        <div className='sticky'>
-          <h1><strong>To Do List</strong></h1>
+        <div>
           <div className='todoListMain'>
             <form onSubmit={this.addItem}>
               <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your list!">
               </input>
-              <button className='btn btn-primary' type='submit'>add</button>
+              <button className='toDoBtn glyphicon glyphicon-ok' type='submit' ></button>
             </form>
           </div>
           <hr className="stickyHR"/>
-          <ul className="list-unstyled">
+          <div className="list-unstyled">
             {/* <li className="toDoListItem"> */}
               <ToDoItems entries={this.state.items}
               />
             {/* </li> */}
             {todoListDb}
-          </ul>
+          </div>
         </div>
         <br />
       </div>

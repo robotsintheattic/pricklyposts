@@ -38,6 +38,15 @@ router.get('/:id', (req, res, next) => {
       next(error)
     })
 })
+// Post todo items
+router.post('/todos', (req, res, next) => {
+  knex('todos')
+    .returning(['id'])
+    .insert(req.body)
+    .then((todo) => {
+      res.send(todo)
+    })
+})
 
 /* POST one option */
 router.post('/:id', (req, res, next) => {
@@ -51,6 +60,22 @@ router.post('/:id', (req, res, next) => {
     })
     .then((option) => {
       res.send(option)
+    })
+    .catch((error) => {
+      next(error)
+    })
+})
+
+router.patch('/todos/:id', (req, res, next) => {
+  const id = req.params.id
+  console.log('in patch', req.body, id)
+  knex('todos')
+    .returning('id')
+    .where('id', id)
+    .update(req.body)
+    .then((entry_mod) => {
+      console.log('here', entry_mod)
+      res.send(entry_mod)
     })
     .catch((error) => {
       next(error)

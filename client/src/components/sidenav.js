@@ -4,6 +4,7 @@ import Pic from './modules/pic'
 import Logo from '../Cactus_6.png'
 import CreateEntry from './buttons/createEntryButton'
 import DeleteEntry from './buttons/deleteBtn'
+import $ from 'jquery'
 
 class Sidebar extends Component {
 	render() {
@@ -40,6 +41,8 @@ class Sidenav extends Component {
     this.state.instaShow = false;
     this.forceUpdate();
   }
+
+
 
 	render() {
   	return (

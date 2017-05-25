@@ -102,6 +102,9 @@
   text-align: center;
 }
 
+.finished {
+  text-decoration: line-through;
+}
 
 /*.toDoListItem {
   margin: none;

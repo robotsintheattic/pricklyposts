@@ -87,7 +87,7 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
 /*-- NavBar & Sidebar --*/
 
 .Home-title {
-  font-size: 35px;
+
   font-weight: initial;
   color: #4dc683;
   margin: 30px auto;
@@ -105,8 +105,9 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
 }
 
 .Home-title p {
+  font-size: 45px;
   float: right;
-  margin-right: 421px;
+  margin-right: 461px;
 }
 
 div.navbar-header {

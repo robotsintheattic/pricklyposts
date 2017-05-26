@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ContentEditable from 'react-contenteditable'
-import Check from '../../Cactus7_checkicon.png'
+import Check from '../../img/Cactus7_checkicon.png'
 
 
 class Textfield extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 import $ from 'jquery'
-import Check from '../../Cactus7_checkicon.png'
+import Check from '../../img/Cactus7_checkicon.png'
 
 class ImgDisplay extends Component {
   constructor(props) {

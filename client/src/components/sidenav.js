@@ -5,7 +5,7 @@ import Logo from '../img/Cactus_6.png'
 import CreateEntry from './buttons/createEntryButton'
 import DeleteEntry from './buttons/deleteBtn'
 import Logout from './buttons/logoutButton'
-import Menu from '../Cactus8_menuicon.png'
+import Menu from '../img/Cactus8_menuicon.png'
 import $ from 'jquery'
 
 class Sidebar extends Component {

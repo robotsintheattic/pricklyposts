@@ -18,7 +18,7 @@ class Mood extends Component {
   }
 
   handleClick = (e) => {
-    let content = this.state.text.substring(5, this.state.text.length - 6)
+    let content = this.state.text.substring(4, this.state.text.length - 5)
     fetch(`/api/entries_modules/${this.props.entryModule.em_id}`, {
       method: 'PATCH',
       body: JSON.stringify({content: content}),

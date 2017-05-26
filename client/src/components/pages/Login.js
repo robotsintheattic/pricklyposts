@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import '../../App.css'
-import logoOne from '../../logo-1.png'
-import logoTwo from '../../logo-2.png'
-import Logo from '../../Cactus_6.png'
+import logoOne from '../../img/logo-1.png'
+import logoTwo from '../../img/logo-2.png'
+import Logo from '../../img/Cactus_6.png'
 import LoginButton from './../buttons/loginButton'
 
 class Login extends Component {

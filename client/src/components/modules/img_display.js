@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 import $ from 'jquery'
+import Check from '../../Cactus7_checkicon.png'
 
 class ImgDisplay extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class ImgDisplay extends Component {
     return (
       <div>
         <img className="instagram" id="instagram-journal" src={this.props.entryModule.content} alt="instagram"/>
-        <Button className="checking" onClick={this.handleClick}><span className="glyphicon glyphicon-ok" aria-hidden="true"></span></Button>
+        <button className="icon-btn checking"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
       </div>
     )
 

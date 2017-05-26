@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ContentEditable from 'react-contenteditable'
+import Check from '../../Cactus7_checkicon.png'
 
 
 class Textfield extends Component {
@@ -44,7 +45,7 @@ class Textfield extends Component {
                 onChange={this.handleChange}
               />
             </p>
-            <span onClick={this.handleClick} className="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
           </p>
         </div>
       </div>

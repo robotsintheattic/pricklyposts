@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import ContentEditable from 'react-contenteditable'
+import Check from '../../Cactus7_checkicon.png'
 
 class BlockQuote extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class BlockQuote extends Component {
               disabled={false}
               onChange={this.handleChange}/>
           </div>
-          <span onClick={this.handleClick} className="glyphicon glyphicon-ok quotebtn" aria-hidden="true"></span>
+          <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
         </blockquote>
       </div>
     )

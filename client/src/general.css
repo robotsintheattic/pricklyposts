@@ -343,6 +343,14 @@ div.navbar-header {
 float: right;
 }
 
+.icon-btn-square {
+  max-width: 33px;
+  border-radius: 30px;
+  background-color: #f8f9f8;
+  -moz-box-shadow:    1px 1px 0px rgba(4, 4, 4, 0.1);
+  float: right;
+}
+
 .icon-btn:hover {
   animation: Cactus-logo-spin infinite 3s linear;
 }

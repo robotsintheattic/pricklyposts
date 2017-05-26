@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ContentEditable from 'react-contenteditable'
-import check from '../../Cactus7_checkicon.png'
-import save from '../../Cactus7_savedisk.png'
+import Check from '../../Cactus7_checkicon.png'
 
 
 class Mood extends Component {
@@ -48,7 +47,7 @@ class Mood extends Component {
           onChange={this.handleChange}
           vertical-align="top"
           />
-          <button className="icon-btn"><img className="icon" src={check} onClick={this.handleClick} aria-hidden="true"/></button>
+          <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
         </div>
       </row>
       </div>

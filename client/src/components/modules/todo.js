@@ -7,7 +7,7 @@ class ToDoItems extends Component {
     let todoEntries = this.props.entries
 
     function createTasks(item){
-      return <p className="crossItem" key={item.key}>{item.text}</p>
+      return <p className="crossItem" key={item.key} id={item.key}>{item.text}</p>
     }
     let listItems = todoEntries.map(createTasks)
 
@@ -45,6 +45,7 @@ class ToDo extends Component{
     }).then((res) => {
       return res.text().then(todo => {
         todo = JSON.parse(todo)
+        console.log('here', todo)
       itemArray.unshift(
         {
           text: this._inputElement.value,
@@ -54,10 +55,10 @@ class ToDo extends Component{
       this.setState({
         items: itemArray
       })
+      this._inputElement.value = ""
     })
     })
 
-    this._inputElement.value = ""
   }
 
   crossOut (e) {

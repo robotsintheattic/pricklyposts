@@ -5,10 +5,9 @@ body, html {
 }
 
 #root {
-  font-family: 'Raleway', cursive;
+  font-family: 'Raleway', sans-serif;
   background-color: transparent;
   background-image: url(https://www.clipartsgram.com/image/844021927-notebook-paper-powerpoint-template429184.jpg);
-  /*opacity: 0.7;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -93,6 +92,7 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
   margin: 30px auto;
   margin-top: 60px;
   padding: 5px auto;
+  font-family: 'Raleway', sans-serif;
 }
 
 .Cactus-logo {
@@ -150,6 +150,15 @@ div.navbar-header {
   display: inline;
 }
 
+.sideFont {
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.sideFont a {
+  color: #484948;
+}
+
 .Sidebar-demo {
   padding: 15px;
 }
@@ -180,6 +189,12 @@ div.navbar-header {
 .modal-logo {
   height: 10rem;
   opacity: 0.7;
+}
+
+.Modal-title {
+  font-size: 34px;
+  color: #4dc683;
+  font-weight: normal;
 }
 
 .new-entry-button {

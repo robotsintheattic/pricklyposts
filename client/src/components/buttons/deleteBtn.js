@@ -137,7 +137,7 @@ class CreateEntry extends Component {
   render() {
     return (
       <Nav>
-        <NavItem onClick={this.handleClick}><span className="glyphicon glyphicon-trash" aria-hidden="true"></span> Current Entry</NavItem>
+        <NavItem onClick={this.handleClick} className="sideFont"><span className="glyphicon glyphicon-trash" aria-hidden="true"></span> Current Entry</NavItem>
       </Nav>
     )
   }

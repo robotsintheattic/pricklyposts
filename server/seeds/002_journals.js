@@ -28,7 +28,7 @@ exports.seed = function(knex) {
         {
           id: 5,
           title: 'May 2017',
-          user_id: 1
+          user_id: 2
         },
         {
           id: 6,

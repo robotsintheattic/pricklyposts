@@ -24,7 +24,7 @@ a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
 }
 
-button:hover, button:active, button:visited, button:focus {
+button:hover, button:active, button:visited, button:focus, .btn-default:hover, .btn-default:active, .btn-default:visited, .btn-default:focus {
   outline: none;
 }
 

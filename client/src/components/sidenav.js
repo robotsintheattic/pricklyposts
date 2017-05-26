@@ -5,6 +5,7 @@ import Logo from '../img/Cactus_6.png'
 import CreateEntry from './buttons/createEntryButton'
 import DeleteEntry from './buttons/deleteBtn'
 import Logout from './buttons/logoutButton'
+import Menu from '../Cactus8_menuicon.png'
 import $ from 'jquery'
 
 class Sidebar extends Component {
@@ -52,7 +53,7 @@ class Sidenav extends Component {
 	render() {
   	return (
     	<div className='Sidenav pull-right'>
-      	<Button onClick={ () => this.updateModal(true) } className="sideNavBtn"><span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> </Button>
+      	<button onClick={ () => this.updateModal(true) } className="icon-btn-square"> <img className="icon" src={Menu} /></button>
         <Sidebar side='left' isVisible={ this.state.isVisible } onHide={ () => this.updateModal(false) }>
         	<Nav>
           	<NavItem onClick={ () => this.setState({ instaShow: !this.state.instaShow })}>Recent Instagram Photos</NavItem>

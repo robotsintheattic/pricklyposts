@@ -28,6 +28,7 @@ class ImgDisplay extends Component {
     return (
       <div>
         <img className="instagram" id="instagram-journal" src={this.props.entryModule.content} alt="instagram"/>
+        <br></br><br></br>
         <button className="icon-btn checking"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
       </div>
     )

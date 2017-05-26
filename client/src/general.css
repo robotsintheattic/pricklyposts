@@ -332,6 +332,7 @@ div.navbar-header {
 .icon {
   width: 100%;
   height: auto;
+  padding: 0;
   /*float: right;*/
 }
 .icon-btn {
@@ -340,15 +341,20 @@ div.navbar-header {
   background-color: #f8f9f8;
   /*-webkit-box-shadow: 1px 1px 0px rgba(4, 4, 4, 0.1);*/
 -moz-box-shadow:    1px 1px 0px rgba(4, 4, 4, 0.1);
-float: right;
+display: inline;
 }
 
 .icon-btn-square {
-  max-width: 33px;
-  border-radius: 30px;
+  max-width: 70px;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 0 7px #777;
+  border-radius: 5px;
   background-color: #f8f9f8;
-  -moz-box-shadow:    1px 1px 0px rgba(4, 4, 4, 0.1);
-  float: right;
+  padding: 0;
+  /*-moz-box-shadow:    1px 1px 0px rgba(4, 4, 4, 0.1);*/
+  margin-right: 5px;
+  /*float: right;*/
 }
 
 .icon-btn:hover {

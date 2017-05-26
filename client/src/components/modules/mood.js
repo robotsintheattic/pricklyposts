@@ -37,8 +37,8 @@ class Mood extends Component {
     return (
       <div>
       <row>
-        <div className="col-md-4 vcenter">
-          <h3 vertical-align="bottom">Today I feel:</h3>
+        <div className="col-md-5 vcenter">
+          <h2 vertical-align="bottom">Today I feel:</h2>
         </div>
         <div className="col-md-6 vcenter dashed-box">
           <ContentEditable

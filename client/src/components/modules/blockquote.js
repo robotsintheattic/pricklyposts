@@ -40,6 +40,7 @@ class BlockQuote extends Component {
               disabled={false}
               onChange={this.handleChange}/>
           </div>
+          <br></br>
           <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
         </blockquote>
       </div>

@@ -18,11 +18,21 @@ exports.seed = function(knex) {
         {
           id: 3,
           title: 'Hopes & Dreams',
-          user_id: 2
+          user_id: 1
         },
         {
           id: 4,
           title: 'Daily Dash',
+          user_id: 1
+        },
+        {
+          id: 5,
+          title: 'May 2017',
+          user_id: 1
+        },
+        {
+          id: 6,
+          title: 'Hopes & Dreams',
           user_id: 2
         }
       ])

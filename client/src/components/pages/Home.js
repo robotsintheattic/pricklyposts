@@ -61,6 +61,7 @@ class Home extends Component {
         }).then((res) => {
           return res.text().then(journals => {
             journals = JSON.parse(journals)
+            console.log(journals)
             let journal_ids = []
             journals.forEach((item) => {
               if (!journal_ids.includes(item.j_id)) {
@@ -86,6 +87,7 @@ class Home extends Component {
           <div>
               <Navbar />
               <div className="container">
+
                 <div className="row journalRow">
                   <div className="journalDiv col-md-2">
                     <span><img className="journalImg" alt="cactus" src={NewJournal} /></span><br /><br />
@@ -93,7 +95,7 @@ class Home extends Component {
                   </div>
                   <div>{this.state.titles}</div>
                 </div>
-                </div>
+              </div>
           </div>
       )
     }

@@ -88,13 +88,13 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
 /*-- NavBar & Sidebar --*/
 
 .Home-title {
-  font-family: 'cursive';
   font-size: 50px;
   color: #4dc683;
   margin: 30px auto;
   margin-top: 60px;
   padding: 5px auto;
 }
+
 .Cactus-logo {
   margin: 0 35px;
 }
@@ -105,7 +105,7 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
 
 .Home-title p {
   float: right;
-  margin-right: 540px;
+  margin-right: 421px;
 }
 
 div.navbar-header {

@@ -25,6 +25,7 @@ class Navbar extends Component {
 
               </div>
               <hr className="navbarHR"/>
+              <h3>Select One of Your Journals!</h3>
             </div>
           </nav>
         </div>

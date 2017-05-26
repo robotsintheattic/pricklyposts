@@ -116,7 +116,7 @@ class ToDo extends Component{
         <div>
           <div className='todoListMain'>
             <form onSubmit={this.addItem}>
-              <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your list!">
+              <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your todo list!">
               </input>
               <Button type='submit'><span className="glyphicon glyphicon-ok" aria-hidden="true"></span></Button>
             </form>

@@ -11,7 +11,7 @@ class CreateEntry extends Component {
   handleClick = (e) => {
     e.preventDefault()
     let jId = +window.location.pathname.split('/')[2]
-    let body = {title: 'Untitled Post', journal_id: jId}
+    let body = {title: 'Journal', journal_id: jId}
     fetch('/api/entries', {
       method: 'POST',
       body: JSON.stringify(body),
@@ -28,7 +28,7 @@ class CreateEntry extends Component {
           method: 'POST',
           body: JSON.stringify({
             module_id: 1,
-            content: 'Title of your Entry'
+            content: 'Today\'s Entry'
           }),
           credentials: 'same-origin',
           headers: {
@@ -42,7 +42,7 @@ class CreateEntry extends Component {
           method: 'POST',
           body: JSON.stringify({
             module_id: 2,
-            content: '(enter you mood here)'
+            content: 'happy?'
           }),
           credentials: 'same-origin',
           headers: {
@@ -98,7 +98,7 @@ class CreateEntry extends Component {
           method: 'POST',
           body: JSON.stringify({
             module_id: 6,
-            content: 'To Do List'
+            content: 'What needs to be done?'
           }),
           credentials: 'same-origin',
           headers: {

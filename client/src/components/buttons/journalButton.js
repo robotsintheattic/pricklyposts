@@ -11,7 +11,7 @@ class JournalButton extends Component {
   handleClick = (e) => {
     e.preventDefault()
     let post = {
-      title: 'Untitled Journal',
+      title: 'Journal',
       user_id: localStorage.userId,
     }
 
@@ -27,7 +27,7 @@ class JournalButton extends Component {
       return res.text().then(el => {
         el = JSON.parse(el)
         let jId = el[0].id
-        let body = {title: 'Untitled Journal', journal_id: jId}
+        let body = {title: 'Future Log', journal_id: jId}
         fetch('/api/entries', {
           method: 'POST',
           body: JSON.stringify(body),
@@ -44,7 +44,7 @@ class JournalButton extends Component {
               method: 'POST',
               body: JSON.stringify({
                 module_id: 1,
-                content: ''
+                content: 'Today\'s Entry'
               }),
               credentials: 'same-origin',
               headers: {
@@ -58,7 +58,7 @@ class JournalButton extends Component {
               method: 'POST',
               body: JSON.stringify({
                 module_id: 2,
-                content: '(enter you mood here)'
+                content: 'happy?'
               }),
               credentials: 'same-origin',
               headers: {

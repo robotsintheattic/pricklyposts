@@ -7,7 +7,6 @@ class JournalButton extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-
   handleClick = (e) => {
     e.preventDefault()
     let post = {

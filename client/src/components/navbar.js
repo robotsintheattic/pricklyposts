@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 class Navbar extends Component {
   constructor(props) {
     super(props)
@@ -18,7 +17,6 @@ class Navbar extends Component {
               <div className="navbar-header">
                 <h1 className="Home-title"><img className="Home-img" src={localStorage.userPic} alt="profile-pict"/> <p>Welcome, {localStorage.userName}</p>
                 </h1>
-
               </div>
               <hr className="navbarHR"/>
               <h3>Select One of Your Journals!</h3>

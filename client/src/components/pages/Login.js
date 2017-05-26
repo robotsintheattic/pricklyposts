@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import '../../App.css'
 import logoOne from '../../img/logo-1.png'
 import logoTwo from '../../img/logo-2.png'
 import Logo from '../../img/Cactus_6.png'

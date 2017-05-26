@@ -9,7 +9,6 @@
   margin-left: 4rem;
 }
 
-
 /*-- Mood --*/
 
 .inlineBox {
@@ -303,7 +302,6 @@ blockquote:before {
     -ms-transform: rotate(4deg);
     transform: rotate(4deg);
   }
-
   /*-- Quote --*/
   .quoteblock {
     width: auto;

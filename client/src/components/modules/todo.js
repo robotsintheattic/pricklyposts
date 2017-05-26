@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 import $ from 'jquery'
 import Plus from '../../img/Cactus1_plusicon.png'

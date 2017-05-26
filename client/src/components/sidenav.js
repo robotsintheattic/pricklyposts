@@ -11,8 +11,7 @@ class Sidebar extends Component {
 	render() {
   	return (
     	<Modal className='Sidebar right' show={ this.props.isVisible } onHide={this.props.onHide}
-      	 autoFocus keyboard
-      >
+      	 autoFocus keyboard>
       	<Modal.Header closeButton>
         	<Modal.Title className="Modal-title"><img className="modal-logo" src={Logo} height="100rem;" alt="logo"/> Prickly Posts</Modal.Title>
           <br />

@@ -53,7 +53,7 @@ class Sidenav extends Component {
 	render() {
   	return (
     	<div className='Sidenav pull-right'>
-      	<button onClick={ () => this.updateModal(true) } className="icon-btn-square"> <img className="icon" src={Menu} /></button>
+      	<button onClick={ () => this.updateModal(true) } className="margin-right"> <img className="icon icon-btn-square" src={Menu} /></button>
         <Sidebar side='left' isVisible={ this.state.isVisible } onHide={ () => this.updateModal(false) }>
         	<Nav>
           	<NavItem onClick={ () => this.setState({ instaShow: !this.state.instaShow })}><span className="glyphicon glyphicon-camera" aria-hidden="true"></span> Recent Instagram Photos</NavItem>

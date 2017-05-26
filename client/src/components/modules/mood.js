@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ContentEditable from 'react-contenteditable'
 import check from '../../Cactus7_checkicon.png'
+import save from '../../Cactus7_savedisk.png'
 
 
 class Mood extends Component {
@@ -36,17 +37,20 @@ class Mood extends Component {
   render() {
     return (
       <div>
-        <div className="col-md-5 vcenter">
-          <h2>Today I feel:</h2>
+      <row>
+        <div className="col-md-4 vcenter">
+          <h3 vertical-align="bottom">Today I feel:</h3>
         </div>
-        <div className="col-md-8 vcenter dashed-box">
+        <div className="col-md-6 vcenter dashed-box">
           <ContentEditable
           html={this.state.text}
           disabled={false}
           onChange={this.handleChange}
+          vertical-align="top"
           />
-          <img className="icon" src={check} onClick={this.handleClick} aria-hidden="true"/>
+          <button className="icon-btn"><img className="icon" src={check} onClick={this.handleClick} aria-hidden="true"/></button>
         </div>
+      </row>
       </div>
     )
   }

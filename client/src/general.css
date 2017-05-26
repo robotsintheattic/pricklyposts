@@ -330,7 +330,37 @@ div.navbar-header {
 }
 
 .icon {
-  width: 10%;
+  width: 100%;
   height: auto;
-  float: right;
+  /*float: right;*/
+}
+.icon-btn {
+  max-width: 33px;
+  border-radius: 30px;
+  background-color: #f8f9f8;
+  /*-webkit-box-shadow: 1px 1px 0px rgba(4, 4, 4, 0.1);*/
+-moz-box-shadow:    1px 1px 0px rgba(4, 4, 4, 0.1);
+float: right;
+}
+
+.icon-btn:hover {
+  animation: Cactus-logo-spin infinite 3s linear;
+}
+
+@keyframes Cactus-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

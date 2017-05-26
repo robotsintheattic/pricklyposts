@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-import Sidenav from './sidenav'
-import CreateEntry from './buttons/createEntryButton'
-import  Logout from './buttons/logoutButton'
-import DeleteEntry from './buttons/deleteBtn'
 
 
 class Navbar extends Component {
@@ -20,7 +16,7 @@ class Navbar extends Component {
           <nav className="navbar navbar-default">
             <div className="container-fluid">
               <div className="navbar-header">
-                <h1 className="Home-title"><img className="Home-img" src={localStorage.userPic} alt="profile picture"/> <p>Welcome, {localStorage.userName}</p>
+                <h1 className="Home-title"><img className="Home-img" src={localStorage.userPic} alt="profile-pict"/> <p>Welcome, {localStorage.userName}</p>
                 </h1>
 
               </div>

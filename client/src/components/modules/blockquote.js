@@ -41,7 +41,7 @@ class BlockQuote extends Component {
               onChange={this.handleChange}/>
           </div>
           <br></br>
-          <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
+          <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true" alt="dancing-cactus"/></button>
         </blockquote>
       </div>
     )

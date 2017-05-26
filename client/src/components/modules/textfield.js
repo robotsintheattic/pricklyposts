@@ -46,7 +46,7 @@ class Textfield extends Component {
               />
             </p>
             <br></br>
-            <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
+            <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true" alt="dancing-cactus"/></button>
           </p>
         </div>
       </div>

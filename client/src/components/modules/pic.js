@@ -19,7 +19,7 @@ class Pic extends Component {
   }
 
   componentDidMount() {
-    let recentPics = ''
+    // let recentPics = ''
     $.ajax({
       method: 'get',
       url: `https://api.instagram.com/v1/users/self/media/recent/?access_token=${localStorage.token}`,
@@ -40,7 +40,7 @@ class Pic extends Component {
     render() {
       let recent = this.state.recentPics
       let picsList = recent.map(function(picsDisplay) {
-        return <img src={picsDisplay.images.standard_resolution.url} width="75%" className="insta-pics"/>
+        return <img src={picsDisplay.images.standard_resolution.url} width="75%" className="insta-pics" alt="insta-pics"/>
       })
       return (
         <div className='insta-collection'>

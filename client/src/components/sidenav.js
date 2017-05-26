@@ -1,12 +1,11 @@
-import React, {Component} from 'react'
-import { Button, Modal, Nav, NavItem } from 'react-bootstrap'
+import React, { Component } from 'react'
+import { Modal, Nav, NavItem } from 'react-bootstrap'
 import Pic from './modules/pic'
 import Logo from '../img/Cactus_6.png'
 import CreateEntry from './buttons/createEntryButton'
 import DeleteEntry from './buttons/deleteBtn'
 import Logout from './buttons/logoutButton'
 import Menu from '../img/Cactus8_menuicon.png'
-import $ from 'jquery'
 
 class Sidebar extends Component {
 	render() {
@@ -53,7 +52,7 @@ class Sidenav extends Component {
 	render() {
   	return (
     	<div className='Sidenav pull-right'>
-      	<button onClick={ () => this.updateModal(true) } className="margin-right"> <img className="icon icon-btn-square" src={Menu} /></button>
+      	<button onClick={ () => this.updateModal(true) } className="margin-right"> <img className="icon icon-btn-square" src={Menu}  alt="menu"/></button>
         <Sidebar side='left' isVisible={ this.state.isVisible } onHide={ () => this.updateModal(false) }>
         	<Nav>
           	<NavItem className="sideFont" onClick={ () => this.setState({ instaShow: !this.state.instaShow })}><span className="glyphicon glyphicon-camera" aria-hidden="true"></span> Recent Instagram Photos</NavItem>

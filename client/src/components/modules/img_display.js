@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
 import $ from 'jquery'
 import Check from '../../img/Cactus7_checkicon.png'
 
@@ -29,7 +28,7 @@ class ImgDisplay extends Component {
       <div>
         <img className="instagram" id="instagram-journal" src={this.props.entryModule.content} alt="instagram"/>
         <br></br><br></br>
-        <button className="icon-btn checking"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true"/></button>
+        <button className="icon-btn checking"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true" alt="dancing-cactus"/></button>
       </div>
     )
 

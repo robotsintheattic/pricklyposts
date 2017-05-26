@@ -119,7 +119,7 @@ class ToDo extends Component{
             <form onSubmit={this.addItem}>
               <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your todo list!">
               </input>
-              <button type='submit'><img className="icon icon-btn-square-sm" src={Plus} /></button>
+              <Button type='submit'><img className="icon icon-btn-square-sm" src={Plus} alt='dancing cactus' /></Button>
             </form>
           </div>
           <hr className="stickyHR"/>

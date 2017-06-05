@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
 import $ from 'jquery'
 import Plus from '../../img/Cactus1_plusicon.png'
 
@@ -117,7 +116,7 @@ class ToDo extends Component{
         <div>
           <div className='todoListMain'>
             <form onSubmit={this.addItem}>
-              <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="Make your list!">
+              <input className="toDoHolder" ref={ (a) => this._inputElement = a } placeholder="create a list">
               </input>
               <button type='submit'><img className="icon icon-btn-square-sm" src={Plus} alt='dancing cactus' /></button>
             </form>

@@ -38,7 +38,6 @@ class Journal extends Component {
     .then(res => {
       return res.text().then(entries => {
         entries = JSON.parse(entries)
-        console.log('entries', entries)
         let todoItems = entries.filter(entry => {
           return entry.m_id === 6
         })

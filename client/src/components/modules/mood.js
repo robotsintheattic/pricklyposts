@@ -37,17 +37,15 @@ class Mood extends Component {
     return (
       <div>
       <row>
-        <div className="col-md-5 vcenter">
-          <h2 vertical-align="bottom">Today I feel:</h2>
-        </div>
-        <div className="col-md-6 vcenter dashed-box">
+        <div className="mood-container">
+          <h2 className="content-mood">I feel:&nbsp;&nbsp;</h2>
           <ContentEditable
           html={this.state.text}
           disabled={false}
           onChange={this.handleChange}
-          vertical-align="top"
+          className="content-mood"
           />
-          <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true" alt="dancing-cactus"/></button>
+          <button className="icon-btn iconMood"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true" alt="dancing-cactus"/></button>
         </div>
       </row>
       </div>

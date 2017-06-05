@@ -41,9 +41,11 @@ class Sidenav extends Component {
   }
 
   updateModal(isVisible) {
-  	this.state.isVisible = isVisible;
-    this.state.instaShow = false;
-    this.forceUpdate();
+    this.setState({
+      isVisible: isVisible,
+      instaShow: false
+    })
+    this.forceUpdate()
   }
 
 

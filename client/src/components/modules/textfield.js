@@ -36,18 +36,14 @@ class Textfield extends Component {
   render() {
     return (
       <div>
-        <div>
-          <p className="texting">
-            <p>
+        <div className="texting">
               <ContentEditable
                 html={this.state.text}
                 disabled={false}
                 onChange={this.handleChange}
               />
-            </p>
             <br></br>
             <button className="icon-btn"><img className="icon" src={Check} onClick={this.handleClick} aria-hidden="true" alt="dancing-cactus"/></button>
-          </p>
         </div>
       </div>
     )

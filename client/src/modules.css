@@ -220,6 +220,10 @@ blockquote:before {
     visibility: hidden;
     display: none;
   }
+  .insta-button {
+    visibility: visible !important;
+    display: inline-block !important;
+  }
   .glyphicon.glyphicon-ok {
     visibility: hidden;
     display: none;

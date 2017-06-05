@@ -455,22 +455,25 @@ div.navbar-header {
 
 
 /*-- Media Queries --*/
-@media only screen and (min-device-width: 320px) and (max-device-height: 667px) {
+@media only screen and (min-device-width: 320px) and (max-device-height: 736px) {
   .App-content {
+    padding-top: 20px;
     height: auto;
   }
-
   .App-title {
     margin: 0px;
   }
   img.logo-1 {
+    display: block;
     width: 182px;
   }
-
   img.logo-2 {
+    display: block;
     width: 150px;
   }
-
+  Cactus-logo {
+    display: block;
+  }
   .App-content button {
     margin-left: 0px;
     margin-bottom: 5px;
@@ -495,11 +498,6 @@ div.navbar-header {
   .login-about {
     height: auto;
   }
-}
-
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-
   .Home-title {
     font-size: 3rem;
   }

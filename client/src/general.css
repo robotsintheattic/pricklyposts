@@ -7,11 +7,6 @@ body, html {
 #root {
   font-family: 'Raleway', sans-serif;
   background-color: transparent;
-  background-image: url(https://www.clipartsgram.com/image/844021927-notebook-paper-powerpoint-template429184.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1000px;
 }
 
 
@@ -84,10 +79,141 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
   margin-top: -18rem;
 }
 
+/* Login Page */
+
+.App-content {
+  background-color: rgba(244, 230, 218, 0.2);
+  width: 100%;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.read-more-about {
+  background-color: rgba(244, 230, 218, 0.2);
+  height: 3.2rem;
+}
+
+.read-more-explore {
+  background-color: #87d9ab;
+  height: 2.5rem;
+}
+
+.login-arrow-about, .login-arrow-explore {
+  font-size: 3em;
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 3rem;
+}
+
+.login-arrow-about {
+  background-color: #FDFAF8;
+  border: .5px solid #FDFAF8;
+}
+
+.login-arrow-explore {
+  margin-top: -30px;
+  background-color: #aee5c6;
+  border: .5px solid #aee5c6;
+}
+
+.login-arrow-about:before, .login-arrow-explore:before {
+  color: black;
+}
+
+.login-about {
+  background-color: #aee5c6;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-about h4 {
+  padding-top: 10px;
+  line-height: 30px;
+}
+.about-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 75%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-content p {
+  font-size: 16px;
+}
+
+.about-cactus-img {
+  height: 100px;
+}
+
+.login-explore {
+  background-color: #87d9ab;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-explore-content h1 {
+  padding-bottom: 70px;
+}
+
+.login-explore-content {
+  width: 75%;
+}
+
+.login-explore-text {
+  padding-top: 20px;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.instagram-text {
+  font-size: 16px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+}
+
+.explore-icons {
+  font-size: 75px;
+}
+
+.instagram-icon {
+  height: 75px;
+  opacity: 0.8;
+}
+
+.login-footer {
+  padding-top: 3rem;
+    background-color: rgba(244, 230, 218, 0.56);
+}
+
+.footer-git {
+  padding-bottom: 1rem;
+  height: 5rem;
+}
+
 /*-- NavBar & Sidebar --*/
 
 .Home-title {
-
+  font-size: 35px;
   font-weight: initial;
   color: #4dc683;
   margin: 30px auto;
@@ -105,9 +231,8 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
 }
 
 .Home-title p {
-  font-size: 45px;
   float: right;
-  margin-right: 461px;
+  margin-right: 507px;
 }
 
 div.navbar-header {
@@ -274,9 +399,6 @@ div.navbar-header {
   height: 600px;
 }
 
-.App-content {
-  padding-top: 200px;
-}
 
 .App-title {
   font-family: 'cursive';
@@ -333,8 +455,51 @@ div.navbar-header {
 
 
 /*-- Media Queries --*/
+@media only screen and (min-device-width: 320px) and (max-device-height: 667px) {
+  .App-content {
+    height: auto;
+  }
+
+  .App-title {
+    margin: 0px;
+  }
+  img.logo-1 {
+    width: 182px;
+  }
+
+  img.logo-2 {
+    width: 150px;
+  }
+
+  .App-content button {
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+  .login-arrow-about, .login-arrow-explore {
+    margin-left: 0px;
+  }
+  .login-explore {
+    height: auto;
+  }
+  .about-container {
+    width: 100%;
+    margin: 35px 0px 35px 0px;
+  }
+  .about-content {
+    width: 100%;
+  }
+  .login-explore-content h1 {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+  .login-about {
+    height: auto;
+  }
+}
+
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+
   .Home-title {
     font-size: 3rem;
   }

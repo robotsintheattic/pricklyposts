@@ -7,21 +7,29 @@
 .headingH1 {
   display: inline-block;
   margin-left: 4rem;
+  margin-top: -3px;
+}
+
+.headingIcon {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: -5px;
 }
 
 /*-- Mood --*/
 
-.inlineBox {
+.mood-container {
+  float: left;
+}
+
+.content-mood {
   display: inline-block;
 }
 
-.vcenter {
-  margin-top: 1rem;
+.iconMood {
+  margin-left: 10px;
 }
 
-.vcenter span {
-  padding-left: 3rem;
-}
 
 
 /*-- Text Field --*/
@@ -55,8 +63,8 @@
 
 .sticky {
   width: 380px;
-  font-family: 'Shadows Into Light Two', cursive !important;
-  font-size: 1.4em;
+  font-family: 'Cedarville Cursive', cursive !important;
+  font-size: 1.5em;
   border: 1px #E8Ds47 solid;
   -moz-box-shadow: 0px 0px 6px 1px #333333;
   -webkit-box-shadow: 0px 0px 6px 1px #333333;

@@ -84,7 +84,7 @@ class Login extends Component {
           </div>
         </div>
         <div className="container-fluid login-footer">
-          <a className="footer-link" href="https://github.com/jenniferwiner/pricklyposts"><img className="footer-git" src={Github} alt="github-logo"/></a>
+          <a className="footer-link" href="https://github.com/robotsintheattic/pricklyposts"><img className="footer-git" src={Github} alt="github-logo"/></a>
           <p className="copyright">Prickly Posts &copy; 2017 All Rights Reserved.</p>
         </div>
       </div>

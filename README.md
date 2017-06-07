@@ -2,10 +2,12 @@
 ### A digital journaling platform that makes creativity and organization accessible for everyone
 ##
 
-A video walk through of our app:
+Our current deployed version: [pricklyposts.herokuapp.com](pricklyposts.herokuapp.com)
+
+Check out a video walk through of Prickly Posts:
 [![Prickly Posts Walkthrough](client/src/img/youtube_screenshot.png)](https://www.youtube.com/watch?v=kEUcZbigSYs&t=13s)
 
-Our current deployed version: [pricklyposts.herokuapp.com](pricklyposts.herokuapp.com)
+
 
 
 * If you want to log onto Prickly Posts with Instagram, please contact us to become a sandbox user.

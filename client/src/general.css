@@ -125,11 +125,13 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
 
 .login-about {
   background-color: #aee5c6;
-  height: 50rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .login-about h4 {
@@ -140,7 +142,7 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   width: 75%;
-  height: auto;
+  height: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,7 +166,9 @@ button:hover, button:active, button:visited, button:focus, .btn-default:hover, .
 
 .login-explore {
   background-color: #87d9ab;
-  height: 50rem;
+  height: auto;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -481,8 +485,15 @@ div.navbar-header {
   .login-arrow-about, .login-arrow-explore {
     margin-left: 0px;
   }
+  .login-about {
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
   .login-explore {
     height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
   }
   .about-container {
     width: 100%;
@@ -495,8 +506,8 @@ div.navbar-header {
     padding-top: 25px;
     padding-bottom: 40px;
   }
-  .login-about {
-    height: auto;
+  .login-explore br {
+    content: '';
   }
   .Home-title {
     font-size: 3rem;

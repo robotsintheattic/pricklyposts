@@ -55,7 +55,7 @@ class Login extends Component {
             <div className="about-content row">
               <h1>READY TO BEGIN?</h1>
               <img className="about-cactus-img" src={CactusAbout} alt="cactus"/>
-              <h4 className="about-tagline">Prickly Posts is a journaling platform that allows you to creatively explore and discover the beauty of Bullet Journaling without a degree in Caligraphy.</h4>
+              <h4 className="about-tagline">Prickly Posts is a journaling platform that allows you to creatively explore and discover the beauty of Bullet Journaling without a degree in Calligraphy.</h4>
             </div>
           </div>
         </div>
@@ -68,15 +68,15 @@ class Login extends Component {
           <div className="container login-explore-content">
             <h1>WRITE & RECORD</h1>
             <div className="row">
-              <div className="col-sm-12 col-md-4">
+              <div className="col-xs-12 col-sm-4">
                 <span className="glyphicon glyphicon-list-alt explore-icons" aria-hidden="true"></span>
-                <p className="login-explore-text">Record your thoughts and ideas <br /> in bullet size snippits</p>
+                <p className="login-explore-text">Record your thoughts and ideas <br /> in bullet-sized snippits</p>
               </div>
-              <div className="col-sm-12 col-md-4">
+              <div className="col-xs-12 col-sm-4">
                 <span><img className="instagram-icon" src={Instagram} alt="instagram-icon"/></span>
                 <p className="instagram-text">Integrate your recent Instagram <br />photos to customize entries</p>
               </div>
-              <div className="col-sm-12 col-md-4">
+              <div className="col-xs-12 col-sm-4">
                 <span className="glyphicon glyphicon-grain explore-icons" aria-hidden="true"></span>
                 <p className="login-explore-text">Explore your personal growth by <br /> browsing through past journals</p>
               </div>

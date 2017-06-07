@@ -2,14 +2,12 @@
 ### A digital journaling platform that makes creativity and organization accessible for everyone
 ##
 
-Our current deployed version: [pricklyposts.herokuapp.com](pricklyposts.herokuapp.com)
-
 Check out a video walk through of Prickly Posts:
 [![Prickly Posts Walkthrough](client/src/img/youtube_screenshot.png)](https://www.youtube.com/watch?v=kEUcZbigSYs&t=13s)
 
+Visit the current deployed version of Prickly Posts: [pricklyposts.herokuapp.com](pricklyposts.herokuapp.com)
 
-
-
+Notes:
 * If you want to log onto Prickly Posts with Instagram, please contact us to become a sandbox user.
 * Otherwise, feel free to fork and clone the repo and run on your machine's local host.
 ```

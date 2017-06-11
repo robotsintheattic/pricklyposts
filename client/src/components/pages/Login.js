@@ -39,9 +39,9 @@ class Login extends Component {
       <div className="App">
         <div className="container App-content">
           <h1 className="App-title">
-            <img className="logo-1" alt="svg of a cactus" src={logoOne} />
-            <img className="Cactus-logo" alt="svg of a cactus" src={Logo} />
-            <img className="logo-2" alt="svg of a cactus" src={logoTwo} />
+            <img className="logo-1" alt="svg of a prickly (logo)" src={logoOne} />
+            <img className="Cactus-logo" alt="svg of a cactus (logo)" src={Logo} />
+            <img className="logo-2" alt="svg of a posts (logo)" src={logoTwo} />
           </h1>
           <LoginButton />
         </div>

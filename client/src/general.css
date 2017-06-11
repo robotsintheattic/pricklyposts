@@ -469,14 +469,15 @@ div.navbar-header {
   }
   img.logo-1 {
     display: block;
-    width: 182px;
+    width: 150px;
   }
   img.logo-2 {
     display: block;
-    width: 150px;
+    width: 135px;
   }
   Cactus-logo {
     display: block;
+    height: 150px;
   }
   .App-content button {
     margin-left: 0px;
@@ -486,7 +487,7 @@ div.navbar-header {
     margin-left: 0px;
   }
   .login-about {
-    height: auto;
+    height: 100%;
     padding-top: 2rem;
     padding-bottom: 3rem;
   }

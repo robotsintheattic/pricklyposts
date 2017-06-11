@@ -459,7 +459,7 @@ div.navbar-header {
 
 
 /*-- Media Queries --*/
-@media only screen and (min-device-width: 320px) and (max-device-height: 736px) {
+@media only screen and (min-device-width: 320px) and (max-device-height: 736px) and (orientation: portrait){
   .App-content {
     padding-top: 20px;
     height: auto;

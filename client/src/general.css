@@ -457,27 +457,15 @@ div.navbar-header {
   }
 }
 
-
 /*-- Media Queries --*/
+
 @media only screen and (min-device-width: 320px) and (max-device-height: 736px) {
   .App-content {
     padding-top: 20px;
     height: auto;
   }
   .App-title {
-    margin: 0px;
-  }
-  img.logo-1 {
-    display: block;
-    width: 150px;
-  }
-  img.logo-2 {
-    display: block;
-    width: 135px;
-  }
-  Cactus-logo {
-    display: block;
-    height: 150px;
+    margin-left: -35px;
   }
   .App-content button {
     margin-left: 0px;
@@ -518,6 +506,24 @@ div.navbar-header {
   }
   .grid-top, .grid-bottom {
     border: 1px solid transparent;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 736px) and (orientation: portrait) {
+  .App-title {
+    margin: 0px;
+  }
+  img.logo-1 {
+    display: block;
+    width: 150px;
+  }
+  img.logo-2 {
+    display: block;
+    width: 135px;
+  }
+  Cactus-logo {
+    display: block;
+    height: 150px;
   }
 }
 

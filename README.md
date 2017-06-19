@@ -40,7 +40,7 @@ contact us!
 
 **Note:** You may be wondering why we chose a cactus theme for a digital journaling app. A cactus is resilient, strong and patient for water. Cacti thrive in heat, but it is through the cold, through the harsh conditions, that they grow stronger.
 
-It is our hope, at Prickly Posts, to encouarge users to creatively explore and maybe even  discover the cactus that lives inside themselves.
+It is our hope, at Prickly Posts, to encourage users to creatively explore and maybe even  discover the cactus that lives inside themselves.
 
 >"A creative person has to create. It doesn't really matter what you create. If such a dancer wanted to go out and build the cactus gardens where he could, in Mexico, let him do that, but something that is creative has to go on."
 >
